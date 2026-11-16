@@ -46,7 +46,7 @@ Todos os prompts começam por *Minimalist flat cartoon illustration of* e termin
 
 Prompt negativo comum (só tem efeito com CFG acima de 1):
 
-> text, letters, words, caption, watermark, signature, logo, frame, border, card template, photorealistic, photo, realistic, 3d render, faceless, blank face, face hidden, back view, detailed background, intricate details, oil painting, painterly texture, heavy shading, blood, gore, wounds, nudity, modern clothing, deformed hands, extra fingers, extra limbs, lowres, blurry
+> text, letters, words, caption, watermark, signature, logo, frame, border, card template, photorealistic, photo, realistic, 3d render, faceless, blank face, face hidden, back view, baby, detailed background, intricate details, oil painting, painterly texture, heavy shading, blood, gore, wounds, nudity, modern clothing, deformed hands, extra fingers, extra limbs, lowres, blurry
 
 ## Lista de imagens a produzir
 
@@ -99,223 +99,223 @@ O verso é desenhado pela Oficina e não precisa de imagem.
 ### Israelita · `israelita`
 
 ```text
-Minimalist flat cartoon illustration of a friendly Israelite villager in a simple striped tunic and head scarf, smiling, carrying a clay water jar, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of a friendly Israelite villager with short dark hair under a simple head scarf, a simple striped tunic, smiling, carrying a clay water jar, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Profeta Isaías · `isaias`
 
 ```text
-Minimalist flat cartoon illustration of the prophet Isaiah, an old man with a long white beard and a blue mantle, looking up in awe at a glowing star, holding a scroll, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of the prophet Isaiah, an old man with a long white beard and a blue mantle, looking up in awe at a glowing star, holding a scroll, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Profeta Jeremias · `jeremias`
 
 ```text
-Minimalist flat cartoon illustration of the young prophet Jeremiah, sad and thoughtful, holding a scroll and a small blossoming almond branch, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of the young adult prophet Jeremiah, a slim young man with thick wavy dark brown hair and a short beard, sad and thoughtful, holding a scroll and a small blossoming almond branch, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Profeta Elias · `elias`
 
 ```text
-Minimalist flat cartoon illustration of the prophet Elijah, a wild-haired bearded man in a rough brown fur cloak, determined look, both arms raised, a small flame on a little stone altar beside him, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of the prophet Elijah, a wild-haired bearded man in a rough brown fur cloak, determined look, both arms raised, a small flame on a little stone altar beside him, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Profeta Eliseu · `eliseu`
 
 ```text
-Minimalist flat cartoon illustration of the prophet Elisha, a kind bald old man with a gentle smile, holding a walking staff, wearing a big cloak slightly too large for him, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of the prophet Elisha, a kind bald old man with a gentle smile, holding a walking staff, wearing a big cloak slightly too large for him, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Sumo Sacerdote Zadoque · `zadoque`
 
 ```text
-Minimalist flat cartoon illustration of Zadok the high priest, a calm bearded man in white robes and a turban, a breastplate of colorful square gems, holding a small incense burner, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Zadok the high priest, a calm man with a grey beard and grey hair under a white turban, white robes, a breastplate of colorful square gems, holding a small incense burner, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Rei Salomão · `salomao`
 
 ```text
-Minimalist flat cartoon illustration of King Solomon, a calm wise bearded king with a golden crown, sitting on a small throne, holding a scroll, thoughtful look, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of King Solomon, a calm wise king with long dark hair, a neat black beard and a golden crown, sitting on a small throne, holding a scroll, thoughtful look, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Calebe · `calebe`
 
 ```text
-Minimalist flat cartoon illustration of Caleb the scout, a cheerful sturdy man, carrying a giant bunch of purple grapes hanging from a pole over his shoulder, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Caleb the scout, a cheerful sturdy man with short brown hair and a brown beard, carrying a giant bunch of purple grapes hanging from a pole over his shoulder, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Benaia · `benaia`
 
 ```text
-Minimalist flat cartoon illustration of Benaiah the royal bodyguard, a serious alert soldier in a bronze helmet that leaves his face uncovered, holding a round shield and a spear, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Benaiah the royal bodyguard, a serious alert soldier with a black beard, a bronze helmet that leaves his face uncovered, holding a round shield and a spear, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Sansão · `sansao`
 
 ```text
-Minimalist flat cartoon illustration of Samson, a very strong man with extremely long braided hair, straining face, pushing two short stone pillars apart, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Samson, a very strong man with extremely long braided hair, straining face, pushing two short stone pillars apart, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Rainha Ester · `ester`
 
 ```text
-Minimalist flat cartoon illustration of Queen Esther, a brave young queen in a royal robe and small crown, hopeful look, reaching toward a golden scepter, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Queen Esther, a brave young woman with long wavy black hair and a small crown, a royal robe, hopeful look, reaching toward a golden scepter, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Eleazar · `eleazar`
 
 ```text
-Minimalist flat cartoon illustration of Eleazar, a tired but determined warrior, gripping a sword with both hands, a few golden barley stalks at his feet, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Eleazar, a tired but determined warrior with messy brown hair and a short beard, gripping a sword with both hands, a few golden barley stalks at his feet, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Príncipe Jónatas · `jonatas`
 
 ```text
-Minimalist flat cartoon illustration of Prince Jonathan, a young archer with a kind smile, holding a bow, a quiver of arrows on his back, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Prince Jonathan, a young adult archer with curly brown hair and a kind smile, holding a bow, a quiver of arrows on his back, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Daniel · `daniel`
 
 ```text
-Minimalist flat cartoon illustration of Daniel, a young man kneeling in prayer with a peaceful face, next to a calm sleeping lion, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Daniel, a young adult man with short black hair and a short beard, kneeling in prayer with a peaceful face, next to a calm sleeping lion, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Rei David · `david`
 
 ```text
-Minimalist flat cartoon illustration of King David, a young red-haired king with a golden crown and a happy smile, playing a small harp, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of King David, a young adult king with curly red hair and a golden crown, happy smile, playing a small harp, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Trombeteiro · `trombeteiro`
 
 ```text
-Minimalist flat cartoon illustration of a trumpeter with puffed cheeks, blowing a long curved ram's horn shofar, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of a trumpeter with curly black hair and a short beard, puffed cheeks, blowing a long curved ram's horn shofar, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Baruque · `baruque`
 
 ```text
-Minimalist flat cartoon illustration of Baruch the scribe, a focused young man writing on a long scroll with a reed pen, a small oil lamp beside him, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Baruch the scribe, a focused young adult man with short dark hair, writing on a long scroll with a reed pen, a small oil lamp beside him, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Construtor · `construtor`
 
 ```text
-Minimalist flat cartoon illustration of a builder with a confident smile, holding a trowel and a limestone block, a sword on his belt, a small stack of stones beside him, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of a builder with short brown hair and a beard, confident smile, holding a trowel and a limestone block, a sword on his belt, a small stack of stones beside him, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Nabal · `nabal`
 
 ```text
-Minimalist flat cartoon illustration of Nabal, a chubby rich man with a smug face, holding a big golden goblet, a fluffy sheep beside him, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Nabal, a chubby rich man with greasy black hair and a curly beard, smug face, holding a big golden goblet, a fluffy sheep beside him, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Juíza Débora · `debora`
 
 ```text
-Minimalist flat cartoon illustration of Deborah the judge, a wise woman with a calm kind face, sitting under a small palm tree, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Deborah the judge, a wise woman with long grey-streaked hair under a light veil, calm kind face, sitting under a small palm tree, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Rei Ezequias · `ezequias`
 
 ```text
-Minimalist flat cartoon illustration of King Hezekiah, a crowned king with a stern face, holding one finger to his lips asking for silence, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of King Hezekiah, a crowned king with dark hair and a full beard, stern face, holding one finger to his lips asking for silence, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Rute · `rute`
 
 ```text
-Minimalist flat cartoon illustration of Ruth, a gentle young woman with a warm smile, carrying a bundle of golden barley in her arms, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Ruth, a gentle young woman with a long brown braid, warm smile, carrying a bundle of golden barley in her arms, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Noemi · `noemi`
 
 ```text
-Minimalist flat cartoon illustration of Naomi, a kind older woman with a warm smile, holding a long red ribbon tied into a bow between two small rings, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Naomi, a kind older woman with grey hair in a bun under a shawl, warm smile, holding a long red ribbon tied into a bow between two small rings, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Matusalém · `matusalem`
 
 ```text
-Minimalist flat cartoon illustration of Methuselah, a tiny very old man with sleepy happy eyes and an extremely long white beard reaching the ground, leaning on a cane, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Methuselah, a tiny very old man with sleepy happy eyes and an extremely long white beard reaching the ground, leaning on a cane, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Abigail · `abigail`
 
 ```text
-Minimalist flat cartoon illustration of Abigail, a gentle woman with a pleading peaceful face, offering a basket of bread and figs, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of Abigail, a gentle woman with long dark hair, pleading peaceful face, offering a basket of bread and figs, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Filisteu · `filisteu`
 
 ```text
-Minimalist flat cartoon illustration of a sneaky Philistine soldier with a sly sideways glance, wearing a tall feathered helmet and a dark cloak, holding a bronze sword, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of oxblood red, bronze and charcoal, soft dusty red background
+Minimalist flat cartoon illustration of a sneaky Philistine soldier with a sly sideways glance, wearing a tall feathered helmet over short black hair and a dark cloak, holding a bronze sword, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of oxblood red, bronze and charcoal, soft dusty red background
 ```
 
 ### Golias · `golias`
 
 ```text
-Minimalist flat cartoon illustration of Goliath, a huge grumpy giant with a frowning face, in bronze scale armor and a feathered helmet, holding an enormous spear, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of oxblood red, bronze and charcoal, soft dusty red background
+Minimalist flat cartoon illustration of Goliath, a huge grumpy giant with a thick black beard and a frowning face, in bronze scale armor and a feathered helmet, holding an enormous spear, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of oxblood red, bronze and charcoal, soft dusty red background
 ```
 
 ### Dalila · `dalila`
 
 ```text
-Minimalist flat cartoon illustration of Delilah, a sly woman with dark eyes and a mischievous smile, holding a pair of scissors and a small pouch of coins, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of oxblood red, bronze and charcoal, soft dusty red background
+Minimalist flat cartoon illustration of Delilah, a sly woman with long glossy black hair, dark eyes and a mischievous smile, holding a pair of scissors and a small pouch of coins, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of oxblood red, bronze and charcoal, soft dusty red background
 ```
 
 ### Espia Filisteu · `espia`
 
 ```text
-Minimalist flat cartoon illustration of a Philistine spy in a hood pushed back to show his face, narrow suspicious eyes, holding a small fish-tailed idol, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of oxblood red, bronze and charcoal, soft dusty red background
+Minimalist flat cartoon illustration of a Philistine spy with short black hair, a hood pushed back to show his face, narrow suspicious eyes, holding a small fish-tailed idol, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of oxblood red, bronze and charcoal, soft dusty red background
 ```
 
 ### Agente Caldeu · `caldeu`
 
 ```text
-Minimalist flat cartoon illustration of a Babylonian agent with a curled black beard and a tall cap, blue and gold robes, sly smile, holding a clay tablet, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of violet, lapis blue and gold, soft lavender background
+Minimalist flat cartoon illustration of a Babylonian agent with a curled black beard and a tall cap, blue and gold robes, sly smile, holding a clay tablet, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of violet, lapis blue and gold, soft lavender background
 ```
 
 ### Absalão · `absalao`
 
 ```text
-Minimalist flat cartoon illustration of Absalom, a proud handsome prince with a smug smile, very long flowing hair and a small crown, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of ochre, olive and cream, soft ochre background
+Minimalist flat cartoon illustration of Absalom, a proud handsome prince with a smug smile, very long flowing hair and a small crown, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of ochre, olive and cream, soft ochre background
 ```
 
 ### Hananias · `hananias`
 
 ```text
-Minimalist flat cartoon illustration of Hananiah the false prophet with a smug grin, breaking a wooden yoke over his knee, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of ochre, olive and cream, soft ochre background
+Minimalist flat cartoon illustration of Hananiah the false prophet, a man with slicked dark hair and a pointy beard, smug grin, breaking a wooden yoke over his knee, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of ochre, olive and cream, soft ochre background
 ```
 
 ### Jonas · `jonas`
 
 ```text
-Minimalist flat cartoon illustration of Jonah with a worried face, sitting in a tiny boat on big curly waves, a friendly whale tail rising behind him, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of ochre, olive and cream, soft ochre background
+Minimalist flat cartoon illustration of Jonah, a man with messy brown hair and a short beard, worried face, sitting in a tiny boat on big curly waves, a friendly whale tail rising behind him, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of ochre, olive and cream, soft ochre background
 ```
 
 ### Barrabás · `barrabas`
 
 ```text
-Minimalist flat cartoon illustration of Barabbas, a scruffy bandit with a defiant grin, broken iron chains hanging from his wrists, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of ochre, olive and cream, soft ochre background
+Minimalist flat cartoon illustration of Barabbas, a scruffy bandit with shaggy black hair and stubble, defiant grin, broken iron chains hanging from his wrists, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of ochre, olive and cream, soft ochre background
 ```
 
 ### Jacó · `jaco`
 
 ```text
-Minimalist flat cartoon illustration of Jacob with a sneaky smile, goat skins on his arms, carrying a bowl of stew, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of moss green, grey and cream, soft moss green background
+Minimalist flat cartoon illustration of Jacob, a young adult man with smooth brown hair and no beard, sneaky smile, goat skins on his arms, carrying a bowl of stew, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of moss green, grey and cream, soft moss green background
 ```
 
 ### Acã · `aca`
 
 ```text
-Minimalist flat cartoon illustration of Achan with a nervous face, glancing sideways, hiding a gold bar behind his back, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of moss green, grey and cream, soft moss green background
+Minimalist flat cartoon illustration of Achan, a man with short curly hair and a short beard, nervous face, glancing sideways, hiding a gold bar behind his back, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of moss green, grey and cream, soft moss green background
 ```
 
 ### Joás · `joas`
 
 ```text
-Minimalist flat cartoon illustration of the boy king Joash, a small child with big surprised eyes, wearing a crown that is too big for him, with a clearly visible cute face: round head, two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of moss green, grey and cream, soft moss green background
+Minimalist flat cartoon illustration of the boy king Joash, a small child with short dark hair and big surprised eyes, wearing a crown that is too big for him, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of moss green, grey and cream, soft moss green background
 ```
 
 ### Manto do Profeta · `manto`
@@ -327,5 +327,5 @@ Minimalist flat cartoon illustration of a prophet's brown woven cloak floating i
 ### Narrador · `narrador`
 
 ```text
-Minimalist flat cartoon illustration of an old storyteller with a friendly smile and round glasses, holding a big open book and a lit candle, no people, no face, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of umber brown and gold, soft tan background
+Minimalist flat cartoon illustration of an old storyteller with white hair, a white beard and round glasses, friendly smile, holding a big open book and a lit candle, no people, no face, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of umber brown and gold, soft tan background
 ```
