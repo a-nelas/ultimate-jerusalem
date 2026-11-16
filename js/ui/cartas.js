@@ -10,6 +10,7 @@ const PREFS = 'uj:cartas:prefs';
 const TEXTOS = 'uj:cartas:textos';
 const PERSONALIZADA = 'personalizada';
 const DPI_MAX_PREVISUALIZACAO = 300;
+const DPI_MIN_PREVISUALIZACAO = 200;
 
 const prefs = {
   id: 'isaias', tamanho: 'padrao', mm: [63, 88], dpi: 300, esquema: 'janela', lado: 'frente',
@@ -199,12 +200,16 @@ function atualizarArteUI() {
 }
 
 // ── desenho ──
-/** Resolução da pré-visualização: a que o ecrã mostra de facto (a exportação usa sempre a escolhida). */
+/**
+ * Resolução da pré-visualização: o dobro dos píxeis que o ecrã mostra (para a arte e o texto ficarem nítidos),
+ * entre 200 e 300 dpi. A exportação usa sempre a resolução escolhida.
+ */
 function dpiPrevisualizacao(tela) {
   const largura = tela.getBoundingClientRect().width;
   if (!largura) return DPI_MAX_PREVISUALIZACAO;
   const pol = (mmAtual()[0] + 6) / 25.4;
-  return Math.max(96, Math.min(DPI_MAX_PREVISUALIZACAO, Math.ceil((largura * (window.devicePixelRatio || 1)) / pol)));
+  const ecra = (largura * (window.devicePixelRatio || 1) * 2) / pol;
+  return Math.round(Math.max(DPI_MIN_PREVISUALIZACAO, Math.min(DPI_MAX_PREVISUALIZACAO, ecra)));
 }
 
 let pedido = 0;
@@ -340,6 +345,9 @@ function ligarEventos() {
     desenhar();
     guardarCorte();
   });
+
+  let redimT;
+  window.addEventListener('resize', () => { clearTimeout(redimT); redimT = setTimeout(desenhar, 150); });
 
   const tela = $('#tela');
   let arrasto = null;

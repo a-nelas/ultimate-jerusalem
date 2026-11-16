@@ -80,6 +80,5 @@ O aspeto visual usa o sistema de design **Mistfold** (`mistfold@1.0.0`, InstaLan
 
 ## Créditos
 
-Projeto de fãs, sem ligação à Bézier Games. Mecânicas e valores de equilíbrio baseados em
-*Ultimate Werewolf: Ultimate Edition* (Ted Alspach / Bézier Games). Os valores marcados com **?** ainda não foram
+Mecânicas e valores de equilíbrio inspirados em *Ultimate Werewolf: Ultimate Edition* (2008). Os valores marcados com **?** ainda não foram
 confirmados numa carta impressa.

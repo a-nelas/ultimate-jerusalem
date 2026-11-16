@@ -1,5 +1,5 @@
 // Fonte única de verdade dos papéis de "Ultimate Jerusalém".
-// Mecânicas: Ultimate Werewolf: Ultimate Edition (Bézier Games), re-tematizadas.
+// Mecânicas inspiradas em Ultimate Werewolf: Ultimate Edition (2008), re-tematizadas.
 // `valor` = número de equilíbrio impresso no canto da carta original
 //   (positivo ajuda Jerusalém, negativo ajuda os inimigos).
 // `verificar: true` = valor ainda não confirmado numa carta impressa.

@@ -138,6 +138,8 @@ function desenharArte(ctx, g, t, arte, corte, modo) {
     ctx.clearRect(a.x, a.y, a.w, a.h);
   } else if (arte) {
     const e = enquadrar(arte, a, corte);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
     ctx.drawImage(arte, e.dx, e.dy, e.dw, e.dh);
   } else {
     ctx.fillStyle = t.tint;

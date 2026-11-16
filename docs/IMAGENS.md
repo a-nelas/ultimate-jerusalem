@@ -31,7 +31,7 @@ O tamanho padrão é o dos jogos de cartas colecionáveis (Riftbound, Magic, Pok
 | Esquema | Área da arte | Proporção | Gerar em |
 |---|---|---|---|
 | Arte em janela | 677 × 447 px | 1,51 : 1 | 1264 × 832 px |
-| Arte completa (até à margem) | 814 × 1109 px | 0,73 : 1 | 880 × 1200 px |
+| Arte completa | 814 × 1109 px | 0,73 : 1 | 880 × 1200 px |
 
 Na **janela** a arte fica num painel horizontal no topo; na **arte completa** ocupa a carta inteira (até à sangria)
 e o texto assenta numa placa semitransparente: põe a personagem na metade de cima.

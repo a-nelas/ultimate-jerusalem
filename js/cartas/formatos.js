@@ -11,7 +11,7 @@ export const TAMANHOS = {
 
 export const ESQUEMAS = {
   janela: 'Arte em janela',
-  completa: 'Arte completa (até à margem)',
+  completa: 'Arte completa',
 };
 
 export const RESOLUCOES = [300, 600];
