@@ -1,0 +1,11 @@
+{
+  "name": "ultimate-jerusalem",
+  "private": true,
+  "description": "Assistente do Cronista para Ultimate Werewolf, tema Jerusalém. Site estático (GitHub Pages) — o Node só é usado para testes e para gerar a documentação.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"tests/*.test.mjs\"",
+    "docs": "node tools/gerar-docs.mjs",
+    "serve": "python -m http.server 8000"
+  }
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+  <rect width="750" height="1050" fill="#e8dcc2"/>
+  <rect x="30" y="30" width="690" height="990" fill="none" stroke="#9a7b2f" stroke-width="6" rx="24"/>
+  <!-- muralha estilizada -->
+  <g fill="#c9b48a">
+    <rect x="135" y="560" width="480" height="230"/>
+    <rect x="135" y="520" width="60" height="40"/><rect x="235" y="520" width="60" height="40"/>
+    <rect x="335" y="520" width="80" height="40"/><rect x="455" y="520" width="60" height="40"/>
+    <rect x="555" y="520" width="60" height="40"/>
+  </g>
+  <path d="M330 790 v-120 a45 45 0 0 1 90 0 v120 z" fill="#e8dcc2"/>
+  <text x="375" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="56" fill="#7a5f1f">Imagem</text>
+  <text x="375" y="480" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#7a5f1f">por fornecer</text>
+</svg>

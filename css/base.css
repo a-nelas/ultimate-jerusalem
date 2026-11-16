@@ -1,0 +1,145 @@
+/* Ultimate Jerusalém — estilos base */
+:root {
+  --bg: #f6f1e7;
+  --surface: #fffdf8;
+  --surface-2: #efe7d6;
+  --text: #2b2418;
+  --muted: #6e624d;
+  --border: #d9cdb4;
+  --accent: #9a7b2f;        /* ouro */
+  --accent-strong: #7a5f1f;
+  --focus: #2f5d8a;
+  --shadow: 0 1px 2px rgb(60 45 20 / .08), 0 4px 14px rgb(60 45 20 / .06);
+
+  --t-jerusalem: #2f5d8a;
+  --t-filisteus: #a3352b;
+  --t-babilonios: #6b3fa0;
+  --t-independentes: #6b6b6b;
+  --t-flutuante: #2c7a7b;
+  --t-objeto: #9a7b2f;
+
+  --pos: #3f7d4a;
+  --neg: #a3352b;
+
+  --font-title: 'Cinzel', 'Times New Roman', serif;
+  --font-body: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --radius: 10px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1b1812;
+    --surface: #242018;
+    --surface-2: #2e2920;
+    --text: #efe6d4;
+    --muted: #b3a68c;
+    --border: #463e30;
+    --accent: #d1ab55;
+    --accent-strong: #e6c06a;
+    --focus: #7fb0e0;
+    --shadow: 0 1px 2px rgb(0 0 0 / .4);
+    --t-jerusalem: #6d9fd1;
+    --t-filisteus: #e0675c;
+    --t-babilonios: #a785d6;
+    --t-independentes: #a8a8a8;
+    --t-flutuante: #5fb8b9;
+    --t-objeto: #d1ab55;
+    --pos: #74bf80;
+    --neg: #e0675c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1b1812;
+  --surface: #242018;
+  --surface-2: #2e2920;
+  --text: #efe6d4;
+  --muted: #b3a68c;
+  --border: #463e30;
+  --accent: #d1ab55;
+  --accent-strong: #e6c06a;
+  --focus: #7fb0e0;
+  --shadow: 0 1px 2px rgb(0 0 0 / .4);
+  --t-jerusalem: #6d9fd1;
+  --t-filisteus: #e0675c;
+  --t-babilonios: #a785d6;
+  --t-independentes: #a8a8a8;
+  --t-flutuante: #5fb8b9;
+  --t-objeto: #d1ab55;
+  --pos: #74bf80;
+  --neg: #e0675c;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 var(--font-body);
+}
+a { color: var(--focus); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+h1, h2, h3 { font-family: var(--font-title); font-weight: 600; line-height: 1.2; letter-spacing: .02em; }
+h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0 0 .25em; }
+h2 { font-size: 1.3rem; margin: 1.5em 0 .5em; }
+
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
+/* ── Cabeçalho ── */
+.topo {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 10;
+}
+.topo .wrap { display: flex; align-items: center; gap: 16px; min-height: 56px; flex-wrap: wrap; }
+.marca { font-family: var(--font-title); font-weight: 700; color: var(--text); text-decoration: none; font-size: 1.1rem; }
+.marca span { color: var(--accent); }
+.nav { display: flex; gap: 4px; flex-wrap: wrap; margin-left: auto; }
+.nav a {
+  text-decoration: none; color: var(--muted); padding: 6px 10px; border-radius: 6px; font-size: .95rem;
+}
+.nav a:hover { background: var(--surface-2); color: var(--text); }
+.nav a[aria-current="page"] { color: var(--text); background: var(--surface-2); font-weight: 600; }
+.nav a.breve { opacity: .55; }
+
+main { padding: 24px 0 48px; }
+.intro { color: var(--muted); max-width: 70ch; margin: 0 0 1.5em; }
+
+/* ── Botões / campos ── */
+button, select, input {
+  font: inherit; color: inherit;
+}
+input[type="search"], input[type="number"], select {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px;
+}
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--border); background: var(--surface);
+  border-radius: 999px; padding: 4px 12px; cursor: pointer; font-size: .9rem;
+}
+.chip[aria-pressed="true"] { background: var(--surface-2); border-color: var(--accent); font-weight: 600; }
+.ponto { width: 10px; height: 10px; border-radius: 50%; background: var(--c, var(--muted)); flex: none; }
+
+/* ── Cartões genéricos ── */
+.painel {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 16px;
+}
+.grelha-cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.grelha-cards a.painel { text-decoration: none; color: inherit; display: block; }
+.grelha-cards a.painel:hover { border-color: var(--accent); }
+.grelha-cards h2 { margin-top: 0; }
+.etiqueta {
+  display: inline-block; font-size: .75rem; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--muted); border: 1px solid var(--border); border-radius: 4px; padding: 0 6px;
+}
+
+.equipa-tag {
+  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-size: .9rem;
+}
+
+footer { color: var(--muted); font-size: .85rem; border-top: 1px solid var(--border); padding: 16px 0 32px; }

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grelha de Papéis — Ultimate Jerusalém</title>
+  <meta name="description" content="Todos os papéis de Ultimate Jerusalém: equipas, valores de equilíbrio, ordem da noite e quantidades recomendadas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/papeis.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="wrap">
+      <a class="marca" href="index.html">Ultimate <span>Jerusalém</span></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html">Início</a>
+        <a href="papeis.html" aria-current="page">Papéis</a>
+        <a class="breve" href="#" aria-disabled="true">Preparar</a>
+        <a class="breve" href="#" aria-disabled="true">Moderar</a>
+        <a class="breve" href="#" aria-disabled="true">Cartas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Grelha de Papéis</h1>
+    <p class="intro">
+      O <strong>valor</strong> é o número de equilíbrio da carta: positivo ajuda Jerusalém, negativo ajuda os inimigos.
+      Um baralho equilibrado soma perto de <strong>0</strong> (entre −2 e +2).
+      Valores com <span class="verificar" title="Por confirmar">?</span> ainda não foram confirmados numa carta impressa.
+    </p>
+
+    <section class="painel filtros" aria-label="Filtros">
+      <div class="linha" id="filtro-equipas" role="group" aria-label="Equipa"></div>
+      <div class="linha campos">
+        <label>Procurar <input type="search" id="filtro-texto" placeholder="Nome, personagem, papel original…"></label>
+        <label>Acorda
+          <select id="filtro-acorda"><option value="">Todos</option></select>
+        </label>
+        <label>Poder
+          <select id="filtro-tipo"><option value="">Todos</option></select>
+        </label>
+        <label>Jogadores
+          <input type="number" id="filtro-jogadores" min="5" max="30" placeholder="5–30" inputmode="numeric">
+        </label>
+      </div>
+      <p class="resumo" id="resumo" aria-live="polite"></p>
+    </section>
+
+    <div class="tabela-wrap">
+      <table class="grelha" id="grelha">
+        <thead>
+          <tr>
+            <th scope="col" data-ordenar="ordem" aria-sort="none"><button>#</button></th>
+            <th scope="col" data-ordenar="nome" aria-sort="none"><button>Papel</button></th>
+            <th scope="col" data-ordenar="equipa" aria-sort="none"><button>Equipa</button></th>
+            <th scope="col" data-ordenar="valor" aria-sort="none"><button>Valor</button></th>
+            <th scope="col" data-ordenar="noite" aria-sort="none"><button>Acorda</button></th>
+            <th scope="col">Poder</th>
+            <th scope="col" data-ordenar="aPartirDe" aria-sort="none"><button>Recomendado</button></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <h2>Ordem de chamada da noite</h2>
+    <p class="intro">Só são chamados os papéis em jogo. Chama sempre os papéis mortos ou ausentes com uma pausa, para não denunciar quem está em jogo.</p>
+    <ol class="ordem-noite" id="ordem-noite"></ol>
+  </main>
+
+  <footer>
+    <div class="wrap">Projeto de fãs, sem ligação à Bézier Games. Mecânicas baseadas em <em>Ultimate Werewolf: Ultimate Edition</em>.</div>
+  </footer>
+
+  <script type="module" src="js/ui/papeis.js"></script>
+</body>
+</html>
