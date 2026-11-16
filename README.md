@@ -11,7 +11,7 @@ Site estático em português de Portugal, pronto para o GitHub Pages — sem pas
 | Marco | Conteúdo | Estado |
 |---|---|---|
 | 1 | Lista de papéis convertidos + grelha de poder (`papeis.html`, [docs/PAPEIS.md](docs/PAPEIS.md)) | ✅ para revisão |
-| 2 | Modelo de cartas para imprimir (`cartas.html`) — ver [docs/IMAGENS.md](docs/IMAGENS.md) | por fazer |
+| 2 | Oficina de cartas em tamanho TCG, com modelos e prompts para o ComfyUI (`cartas.html`, [docs/IMAGENS.md](docs/IMAGENS.md)) | ✅ disponível |
 | 3 | Preparar partida: baralho equilibrado por n.º de jogadores | por fazer |
 | 4 | Moderar: guião da noite, amanhecer, votações, vitória | por fazer |
 | 5 | Versão *Uma Noite* (One Night) | futuro |
@@ -19,11 +19,13 @@ Site estático em português de Portugal, pronto para o GitHub Pages — sem pas
 ## Estrutura
 
 ```
-index.html, papeis.html     páginas
+index.html, papeis.html, cartas.html   páginas
 css/vendor/mistfold-1.0.0.css   sistema de design Mistfold (não editar)
-css/app.css, css/papeis.css  camada da aplicação, só com tokens --mf-*
+css/app.css, css/papeis.css, css/cartas.css   camada da aplicação, só com tokens --mf-*
 js/data/roles.js             fonte única de todos os papéis
 js/data/regras.js            regras da casa (votação a apontar)
+js/data/arte.js              descrições e prompts da arte de cada papel (ComfyUI)
+js/cartas/                   geometria das cartas, desenho em canvas, armazenamento local da arte
 js/ui/                       código de cada página
 js/vendor/mistfold-1.0.0.js  script do sistema (revelação dos cartões, títulos em WebGL)
 assets/roles/<id>.webp       imagens das cartas (fornecidas pelo autor)

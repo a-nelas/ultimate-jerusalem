@@ -54,15 +54,18 @@ body.mf { min-height: 100vh; }
 .mf .mf-field { display: flex; flex-direction: column; gap: 4px; }
 .mf .mf-field > span { font-size: var(--mf-caps); text-transform: uppercase; letter-spacing: 1px; color: var(--mf-ink-soft); }
 .mf .mf-field input,
-.mf .mf-field select {
+.mf .mf-field select,
+.mf .mf-field textarea {
   font-family: var(--mf-font-text); font-size: var(--mf-card-text); color: var(--mf-ink-strong);
   background: var(--mf-white); border: var(--mf-hair) solid var(--mf-line-dark);
   border-radius: var(--mf-radius); corner-shape: var(--mf-corner); padding: 7px 12px;
   box-shadow: var(--mf-shadow-field); transition: border-color var(--mf-dur), box-shadow var(--mf-dur);
 }
-.mf .mf-field input::placeholder { color: var(--mf-placeholder); }
+.mf .mf-field input::placeholder,
+.mf .mf-field textarea::placeholder { color: var(--mf-placeholder); }
 .mf .mf-field input:focus-visible,
-.mf .mf-field select:focus-visible { outline: var(--mf-focus) solid var(--mf-sage); outline-offset: 3px; border-color: var(--mf-sage); box-shadow: var(--mf-shadow-field-focus); }
+.mf .mf-field select:focus-visible,
+.mf .mf-field textarea:focus-visible { outline: var(--mf-focus) solid var(--mf-sage); outline-offset: 3px; border-color: var(--mf-sage); box-shadow: var(--mf-shadow-field-focus); }
 
 /* Lista numerada com numerais Cinzel */
 .mf .mf-numbered { list-style: none; counter-reset: mf-n; margin: 0; padding: 0; text-align: left; }

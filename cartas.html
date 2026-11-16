@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oficina de Cartas — Ultimate Jerusalém</title>
+  <meta name="description" content="Compõe e exporta as cartas de Ultimate Jerusalém em tamanho TCG, com modelos e prompts para gerar a arte no ComfyUI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Cinzel:wght@400..900&family=UnifrakturMaguntia&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Sistema de design: mistfold@1.0.0 -->
+  <link rel="stylesheet" href="css/vendor/mistfold-1.0.0.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/cartas.css">
+</head>
+<body class="mf">
+<svg id="mf-defs" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="mf-ig" gradientUnits="userSpaceOnUse" x1="2" y1="2" x2="22" y2="22">
+      <stop offset="0" style="stop-color:var(--mf-sage)"/><stop offset=".55" style="stop-color:var(--mf-blue)"/><stop offset="1" style="stop-color:var(--mf-violet)"/>
+    </linearGradient>
+  </defs>
+  <!-- lens with a helix inside -->
+  <symbol id="mf-i-lens" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5"/><path d="M14.8 14.8l5.4 5.4"/><path d="M7.3 7.6c1.8 1.3 3.6 1.3 5.4 0M7.3 12.4c1.8-1.3 3.6-1.3 5.4 0M8.7 8.7v2.6M11.3 8.7v2.6"/></symbol>
+  <!-- microscope -->
+  <symbol id="mf-i-scope" viewBox="0 0 24 24"><path d="M10 2.8l3 1.3-2.7 6.5-3-1.3z"/><path d="M8.6 10.6l-.8 1.9"/><path d="M13.6 7.2a6.3 6.3 0 0 1 2.2 10.6"/><path d="M4.8 20.6h14.4M9.2 17.6h6.6"/><circle cx="7.4" cy="14.3" r="1.1"/></symbol>
+  <!-- hexagon (compute rating) -->
+  <symbol id="mf-i-hex" viewBox="0 0 24 24"><path d="M12 2.8l8 4.6v9.2l-8 4.6-8-4.6V7.4z"/></symbol>
+  <!-- atom / foundation -->
+  <symbol id="mf-i-atom" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="9.5" ry="3.6"/><ellipse cx="12" cy="12" rx="9.5" ry="3.6" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9.5" ry="3.6" transform="rotate(-60 12 12)"/><circle cx="12" cy="12" r="1.3" fill="url(#mf-ig)" stroke="none"/></symbol>
+  <!-- folded manuscript / outputs -->
+  <symbol id="mf-i-folio" viewBox="0 0 24 24"><path d="M6 3.5h8.5l3.5 3.5v13.5H6z"/><path d="M14.5 3.5V7H18"/><path d="M9 11.5h6M9 14.5h6M9 17.5h3.5"/></symbol>
+  <!-- funnel / ingest -->
+  <symbol id="mf-i-funnel" viewBox="0 0 24 24"><path d="M3.8 4.5h16.4l-6.3 7.3v5.9l-3.8 2.8v-8.7z"/><path d="M7.5 8.2h9"/></symbol>
+  <!-- branching nodes / compose -->
+  <symbol id="mf-i-branch" viewBox="0 0 24 24"><circle cx="6" cy="5.5" r="2"/><circle cx="6" cy="18.5" r="2"/><circle cx="18" cy="12" r="2"/><path d="M6 7.5v9M7.9 6.2c5 .3 7.7 2.4 8.4 4.1M7.9 17.8c5-.3 7.7-2.4 8.4-4.1"/></symbol>
+  <!-- hexagon with spark / run -->
+  <symbol id="mf-i-surge" viewBox="0 0 24 24"><path d="M12 2.8l8 4.6v9.2l-8 4.6-8-4.6V7.4z"/><path d="M13.2 6.8L9.4 12.6h3.2l-1.6 4.6 3.9-5.9h-3.2z"/></symbol>
+  <!-- open codex / publish -->
+  <symbol id="mf-i-codex" viewBox="0 0 24 24"><path d="M12 6.4C9.8 4.9 6.8 4.4 3.6 4.9v13.4c3.2-.5 6.2 0 8.4 1.5 2.2-1.5 5.2-2 8.4-1.5V4.9c-3.2-.5-6.2 0-8.4 1.5zM12 6.4v13.4"/><path d="M6.2 9.2c1.4-.1 2.7.1 3.6.6M14.2 9.8c.9-.5 2.2-.7 3.6-.6"/></symbol>
+  <!-- envelope seal / access -->
+  <symbol id="mf-i-seal" viewBox="0 0 24 24"><path d="M3.5 6.5h17v11h-17z"/><path d="M3.5 6.8l8.5 6.4 8.5-6.4"/><circle cx="12" cy="15.6" r="2.1"/></symbol>
+</svg>
+
+<header class="mf-nav">
+  <div class="mf-nav-in">
+    <a href="index.html" class="mf-logo">Ultimate Jerusalém</a>
+    <nav class="mf-nav-links" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="papeis.html">Papéis</a>
+      <span class="mf-soon" title="Em breve">Preparar</span>
+      <span class="mf-soon" title="Em breve">Moderar</span>
+      <a href="cartas.html" aria-current="page">Cartas</a>
+    </nav>
+    <a href="papeis.html" class="mf-btn">Papéis</a>
+  </div>
+</header>
+
+<main class="mf-main">
+
+  <section class="mf-frame mf-hero">
+    <span class="mf-label">a oficina do escriba</span>
+    <h1><span class="mf-display">Oficina de Cartas</span></h1>
+    <span class="mf-subtitle">Compõe cada carta no tamanho de um jogo de cartas colecionáveis, pronta a imprimir.</span>
+    <div class="mf-rule" aria-hidden="true"></div>
+    <div class="mf-intro">
+      <svg class="mf-icon mf-intro-icon" aria-hidden="true"><use href="#mf-i-folio"/></svg>
+      <div class="mf-txt">
+        A Oficina desenha a moldura, o nome, a habilidade e a medalha de valor; tu geras apenas a <b>arte</b> da personagem no ComfyUI.
+        Descarrega o modelo e o prompt, gera a imagem, guarda-a e carrega-a aqui para a enquadrar.
+        As imagens carregadas ficam guardadas só neste navegador — nada é enviado para lado nenhum.
+      </div>
+    </div>
+  </section>
+
+  <section class="mf-frame mf-wide" aria-labelledby="t-bancada">
+    <span class="mf-label">a bancada</span>
+    <h2 class="mf-title" id="t-bancada">Compor a Carta</h2>
+    <div class="mf-rule" aria-hidden="true"></div>
+
+    <div class="oficina">
+      <form class="controlos" id="controlos" autocomplete="off">
+        <fieldset>
+          <legend>Papel</legend>
+          <label class="mf-field"><span>Carta</span><select id="papel"></select></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Texto da carta</legend>
+          <div class="campos">
+            <label class="mf-field"><span>Nome</span><input id="f-nome" maxlength="40"></label>
+            <label class="mf-field"><span>Personagem</span><input id="f-personagem" maxlength="60"></label>
+            <label class="mf-field"><span>Equipa</span><select id="f-equipa"></select></label>
+            <label class="mf-field"><span>Valor</span><input id="f-valor" type="number" min="-10" max="10" step="1"></label>
+            <label class="mf-field largo"><span>Habilidade</span><textarea id="f-habilidade" rows="4" maxlength="320"></textarea></label>
+            <label class="mf-field largo"><span>Referência bíblica</span><input id="f-ref" maxlength="40"></label>
+          </div>
+          <div class="botoes"><button type="button" class="mf-btn" id="repor-texto">Repor texto do papel</button></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Formato</legend>
+          <div class="campos">
+            <label class="mf-field largo"><span>Tamanho</span><select id="tamanho"></select></label>
+            <label class="mf-field" id="campo-larg" hidden><span>Largura (mm)</span><input id="larg" type="number" min="30" max="150" step="0.5"></label>
+            <label class="mf-field" id="campo-alt" hidden><span>Altura (mm)</span><input id="alt" type="number" min="40" max="200" step="0.5"></label>
+            <label class="mf-field"><span>Esquema</span><select id="esquema"></select></label>
+            <label class="mf-field"><span>Resolução</span><select id="dpi"></select></label>
+            <label class="mf-field"><span>Lado</span><select id="lado"><option value="frente">Frente</option><option value="verso">Verso</option></select></label>
+            <label class="mf-check"><input type="checkbox" id="sangria"> <span>Sangria de 3 mm (para a gráfica)</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Arte</legend>
+          <p class="origem" id="arte-origem" aria-live="polite"></p>
+          <div class="botoes">
+            <label class="mf-btn mf-solid" for="ficheiro">Carregar imagem…</label>
+            <input type="file" id="ficheiro" accept="image/png,image/jpeg,image/webp" class="escondido">
+            <button type="button" class="mf-btn" id="centrar">Centrar</button>
+            <button type="button" class="mf-btn" id="remover">Remover</button>
+          </div>
+          <label class="mf-field"><span>Zoom <output id="zoom-val">100%</output></span>
+            <input type="range" id="zoom" min="1" max="4" step="0.01" value="1"></label>
+          <p class="dica">Arrasta a imagem na pré-visualização para a enquadrar (ou usa as setas). Também podes largar um ficheiro sobre a carta ou colar com Ctrl+V.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Exportar</legend>
+          <p class="origem" id="dimensoes"></p>
+          <div class="botoes">
+            <button type="button" class="mf-btn mf-solid" id="exp-frente">Descarregar frente (PNG)</button>
+            <button type="button" class="mf-btn" id="exp-verso">Descarregar verso (PNG)</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <figure class="pre">
+        <canvas id="tela" tabindex="0" aria-label="Pré-visualização da carta. Arrasta ou usa as setas para enquadrar a arte."></canvas>
+        <figcaption id="tela-info"></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="mf-frame" aria-labelledby="t-comfy">
+    <span class="mf-label">o pincel</span>
+    <h2 class="mf-title" id="t-comfy">Gerar a Arte no ComfyUI</h2>
+    <div class="mf-rule" aria-hidden="true"></div>
+    <div class="mf-flow">
+      <div class="mf-step"><span class="mf-medal"><svg class="mf-icon" aria-hidden="true"><use href="#mf-i-folio"/></svg></span><b>Modelo</b><p>Descarrega o modelo, a máscara e o prompt.</p></div>
+      <div class="mf-step"><span class="mf-medal"><svg class="mf-icon" aria-hidden="true"><use href="#mf-i-lens"/></svg></span><b>Gerar</b><p>Gera no ComfyUI no tamanho sugerido.</p></div>
+      <div class="mf-step"><span class="mf-medal"><svg class="mf-icon" aria-hidden="true"><use href="#mf-i-codex"/></svg></span><b>Guardar</b><p>Grava a imagem com o nome indicado.</p></div>
+      <div class="mf-step"><span class="mf-medal"><svg class="mf-icon" aria-hidden="true"><use href="#mf-i-seal"/></svg></span><b>Compor</b><p>Carrega-a aqui, enquadra e descarrega.</p></div>
+    </div>
+    <div class="mf-fleuron" aria-hidden="true">❦</div>
+
+    <div class="comfy">
+      <dl class="ficha" id="ficha"></dl>
+      <label class="mf-field"><span>Descrição da personagem (inglês)</span>
+        <textarea id="descricao" rows="3"></textarea></label>
+      <label class="mf-field"><span>Prompt</span>
+        <textarea id="prompt" rows="5" readonly></textarea></label>
+      <label class="mf-field"><span>Prompt negativo</span>
+        <textarea id="negativo" rows="3" readonly></textarea></label>
+      <div class="botoes centro">
+        <button type="button" class="mf-btn mf-solid" id="copiar-prompt">Copiar prompt</button>
+        <button type="button" class="mf-btn" id="copiar-negativo">Copiar negativo</button>
+      </div>
+      <div class="botoes centro">
+        <button type="button" class="mf-btn" id="exp-modelo">Modelo (PNG transparente)</button>
+        <button type="button" class="mf-btn" id="exp-mascara">Máscara (PNG)</button>
+        <button type="button" class="mf-btn" id="exp-ficha">Ficha (.txt)</button>
+      </div>
+      <p class="estado" id="estado" aria-live="polite"></p>
+      <p class="dica">
+        <b>Modelo</b>: a carta completa com a área da arte transparente — serve de referência para a composição.
+        <b>Máscara</b>: branco onde vai a arte, preto no resto — para <i>inpainting</i>.
+        Gera de preferência só a arte, sem texto: os modelos de imagem estragam letras e acentos.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="mf-frame mf-finale">
+  <div class="mf-finale-foot">
+    <div class="mf-brand">
+      <a href="index.html" class="mf-logo">Ultimate Jerusalém</a>
+      <p>Assistente do Narrador para um jogo de dedução social de várias noites, na Cidade Santa.</p>
+    </div>
+    <div>
+      <h4>Ferramentas</h4>
+      <ul><li><a href="papeis.html">Papéis</a></li><li><a href="cartas.html">Cartas</a></li><li><span class="mf-soon">Preparar</span></li><li><span class="mf-soon">Moderar</span></li></ul>
+    </div>
+    <div>
+      <h4>Documentação</h4>
+      <ul><li><a href="docs/PAPEIS.md">Lista de papéis</a></li><li><a href="docs/IMAGENS.md">Guia das imagens</a></li><li><a href="README.md">Leia-me</a></li></ul>
+    </div>
+    <div>
+      <h4>Origem</h4>
+      <ul><li><a href="https://boardgamegeek.com/boardgame/38159" rel="noopener">Ultimate Werewolf</a></li><li><a href="https://beziergames.com" rel="noopener">Bézier Games</a></li></ul>
+    </div>
+  </div>
+  <div class="mf-finale-base">
+    <span>Projeto de fãs, sem ligação à Bézier Games. Mecânicas de <i>Ultimate Werewolf: Ultimate Edition</i> (2008).</span>
+  </div>
+  <div class="mf-finale-mark" aria-hidden="true"><canvas></canvas><span class="mf-mark-fallback">Jerusalém</span></div>
+</footer>
+
+<script type="module" src="js/ui/cartas.js"></script>
+<script src="js/vendor/mistfold-1.0.0.js" defer></script>
+</body>
+</html>
