@@ -4,14 +4,14 @@
 //   (positivo ajuda Jerusalém, negativo ajuda os inimigos).
 // `verificar: true` = valor ainda não confirmado numa carta impressa.
 
-/** Equipas e respetivas cores (usadas na grelha e nas cartas). */
+/** Equipas e respetivas cores (iguais aos tokens --mf-team-* de css/app.css; usadas nas cartas). */
 export const EQUIPAS = {
-  jerusalem:     { nome: 'Jerusalém',     cor: '#2f5d8a', descricao: 'O povo de Israel e os defensores da Cidade Santa. Vencem quando todos os inimigos forem descobertos.' },
-  filisteus:     { nome: 'Filisteus',     cor: '#a3352b', descricao: 'Infiltrados de Gate e Gaza. Vencem quando igualam em número os restantes jogadores.' },
-  babilonios:    { nome: 'Babilónios',    cor: '#6b3fa0', descricao: 'Agentes caldeus de Nabucodonosor. Inimigos tanto de Jerusalém como dos Filisteus.' },
-  independentes: { nome: 'Independentes', cor: '#6b6b6b', descricao: 'Jogam sozinhos, com uma condição de vitória própria.' },
-  flutuante:     { nome: 'Flutuante',     cor: '#2c7a7b', descricao: 'Começam numa equipa, mas podem mudar durante o jogo.' },
-  objeto:        { nome: 'Objeto',        cor: '#9a7b2f', descricao: 'Não é um papel: é um objeto passado entre jogadores.' },
+  jerusalem:     { nome: 'Jerusalém',     cor: '#4C6D7B', descricao: 'O povo de Israel e os defensores da Cidade Santa. Vencem quando todos os inimigos forem descobertos.' },
+  filisteus:     { nome: 'Filisteus',     cor: '#792E2E', descricao: 'Infiltrados de Gate e Gaza. Vencem quando igualam em número os restantes jogadores.' },
+  babilonios:    { nome: 'Babilónios',    cor: '#675A7C', descricao: 'Agentes caldeus de Nabucodonosor. Inimigos tanto de Jerusalém como dos Filisteus.' },
+  independentes: { nome: 'Independentes', cor: '#897A5D', descricao: 'Jogam sozinhos, com uma condição de vitória própria.' },
+  flutuante:     { nome: 'Flutuante',     cor: '#4E663E', descricao: 'Começam numa equipa, mas podem mudar durante o jogo.' },
+  objeto:        { nome: 'Objeto',        cor: '#85613A', descricao: 'Não é um papel: é um objeto passado entre jogadores.' },
 };
 
 /** Quando o papel acorda. */

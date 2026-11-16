@@ -17,7 +17,8 @@ const el = (tag, attrs = {}, ...filhos) => {
 const ORDEM_EQUIPAS = Object.keys(EQUIPAS);
 const VALOR_MAX = Math.max(...ROLES.map((r) => Math.abs(r.valor)));
 const PAPEIS = ROLES.filter((r) => r.id !== 'narrador').map((r, i) => ({ ...r, ordem: i + 1 }));
-const corEquipa = (eq) => `var(--t-${eq})`;
+const acento = (eq) => `--mf-accent:var(--mf-team-${eq})`;
+const marca = (eq) => el('span', { class: 'mf-dot', style: acento(eq), 'aria-hidden': 'true' });
 
 const estado = {
   equipas: new Set(),
@@ -46,8 +47,8 @@ const guardar = () => {
 function montarFiltros() {
   const caixa = $('#filtro-equipas');
   for (const [id, eq] of Object.entries(EQUIPAS)) {
-    const b = el('button', { class: 'chip', type: 'button', 'aria-pressed': 'false', 'data-equipa': id },
-      el('span', { class: 'ponto', style: `--c:${corEquipa(id)}` }), eq.nome);
+    const b = el('button', { class: 'mf-btn mf-chip', type: 'button', 'aria-pressed': 'false', 'data-equipa': id },
+      marca(id), eq.nome);
     b.title = eq.descricao;
     b.addEventListener('click', () => {
       estado.equipas.has(id) ? estado.equipas.delete(id) : estado.equipas.add(id);
@@ -115,8 +116,8 @@ function celValor(r) {
   const pct = (Math.abs(r.valor) / VALOR_MAX) * 50;
   const barra = el('i', {
     style: r.valor >= 0
-      ? `left:50%;width:${pct}%;background:var(--pos)`
-      : `right:50%;width:${pct}%;background:var(--neg)`,
+      ? `left:50%;width:${pct}%;background:var(--mf-pos)`
+      : `right:50%;width:${pct}%;background:var(--mf-neg)`,
   });
   const num = el('span', { class: `valor-num ${r.valor > 0 ? 'pos' : r.valor < 0 ? 'neg' : ''}` },
     r.valor > 0 ? `+${r.valor}` : r.valor < 0 ? `−${Math.abs(r.valor)}` : '0');
@@ -139,7 +140,7 @@ function linha(r) {
   const recomendado = n != null && r.recomendado.aPartirDe <= n && r.recomendado.max > 0;
   const tr = el('tr', {
     class: `papel${n != null ? (recomendado ? ' recomendado' : ' fora') : ''}`,
-    tabindex: '0', 'aria-expanded': String(estado.aberto === r.id), 'data-id': r.id,
+    tabindex: '0', 'aria-expanded': String(estado.aberto === r.id), 'data-id': r.id, style: acento(r.equipa),
   });
   const [rec1, rec2] = textoRecomendado(r);
   tr.append(
@@ -150,8 +151,7 @@ function linha(r) {
         el('div', { class: 'papel-nome' }, r.nome),
         el('div', { class: 'papel-sub' }, r.personagem),
         el('div', { class: 'papel-orig' }, `Original: ${r.original}`)))),
-    el('td', { class: 'c-equipa' }, el('span', { class: 'equipa-tag' },
-      el('span', { class: 'ponto', style: `--c:${corEquipa(r.equipa)}` }), EQUIPAS[r.equipa].nome)),
+    el('td', { class: 'c-equipa' }, el('span', { class: 'mf-team' }, marca(r.equipa), EQUIPAS[r.equipa].nome)),
     el('td', { class: 'c-valor' }, celValor(r)),
     el('td', { class: 'c-acorda', 'data-rotulo': 'Acorda' }, ACORDA[r.acorda]),
     el('td', { class: 'c-tipo' }, el('div', { class: 'tipos' }, r.tipo.map((t) => el('span', { class: 'tipo' }, TIPOS[t])))),
@@ -171,7 +171,7 @@ function detalhe(r) {
     el('dt', {}, 'Nota do Narrador'), el('dd', {}, r.notaModerador),
     el('dt', {}, 'Isaías vê'), el('dd', {}, r.profetaVe === 'filisteu' ? 'Filisteu' : 'Israelita'),
   );
-  return el('tr', { class: 'detalhe' }, el('td', { colspan: '7' }, dl));
+  return el('tr', { class: 'detalhe', style: acento(r.equipa) }, el('td', { colspan: '7' }, dl));
 }
 
 function resumo(lista) {
@@ -213,8 +213,8 @@ function ordemNoite() {
     const [p, ...outros] = papeis;
     const nome = outros.length ? `${p.nome} (com ${outros.map((o) => o.nome).join(' e ')})` : p.nome;
     ol.append(el('li', {},
-      el('span', { class: 'equipa-tag' }, el('span', { class: 'ponto', style: `--c:${corEquipa(p.equipa)}` }), nome),
-      ' ', el('span', { class: 'quando' }, `— ${ACORDA[p.acorda].toLowerCase()}`)));
+      el('span', { class: 'mf-team' }, marca(p.equipa), nome),
+      ' ', el('span', { class: 'mf-when' }, `— ${ACORDA[p.acorda].toLowerCase()}`)));
   }
 }
 
@@ -225,6 +225,15 @@ function votacao() {
   $('#votacao-papeis').append(...v.papeis.map((p) => el('li', {}, p)));
 }
 
+function estatisticas() {
+  const contar = (f) => PAPEIS.filter(f).length;
+  $('#st-papeis').textContent = PAPEIS.length;
+  $('#st-jerusalem').textContent = contar((r) => r.equipa === 'jerusalem');
+  $('#st-inimigos').textContent = contar((r) => ['filisteus', 'babilonios'].includes(r.equipa));
+  $('#st-noite').textContent = new Set(PAPEIS.filter((r) => r.ordemNoite != null).map((r) => r.ordemNoite)).size;
+}
+
+estatisticas();
 montarFiltros();
 render();
 ordemNoite();

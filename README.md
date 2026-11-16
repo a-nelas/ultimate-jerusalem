@@ -20,9 +20,12 @@ Site estático em português de Portugal, pronto para o GitHub Pages — sem pas
 
 ```
 index.html, papeis.html     páginas
-css/                         estilos
+css/vendor/mistfold-1.0.0.css   sistema de design Mistfold (não editar)
+css/app.css, css/papeis.css  camada da aplicação, só com tokens --mf-*
 js/data/roles.js             fonte única de todos os papéis
+js/data/regras.js            regras da casa (votação a apontar)
 js/ui/                       código de cada página
+js/vendor/mistfold-1.0.0.js  script do sistema (revelação dos cartões, títulos em WebGL)
 assets/roles/<id>.webp       imagens das cartas (fornecidas pelo autor)
 docs/                        documentação gerada a partir de roles.js
 tools/gerar-docs.mjs         gera docs/PAPEIS.md e docs/IMAGENS.md
@@ -50,6 +53,18 @@ npm run docs
 ```
 
 Depois de alterar `js/data/roles.js`, corre `npm run docs` para atualizar `docs/PAPEIS.md` e `docs/IMAGENS.md`.
+
+## Design
+
+O aspeto visual usa o sistema de design **Mistfold** (`mistfold@1.0.0`, InstaLanding), copiado para `css/vendor/` e
+`js/vendor/` com a versão fixada. Regras:
+
+- Usa sempre os tokens `var(--mf-…)`; um token novo fica em `css/app.css` com o mesmo esquema de nomes
+  (por exemplo `--mf-team-filisteus`).
+- Cores das equipas: Jerusalém `--mf-blue`, Filisteus `--mf-oxblood`, Babilónios `--mf-violet`,
+  Independentes `--mf-ochre`, Flutuante `--mf-moss`, Objeto `--mf-umber`.
+- Cada página inclui uma vez o `<svg id="mf-defs">` com o gradiente e os ícones.
+- Para atualizar o sistema, substitui os ficheiros em `vendor/` pela nova versão e muda o nome do ficheiro.
 
 ## Publicar no GitHub Pages
 

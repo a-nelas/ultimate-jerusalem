@@ -1,0 +1,80 @@
+/* Ultimate Jerusalém — camada da aplicação sobre o sistema Mistfold (mistfold@1.0.0).
+   Usa apenas tokens --mf-*; os tokens novos abaixo seguem o mesmo esquema de nomes. */
+:root {
+  /* Equipas → acentos do sistema */
+  --mf-team-jerusalem: var(--mf-blue);
+  --mf-team-filisteus: var(--mf-oxblood);
+  --mf-team-babilonios: var(--mf-violet);
+  --mf-team-independentes: var(--mf-ochre);
+  --mf-team-flutuante: var(--mf-moss);
+  --mf-team-objeto: var(--mf-umber);
+
+  /* Valor de equilíbrio */
+  --mf-pos: var(--mf-sage);
+  --mf-neg: var(--mf-oxblood);
+
+  /* Tokens em falta no sistema */
+  --mf-name-sm: 22px;      /* nome de papel em linha de tabela */
+  --mf-nav-h: 60px;        /* altura da barra fixa (para cabeçalhos colantes) */
+  --mf-gutter: 16px;       /* margem lateral da página */
+}
+
+body.mf { min-height: 100vh; }
+.mf-main { padding: var(--mf-frame-gap) var(--mf-gutter) 0; }
+
+/* Navegação */
+.mf .mf-nav-links a[aria-current="page"] { color: var(--mf-sage); }
+.mf .mf-soon { color: var(--mf-ink-soft); cursor: default; }
+.mf .mf-finale-foot .mf-soon:after { content: " · em breve"; text-transform: none; letter-spacing: 0; font-style: italic; }
+@media (max-width: 480px) {
+  .mf .mf-logo { font-size: var(--mf-name-sm); }
+  .mf .mf-nav .mf-btn { padding: 8px 12px; letter-spacing: 1px; }
+}
+
+/* Moldura larga para conteúdo tabular */
+.mf .mf-frame.mf-wide { width: var(--mf-finale-w); }
+
+/* Ações dentro de um cartão */
+.mf .mf-card-info .mf-actions { justify-content: flex-start; margin-top: 18px; }
+
+/* Marca de equipa: a estrela de quatro pontas no acento da equipa */
+.mf .mf-dot {
+  display: inline-block; flex: none; width: 10px; height: 10px; background: var(--mf-accent, var(--mf-sage));
+  -webkit-mask: var(--mf-star) center/contain no-repeat; mask: var(--mf-star) center/contain no-repeat;
+}
+.mf .mf-team { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
+
+/* Botões-alternador (filtros) */
+.mf .mf-btn.mf-chip { font-size: var(--mf-caps); letter-spacing: 1px; padding: 6px 12px; border-color: var(--mf-line-dark); color: var(--mf-ink); background: var(--mf-white); }
+.mf .mf-btn.mf-chip:hover { border-color: var(--mf-sage); color: var(--mf-sage); background: var(--mf-white); }
+.mf .mf-btn.mf-chip[aria-pressed="true"] { background: var(--mf-sage); border-color: var(--mf-sage); color: var(--mf-white); box-shadow: var(--mf-shadow-btn); }
+.mf .mf-btn.mf-chip[aria-pressed="true"] .mf-dot { background: var(--mf-white); }
+
+/* Campos */
+.mf .mf-field { display: flex; flex-direction: column; gap: 4px; }
+.mf .mf-field > span { font-size: var(--mf-caps); text-transform: uppercase; letter-spacing: 1px; color: var(--mf-ink-soft); }
+.mf .mf-field input,
+.mf .mf-field select {
+  font-family: var(--mf-font-text); font-size: var(--mf-card-text); color: var(--mf-ink-strong);
+  background: var(--mf-white); border: var(--mf-hair) solid var(--mf-line-dark);
+  border-radius: var(--mf-radius); corner-shape: var(--mf-corner); padding: 7px 12px;
+  box-shadow: var(--mf-shadow-field); transition: border-color var(--mf-dur), box-shadow var(--mf-dur);
+}
+.mf .mf-field input::placeholder { color: var(--mf-placeholder); }
+.mf .mf-field input:focus-visible,
+.mf .mf-field select:focus-visible { outline: var(--mf-focus) solid var(--mf-sage); outline-offset: 3px; border-color: var(--mf-sage); box-shadow: var(--mf-shadow-field-focus); }
+
+/* Lista numerada com numerais Cinzel */
+.mf .mf-numbered { list-style: none; counter-reset: mf-n; margin: 0; padding: 0; text-align: left; }
+.mf .mf-numbered > li { counter-increment: mf-n; position: relative; padding: 6px 0 6px 40px; border-bottom: var(--mf-hair) solid var(--mf-line-faint); }
+.mf .mf-numbered > li:before {
+  content: counter(mf-n); position: absolute; left: 0; top: 6px; width: 28px; text-align: right;
+  font-family: var(--mf-font-numeral); font-weight: 600; color: var(--mf-ink-strong);
+}
+.mf .mf-numbered .mf-when { color: var(--mf-ink-soft); font-style: italic; font-size: var(--mf-small); }
+.mf .mf-numbered.mf-cols { columns: 2 260px; column-gap: 32px; }
+.mf .mf-numbered.mf-cols > li { break-inside: avoid; }
+.mf .mf-block { width: var(--mf-flow-w); max-width: 100%; margin: 0 auto; }
+
+/* Rodapé: texto que não é ligação */
+.mf .mf-finale-foot li .mf-soon { font-size: var(--mf-foot-text); }
