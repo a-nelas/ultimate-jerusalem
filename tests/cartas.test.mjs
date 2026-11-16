@@ -55,3 +55,15 @@ test('todos os papéis têm descrição de arte e prompt', () => {
     assert.ok(prompt.includes('no text'), r.id);
   }
 });
+
+test('a medalha fica centrada no canto: à mesma distância da margem esquerda e da de baixo', () => {
+  for (const t of Object.values(TAMANHOS)) {
+    const g = geometria({ mm: t.mm, esquema: 'janela' });
+    const esq = g.medalha.cx - (g.b + g.borda);
+    const baixo = g.b + g.h - g.borda - g.medalha.cy;
+    assert.ok(Math.abs(esq - baixo) <= 1, `${t.nome}: ${esq} vs ${baixo}`);
+    assert.ok(esq - g.medalha.r > g.w * 0.03, `${t.nome}: medalha demasiado perto da margem`);
+    const c = geometria({ mm: t.mm, esquema: 'completa' });
+    assert.ok(Math.abs((c.medalha.cx - c.painel.x) - (c.painel.y + c.painel.h - c.medalha.cy)) <= 1, t.nome);
+  }
+});

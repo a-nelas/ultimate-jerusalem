@@ -44,7 +44,8 @@ export function geometria({ mm, dpi = 300, sangria = true, esquema = 'janela' })
     const sub = rect(painel.x + pin, painel.y + 0.02 * h, painel.w - 2 * pin, 0.045 * h);
     const fleuronY = sub.y + sub.h + 0.015 * h;
     const medR = 0.058 * w;
-    const rodapeY = painel.y + painel.h - medR - 0.012 * h;
+    const canto = 0.088 * w; // centro da medalha à mesma distância das duas margens do painel
+    const rodapeY = painel.y + painel.h - canto;
     const texto = rect(painel.x + pin, fleuronY + 0.018 * h, painel.w - 2 * pin, rodapeY - medR - 0.045 * h - (fleuronY + 0.018 * h));
     return {
       ...g, borda, raio: 0.045 * w,
@@ -53,8 +54,8 @@ export function geometria({ mm, dpi = 300, sangria = true, esquema = 'janela' })
       nome: rect(placa.x + 0.03 * w, placa.y, placa.w - 0.06 * w, placa.h),
       sub, fleuronY: r(fleuronY), texto,
       ref: rect(texto.x, texto.y + texto.h + 0.006 * h, texto.w, 0.032 * h),
-      medalha: { cx: r(painel.x + pin + medR * 0.6), cy: r(rodapeY), r: r(medR) },
-      equipa: { x: r(painel.x + painel.w - pin), y: r(rodapeY) },
+      medalha: { cx: r(painel.x + canto), cy: r(rodapeY), r: r(medR) },
+      equipa: { x: r(painel.x + painel.w - (canto - medR)), y: r(rodapeY) },
     };
   }
 
@@ -66,15 +67,16 @@ export function geometria({ mm, dpi = 300, sangria = true, esquema = 'janela' })
   const sub = rect(b + ins, arte.y + arte.h + 0.012 * h, w - 2 * ins, 0.05 * h);
   const fleuronY = sub.y + sub.h + 0.012 * h;
   const medR = 0.06 * w;
-  const rodapeY = b + h - borda - 0.052 * h;
+  const canto = 0.105 * w; // centro da medalha à mesma distância da margem esquerda e da de baixo
+  const rodapeY = b + h - borda - canto;
   const textoY = fleuronY + 0.02 * h;
-  const texto = rect(b + ins + 0.02 * w, textoY, w - 2 * ins - 0.04 * w, rodapeY - medR - 0.045 * h - textoY);
+  const texto = rect(b + ins + 0.02 * w, textoY, w - 2 * ins - 0.04 * w, rodapeY - medR - 0.04 * h - textoY);
   return {
     ...g, borda, raio: 0.05 * w,
     arte, nome, sub, fleuronY: r(fleuronY), texto,
     ref: rect(texto.x, texto.y + texto.h + 0.006 * h, texto.w, 0.032 * h),
-    medalha: { cx: r(b + borda + 0.092 * w), cy: r(rodapeY), r: r(medR) },
-    equipa: { x: r(b + w - borda - 0.05 * w), y: r(rodapeY) },
+    medalha: { cx: r(b + borda + canto), cy: r(rodapeY), r: r(medR) },
+    equipa: { x: r(b + w - borda - (canto - medR)), y: r(rodapeY) },
   };
 }
 
