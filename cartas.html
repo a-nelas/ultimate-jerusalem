@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Oficina de Cartas · Ultimate Jerusalém</title>
-  <meta name="description" content="Compõe e exporta as cartas de Ultimate Jerusalém em tamanho TCG, com modelos e prompts para gerar a arte no ComfyUI.">
+  <meta name="description" content="Compõe e exporta as cartas de Ultimate Jerusalém em tamanho TCG, com modelos e prompts para gerar a arte.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Cinzel:wght@400..900&family=UnifrakturMaguntia&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -66,7 +66,7 @@
     <div class="mf-intro">
       <svg class="mf-icon mf-intro-icon" aria-hidden="true"><use href="#mf-i-folio"/></svg>
       <div class="mf-txt">
-        A Oficina desenha a moldura, o nome, a habilidade e a medalha de valor; tu geras apenas a <b>arte</b> da personagem no ComfyUI.
+        A Oficina desenha a moldura, o nome, a habilidade e a medalha de valor; tu geras apenas a <b>arte</b> da personagem, com o gerador de imagens que preferires.
         Descarrega o modelo e o prompt, gera a imagem, guarda-a e carrega-a aqui para a enquadrar.
         As imagens carregadas ficam guardadas só neste navegador: nada é enviado para lado nenhum.
       </div>
@@ -107,7 +107,6 @@
             <label class="mf-field"><span>Esquema</span><select id="esquema"></select></label>
             <label class="mf-field"><span>Resolução</span><select id="dpi"></select></label>
             <label class="mf-field"><span>Lado</span><select id="lado"><option value="frente">Frente</option><option value="verso">Verso</option></select></label>
-            <label class="mf-check"><input type="checkbox" id="sangria"> <span>Sangria de 3 mm (para a gráfica)</span></label>
           </div>
         </fieldset>
 
@@ -142,19 +141,11 @@
     </div>
   </section>
 
-  <section class="mf-frame" aria-labelledby="t-comfy">
+  <section class="mf-frame" aria-labelledby="t-gerar">
     <span class="mf-label">o pincel</span>
-    <h2 class="mf-title" id="t-comfy">Gerar a Arte no ComfyUI</h2>
+    <h2 class="mf-title" id="t-gerar">Gerar a Arte</h2>
     <div class="mf-rule" aria-hidden="true"></div>
-    <div class="mf-flow">
-      <div class="mf-step"><span class="mf-medal"><svg class="mf-icon" aria-hidden="true"><use href="#mf-i-folio"/></svg></span><b>Modelo</b><p>Descarrega o modelo, a máscara e o prompt.</p></div>
-      <div class="mf-step"><span class="mf-medal"><svg class="mf-icon" aria-hidden="true"><use href="#mf-i-lens"/></svg></span><b>Gerar</b><p>Gera no ComfyUI no tamanho sugerido.</p></div>
-      <div class="mf-step"><span class="mf-medal"><svg class="mf-icon" aria-hidden="true"><use href="#mf-i-codex"/></svg></span><b>Guardar</b><p>Grava a imagem com o nome indicado.</p></div>
-      <div class="mf-step"><span class="mf-medal"><svg class="mf-icon" aria-hidden="true"><use href="#mf-i-seal"/></svg></span><b>Compor</b><p>Carrega-a aqui, enquadra e descarrega.</p></div>
-    </div>
-    <div class="mf-fleuron" aria-hidden="true">❦</div>
-
-    <div class="comfy">
+    <div class="gerar">
       <dl class="ficha" id="ficha"></dl>
       <label class="mf-field"><span>Descrição da personagem (inglês)</span>
         <textarea id="descricao" rows="3"></textarea></label>
@@ -169,7 +160,6 @@
       <div class="botoes centro">
         <button type="button" class="mf-btn" id="exp-modelo">Modelo (PNG transparente)</button>
         <button type="button" class="mf-btn" id="exp-mascara">Máscara (PNG)</button>
-        <button type="button" class="mf-btn" id="exp-ficha">Ficha (.txt)</button>
       </div>
       <p class="estado" id="estado" aria-live="polite"></p>
       <p class="dica">

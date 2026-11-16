@@ -11,7 +11,7 @@ Site estático em português de Portugal, pronto para o GitHub Pages, sem passo 
 | Marco | Conteúdo | Estado |
 |---|---|---|
 | 1 | Lista de papéis convertidos + grelha de poder (`papeis.html`, [docs/PAPEIS.md](docs/PAPEIS.md)) | ✅ para revisão |
-| 2 | Oficina de cartas em tamanho TCG, com modelos e prompts para o ComfyUI (`cartas.html`, [docs/IMAGENS.md](docs/IMAGENS.md)) | ✅ disponível |
+| 2 | Oficina de cartas em tamanho TCG, com modelos e prompts para gerar a arte (`cartas.html`, [docs/IMAGENS.md](docs/IMAGENS.md)) | ✅ disponível |
 | 3 | Preparar partida: baralho equilibrado por n.º de jogadores | por fazer |
 | 4 | Moderar: guião da noite, amanhecer, votações, vitória | por fazer |
 | 5 | Versão *Uma Noite* (One Night) | futuro |
@@ -24,13 +24,14 @@ css/vendor/mistfold-1.0.0.css   sistema de design Mistfold (não editar)
 css/app.css, css/papeis.css, css/cartas.css   camada da aplicação, só com tokens --mf-*
 js/data/roles.js             fonte única de todas as personagens
 js/data/regras.js            regras da casa (votação a apontar)
-js/data/arte.js              descrições e prompts da arte de cada personagem (ComfyUI)
+js/data/arte.js              descrições e prompts da arte de cada personagem
 js/cartas/                   geometria das cartas, desenho em canvas, armazenamento local da arte
 js/ui/                       código de cada página
 js/vendor/mistfold-1.0.0.js  script do sistema (revelação dos cartões, títulos em WebGL)
-assets/roles/<id>.webp       imagens das cartas (fornecidas pelo autor)
+assets/roles/<id>.png         arte das personagens (fornecida pelo autor); mini/ tem as miniaturas
 docs/                        documentação gerada a partir de roles.js
 tools/gerar-docs.mjs         gera docs/PAPEIS.md e docs/IMAGENS.md
+tools/imagens.py             miniaturas e lista das imagens (js/data/imagens.js)
 tests/                       testes (node --test)
 ```
 
@@ -55,6 +56,9 @@ npm run docs
 ```
 
 Depois de alterar `js/data/roles.js`, corre `npm run docs` para atualizar `docs/PAPEIS.md` e `docs/IMAGENS.md`.
+
+Depois de juntar ou trocar imagens em `assets/roles/`, corre `npm run imagens` (Python com Pillow): cria as miniaturas
+leves da grelha e atualiza `js/data/imagens.js`, a lista que evita pedidos a imagens que não existem.
 
 ## Design
 

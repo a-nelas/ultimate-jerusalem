@@ -1,25 +1,16 @@
-// Imagem de um papel, com recurso: .webp → .png → .jpg → placeholder.
-// O resultado é memorizado por id, para não repetir pedidos 404 a cada redesenho.
-const EXTENSOES = ['webp', 'png', 'jpg'];
+// Miniatura de uma personagem para a grelha. Só pede imagens que existem (ver js/data/imagens.js),
+// em versão leve, e só quando a linha se aproxima do ecrã.
+import { IMAGENS } from '../data/imagens.js';
+
 export const PLACEHOLDER = 'assets/placeholder.svg';
-const resolvidas = new Map(); // id → url final
 
 export function imagemPapel(id, alt = '') {
   const img = document.createElement('img');
   img.alt = alt;
+  img.width = 44;
+  img.height = 62;
+  img.loading = 'lazy';
   img.decoding = 'async';
-  if (resolvidas.has(id)) { img.src = resolvidas.get(id); return img; }
-
-  let i = 0;
-  const url = () => `assets/roles/${id}.${EXTENSOES[i]}`;
-  img.src = url();
-  img.addEventListener('load', () => resolvidas.set(id, img.src), { once: true });
-  img.addEventListener('error', function tentar() {
-    i += 1;
-    if (i < EXTENSOES.length) { img.src = url(); return; }
-    img.removeEventListener('error', tentar);
-    resolvidas.set(id, PLACEHOLDER);
-    img.src = PLACEHOLDER;
-  });
+  img.src = IMAGENS[id]?.mini ?? PLACEHOLDER;
   return img;
 }

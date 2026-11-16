@@ -22,7 +22,7 @@ export function lerTema(raiz = document.documentElement) {
 /** Garante que as fontes estão carregadas antes de desenhar texto no canvas. */
 export async function carregarFontes(t) {
   if (!document.fonts) return;
-  const amostra = 'Jerusalém ❦ 0123';
+  const amostra = 'Jerusalém 0123';
   await Promise.race([
     Promise.all([
       document.fonts.load(`900 40px ${t.fontes.gotica}`, amostra),
@@ -230,21 +230,14 @@ export function desenharFrente(ctx, g, d, t, { arte = null, corte = {}, modo = '
   linhaAjustada(ctx, d.personagem, g.sub.x + g.sub.w / 2, g.sub.y + g.sub.h / 2, g.sub.w,
     { fonte: t.fontes.texto, tamanho: g.sub.h * 0.62, cor: t.ink, estilo: 'italic' });
 
-  // Floreado ❦ entre filetes que se desvanecem
-  const fy = g.fleuronY, fcx = g.b + g.w / 2, fl = g.texto.w * 0.34;
-  for (const lado of [-1, 1]) {
-    const x0 = fcx + lado * w * 0.035, x1 = fcx + lado * (w * 0.035 + fl);
-    const gr = ctx.createLinearGradient(x0, 0, x1, 0);
-    gr.addColorStop(0, t.sage);
-    gr.addColorStop(1, 'rgba(76,114,100,0)');
-    ctx.fillStyle = gr;
-    ctx.fillRect(Math.min(x0, x1), fy - Math.max(0.5, w * 0.0012), Math.abs(x1 - x0), Math.max(1, w * 0.0025));
-  }
-  ctx.font = `${w * 0.045}px ${t.fontes.texto}, "Segoe UI Symbol", "DejaVu Sans", serif`;
-  ctx.fillStyle = t.sage;
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  ctx.fillText('❦', fcx, fy);
+  // Filete que se desvanece nas pontas, entre o subtítulo e a habilidade
+  const fy = g.fleuronY, fcx = g.b + g.w / 2, fl = g.texto.w * 0.36;
+  const gr = ctx.createLinearGradient(fcx - fl, 0, fcx + fl, 0);
+  gr.addColorStop(0, 'rgba(76,114,100,0)');
+  gr.addColorStop(0.5, t.sage);
+  gr.addColorStop(1, 'rgba(76,114,100,0)');
+  ctx.fillStyle = gr;
+  ctx.fillRect(fcx - fl, fy - Math.max(0.5, w * 0.0012), 2 * fl, Math.max(1, w * 0.0025));
 
   // Habilidade
   textoNaCaixa(ctx, d.habilidade, g.texto,
@@ -313,9 +306,6 @@ export function desenharVerso(ctx, g, t) {
   ctx.lineWidth = Math.max(1, w * 0.0025);
   ctx.strokeStyle = t['line-dark'];
   ctx.stroke();
-  for (const [ex, ey] of [[x + ins * 2, y + ins * 2], [x + fw - ins * 2, y + ins * 2], [x + ins * 2, y + fh - ins * 2], [x + fw - ins * 2, y + fh - ins * 2]]) {
-    estrela(ctx, ex, ey, w * 0.045, t.sage);
-  }
 
   // muralha ameada, discreta, em baixo
   ctx.save();
@@ -333,14 +323,6 @@ export function desenharVerso(ctx, g, t) {
     ctx.lineTo(ax + ameia * 2, baseY);
   }
   ctx.lineTo(x + fw, b + h);
-  ctx.closePath();
-  ctx.fill();
-  ctx.fillStyle = 'rgba(76,114,100,.18)';
-  ctx.beginPath();
-  ctx.moveTo(b + w / 2 - w * 0.07, b + h);
-  ctx.lineTo(b + w / 2 - w * 0.07, baseY + alt * 0.1);
-  ctx.arc(b + w / 2, baseY + alt * 0.1, w * 0.07, Math.PI, 0);
-  ctx.lineTo(b + w / 2 + w * 0.07, b + h);
   ctx.closePath();
   ctx.fill();
   ctx.restore();
@@ -361,9 +343,6 @@ export function desenharVerso(ctx, g, t) {
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillText('Jerusalém', cx, cy + h * 0.02);
-  ctx.font = `${w * 0.07}px ${t.fontes.texto}, "Segoe UI Symbol", serif`;
-  ctx.fillStyle = t.sage;
-  ctx.fillText('❦', cx, cy + h * 0.13);
 }
 
 /** Máscara para inpainting: branco onde vai a arte, preto no resto. */

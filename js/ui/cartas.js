@@ -3,15 +3,16 @@ import { ARTE, NEGATIVO, promptPara } from '../data/arte.js';
 import { TAMANHOS, ESQUEMAS, RESOLUCOES, SANGRIA_MM, geometria, proporcao, sugestaoGeracao, mmParaPx } from '../cartas/formatos.js';
 import { lerTema, carregarFontes, desenharFrente, desenharVerso, desenharMascara, enquadrar } from '../cartas/render.js';
 import { lerArte, guardarArte, apagarArte, listarArte, lerJSON, guardarJSON } from '../cartas/armazem.js';
+import { IMAGENS } from '../data/imagens.js';
 
 const $ = (s) => document.querySelector(s);
 const PREFS = 'uj:cartas:prefs';
 const TEXTOS = 'uj:cartas:textos';
 const PERSONALIZADA = 'personalizada';
-const DPI_PREVISUALIZACAO = 300;
+const DPI_MAX_PREVISUALIZACAO = 300;
 
 const prefs = {
-  id: 'isaias', tamanho: 'padrao', mm: [63, 88], dpi: 300, sangria: true, esquema: 'janela', lado: 'frente',
+  id: 'isaias', tamanho: 'padrao', mm: [63, 88], dpi: 300, esquema: 'janela', lado: 'frente',
   ...lerJSON(PREFS, {}),
 };
 const textos = lerJSON(TEXTOS, {});
@@ -34,7 +35,7 @@ function dados() {
   return d;
 }
 const mmAtual = () => (prefs.tamanho === 'personalizado' ? prefs.mm : TAMANHOS[prefs.tamanho].mm);
-const geo = (dpi) => geometria({ mm: mmAtual(), dpi, sangria: prefs.sangria, esquema: prefs.esquema });
+const geo = (dpi) => geometria({ mm: mmAtual(), dpi, sangria: true, esquema: prefs.esquema });
 
 // ── controlos ──
 async function montarControlos() {
@@ -83,7 +84,6 @@ function preencherFormulario() {
   $('#esquema').value = prefs.esquema;
   $('#dpi').value = String(prefs.dpi);
   $('#lado').value = prefs.lado;
-  $('#sangria').checked = prefs.sangria;
 }
 
 function lerFormulario() {
@@ -109,7 +109,6 @@ function lerFormato() {
   prefs.esquema = $('#esquema').value;
   prefs.dpi = Number($('#dpi').value) || 300;
   prefs.lado = $('#lado').value;
-  prefs.sangria = $('#sangria').checked;
   $('#campo-larg').hidden = $('#campo-alt').hidden = prefs.tamanho !== 'personalizado';
   guardarJSON(PREFS, prefs);
 }
@@ -124,14 +123,16 @@ function imagemDeBlob(blob) {
     img.src = url;
   });
 }
+/** Arte do projeto (assets/roles/), só se existir: sem pedidos a ficheiros em falta. */
 function imagemDoProjeto(id) {
+  const caminho = IMAGENS[id]?.arte;
+  if (!caminho) return Promise.resolve(null);
   return new Promise((res) => {
-    const exts = ['webp', 'png', 'jpg'];
-    let i = 0;
     const img = new Image();
-    img.onload = () => res({ img, nome: `assets/roles/${id}.${exts[i]}` });
-    img.onerror = () => { i += 1; if (i < exts.length) img.src = `assets/roles/${id}.${exts[i]}`; else res(null); };
-    img.src = `assets/roles/${id}.${exts[i]}`;
+    img.decoding = 'async';
+    img.onload = () => res({ img, nome: caminho });
+    img.onerror = () => res(null);
+    img.src = caminho;
   });
 }
 
@@ -188,7 +189,7 @@ function atualizarArteUI() {
   const o = $('#arte-origem');
   if (arte.origem === 'navegador') o.innerHTML = `Imagem guardada neste navegador: <code></code>`;
   else if (arte.origem === 'projeto') o.innerHTML = `Imagem do projeto: <code></code>`;
-  else o.textContent = 'Ainda sem imagem. Carrega a arte gerada no ComfyUI.';
+  else o.textContent = 'Ainda sem imagem. Carrega a arte da personagem.';
   if (arte.origem) o.querySelector('code').textContent = arte.nome;
   $('#remover').disabled = arte.origem !== 'navegador';
   $('#centrar').disabled = $('#zoom').disabled = !arte.img;
@@ -198,10 +199,24 @@ function atualizarArteUI() {
 }
 
 // ── desenho ──
+/** Resolução da pré-visualização: a que o ecrã mostra de facto (a exportação usa sempre a escolhida). */
+function dpiPrevisualizacao(tela) {
+  const largura = tela.getBoundingClientRect().width;
+  if (!largura) return DPI_MAX_PREVISUALIZACAO;
+  const pol = (mmAtual()[0] + 6) / 25.4;
+  return Math.max(96, Math.min(DPI_MAX_PREVISUALIZACAO, Math.ceil((largura * (window.devicePixelRatio || 1)) / pol)));
+}
+
+let pedido = 0;
+/** Agenda um desenho para o próximo fotograma (vários pedidos seguidos dão um só desenho). */
 function desenhar() {
+  if (!pedido) pedido = requestAnimationFrame(() => { pedido = 0; desenharJa(); });
+}
+
+function desenharJa() {
   if (!tema) return;
   const tela = $('#tela');
-  geoPrev = geo(DPI_PREVISUALIZACAO);
+  geoPrev = geo(dpiPrevisualizacao(tela));
   tela.width = geoPrev.W;
   tela.height = geoPrev.H;
   const ctx = tela.getContext('2d');
@@ -216,7 +231,7 @@ function desenhar() {
 function atualizarInfo() {
   const [wmm, hmm] = mmAtual();
   const g = geo(prefs.dpi);
-  const comSangria = prefs.sangria ? ` + ${SANGRIA_MM} mm de sangria → ${g.W} × ${g.H} px` : '';
+  const comSangria = ` + ${SANGRIA_MM} mm de sangria → ${g.W} × ${g.H} px`;
   $('#tela-info').textContent = `${prefs.lado === 'verso' ? 'Verso' : 'Frente'} · ${wmm} × ${hmm} mm`;
   $('#dimensoes').textContent = `${wmm} × ${hmm} mm a ${prefs.dpi} dpi = ${mmParaPx(wmm, prefs.dpi)} × ${mmParaPx(hmm, prefs.dpi)} px${comSangria}.`;
 
@@ -227,11 +242,10 @@ function atualizarInfo() {
   const esc = (x) => String(x).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   const linhas = [
     ['Personagem', esc(d.nome)],
-    ['Guardar como', `<code>assets/roles/${id}.webp</code> (ou .png / .jpg)`],
+    ['Guardar como', `<code>assets/roles/${id}.png</code> (ou .webp / .jpg), e depois <code>npm run imagens</code>`],
     ['Área da arte', `${g.arte.w} × ${g.arte.h} px a ${prefs.dpi} dpi${prefs.esquema === 'completa' ? ' (carta inteira, com sangria)' : ''}`],
     ['Proporção', `${p.toFixed(2).replace('.', ',')} : 1`],
-    ['Gerar em SDXL', `${s.sdxl[0]} × ${s.sdxl[1]} px`],
-    ['Gerar em Flux', `${s.flux[0]} × ${s.flux[1]} px`],
+    ['Gerar em', `${s[0]} × ${s[1]} px`],
     ['Depois', 'aumenta a resolução (upscale) até pelo menos a área da arte'],
   ];
   $('#ficha').innerHTML = linhas.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('');
@@ -242,7 +256,7 @@ function atualizarInfo() {
 // ── exportação ──
 function nomeBase() {
   const tam = prefs.tamanho === 'personalizado' ? `${prefs.mm[0]}x${prefs.mm[1]}mm` : prefs.tamanho;
-  return `${tam}${prefs.sangria ? '-sangria' : ''}-${prefs.dpi}dpi`;
+  return `${tam}-${prefs.dpi}dpi`;
 }
 function descarregar(canvasOuBlob, nome) {
   const ir = (blob) => {
@@ -270,30 +284,6 @@ async function exportar(tipo) {
   if (tipo === 'modelo') { desenharFrente(ctx, g, dados(), tema, { modo: 'modelo' }); descarregar(c, `${id}-${prefs.esquema}-${nomeBase()}-modelo.png`); }
   if (tipo === 'mascara') { desenharMascara(ctx, g); descarregar(c, `${id}-${prefs.esquema}-${nomeBase()}-mascara.png`); }
 }
-function exportarFicha() {
-  const d = dados();
-  const g = geo(prefs.dpi);
-  const s = sugestaoGeracao(proporcao(g));
-  const txt = [
-    `Ultimate Jerusalém · ficha de arte para o ComfyUI`,
-    ``,
-    `Personagem: ${d.nome} (${d.personagem})`,
-    `Equipa: ${d.equipaNome}`,
-    `Guardar como: assets/roles/${prefs.id}.webp`,
-    `Carta: ${mmAtual().join(' × ')} mm, ${ESQUEMAS[prefs.esquema]}`,
-    `Área da arte: ${g.arte.w} × ${g.arte.h} px a ${prefs.dpi} dpi (proporção ${proporcao(g).toFixed(3)} : 1)`,
-    `Tamanho de geração sugerido: SDXL ${s.sdxl.join(' × ')} · Flux ${s.flux.join(' × ')}`,
-    ``,
-    `PROMPT`,
-    $('#prompt').value,
-    ``,
-    `PROMPT NEGATIVO`,
-    NEGATIVO,
-    ``,
-  ].join('\n');
-  descarregar(new Blob([txt], { type: 'text/plain;charset=utf-8' }), `${prefs.id}-comfyui.txt`);
-}
-
 let avisoT;
 function aviso(msg) {
   $('#estado').textContent = msg;
@@ -333,7 +323,7 @@ function ligarEventos() {
     preencherFormulario();
     desenhar();
   });
-  for (const s of ['#tamanho', '#larg', '#alt', '#esquema', '#dpi', '#lado', '#sangria']) {
+  for (const s of ['#tamanho', '#larg', '#alt', '#esquema', '#dpi', '#lado']) {
     $(s).addEventListener('change', () => { lerFormato(); atualizarArteUI(); desenhar(); });
   }
   $('#ficheiro').addEventListener('change', (e) => { definirArte(e.target.files[0]); e.target.value = ''; });
@@ -397,7 +387,6 @@ function ligarEventos() {
   $('#exp-verso').addEventListener('click', () => exportar('verso'));
   $('#exp-modelo').addEventListener('click', () => exportar('modelo'));
   $('#exp-mascara').addEventListener('click', () => exportar('mascara'));
-  $('#exp-ficha').addEventListener('click', exportarFicha);
   $('#copiar-prompt').addEventListener('click', () => copiar($('#prompt').value, 'Prompt'));
   $('#copiar-negativo').addEventListener('click', () => copiar($('#negativo').value, 'Prompt negativo'));
 }

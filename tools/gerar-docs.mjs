@@ -89,21 +89,21 @@ const linhaEsquema = (esquema) => {
   const g = geometria({ mm: TAMANHOS.padrao.mm, dpi: 300, sangria: true, esquema });
   const p = proporcao(g);
   const s = sugestaoGeracao(p);
-  return `| ${ESQUEMAS[esquema]} | ${g.arte.w} × ${g.arte.h} px | ${fmt(p.toFixed(2))} : 1 | ${s.sdxl.join(' × ')} | ${s.flux.join(' × ')} |`;
+  return `| ${ESQUEMAS[esquema]} | ${g.arte.w} × ${g.arte.h} px | ${fmt(p.toFixed(2))} : 1 | ${s.join(' × ')} px |`;
 };
 const img = `${aviso}
 # Guia de imagens das cartas
 
 As cartas compõem-se na **[Oficina de Cartas](../cartas.html)**: a Oficina desenha a moldura, o nome, a habilidade
-e a medalha de valor; só a **arte da personagem** é gerada à parte (no ComfyUI).
+e a medalha de valor; só a **arte da personagem** é gerada à parte, num gerador de imagens.
 Os modelos de imagem estragam letras e acentos, por isso a arte deve ser gerada **sem texto**.
 
 ## Fluxo de trabalho
 
-1. Na Oficina, escolhe a personagem, o tamanho e o esquema. Descarrega o **modelo** (PNG com a área da arte transparente),
-   a **máscara** (branco = arte) e a **ficha** (.txt) com o prompt e o tamanho de geração.
-2. Gera a imagem no ComfyUI no tamanho sugerido e aumenta-a (upscale) até pelo menos a área da arte.
-3. Guarda-a como \`assets/roles/<id>.webp\` (ou .png / .jpg), ou carrega-a diretamente na Oficina,
+1. Na Oficina, escolhe a personagem, o tamanho e o esquema. Descarrega o **modelo** (PNG com a área da arte transparente)
+   e a **máscara** (branco = arte), e copia o prompt e o tamanho de geração.
+2. Gera a imagem no tamanho sugerido e aumenta-a (upscale) até pelo menos a área da arte.
+3. Guarda-a como \`assets/roles/<id>.png\` (ou .webp / .jpg) e corre \`npm run imagens\`, ou carrega-a diretamente na Oficina,
    onde fica guardada só nesse navegador.
 4. Enquadra-a (arrastar, setas, zoom) e descarrega a frente e o verso em PNG para imprimir.
 
@@ -117,8 +117,8 @@ O tamanho padrão é o dos jogos de cartas colecionáveis (Riftbound, Magic, Pok
 
 ## Área da arte (carta padrão, 300 dpi, com sangria)
 
-| Esquema | Área da arte | Proporção | Gerar em SDXL | Gerar em Flux |
-|---|---|---|---|---|
+| Esquema | Área da arte | Proporção | Gerar em |
+|---|---|---|---|
 ${Object.keys(ESQUEMAS).map(linhaEsquema).join('\n')}
 
 Na **janela** a arte fica num painel horizontal no topo; na **arte completa** ocupa a carta inteira (até à sangria)

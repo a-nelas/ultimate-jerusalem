@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { ROLES } from '../js/data/roles.js';
-import { ARTE, PREFIXO, promptPara } from '../js/data/arte.js';
+import { ARTE, PREFIXO, ROSTO, promptPara } from '../js/data/arte.js';
 import { TAMANHOS, ESQUEMAS, geometria, proporcao, sugestaoGeracao, mmParaPx } from '../js/cartas/formatos.js';
 
 test('63 mm a 300 dpi são 744 px', () => {
@@ -37,7 +37,7 @@ test('as sugestões de geração são múltiplos de 16 e perto de 1 MP', () => {
   for (const esquema of Object.keys(ESQUEMAS)) {
     const p = proporcao(geometria({ mm: [63, 88], esquema }));
     const s = sugestaoGeracao(p);
-    for (const [w, h] of [s.sdxl, s.flux]) {
+    for (const [w, h] of [s]) {
       assert.equal(w % 16, 0);
       assert.equal(h % 16, 0);
       assert.ok(w * h > 0.8e6 && w * h < 1.3e6, `${w}×${h}`);
@@ -53,6 +53,7 @@ test('todos os papéis têm descrição de arte e prompt', () => {
     assert.ok(prompt.startsWith(PREFIXO), r.id);
     assert.ok(prompt.includes(ARTE[r.id]), r.id);
     assert.ok(prompt.includes('no text'), r.id);
+    if (r.equipa !== 'objeto') assert.ok(prompt.includes(ROSTO), `sem rosto: ${r.id}`);
   }
 });
 
@@ -65,5 +66,21 @@ test('a medalha fica centrada no canto: à mesma distância da margem esquerda e
     assert.ok(esq - g.medalha.r > g.w * 0.03, `${t.nome}: medalha demasiado perto da margem`);
     const c = geometria({ mm: t.mm, esquema: 'completa' });
     assert.ok(Math.abs((c.medalha.cx - c.painel.x) - (c.painel.y + c.painel.h - c.medalha.cy)) <= 1, t.nome);
+  }
+});
+
+test('a lista de imagens está em dia com assets/roles/ (corre npm run imagens)', async () => {
+  const { readdirSync, existsSync } = await import('node:fs');
+  const { IMAGENS } = await import('../js/data/imagens.js');
+  const { ROLES } = await import('../js/data/roles.js');
+  const ids = new Set(ROLES.map((r) => r.id));
+  const ficheiros = readdirSync(new URL('../assets/roles/', import.meta.url))
+    .filter((f) => /\.(webp|png|jpe?g)$/i.test(f));
+  const naPasta = new Set(ficheiros.map((f) => f.replace(/\.[^.]+$/, '')));
+  assert.deepEqual([...naPasta].sort(), Object.keys(IMAGENS).sort());
+  for (const [id, { arte, mini }] of Object.entries(IMAGENS)) {
+    assert.ok(ids.has(id), `imagem sem personagem: ${id}`);
+    assert.ok(existsSync(new URL(`../${arte}`, import.meta.url)), arte);
+    assert.ok(existsSync(new URL(`../${mini}`, import.meta.url)), mini);
   }
 });

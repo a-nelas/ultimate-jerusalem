@@ -83,12 +83,9 @@ export function geometria({ mm, dpi = 300, sangria = true, esquema = 'janela' })
 /** Proporção (largura / altura) da área de arte. */
 export const proporcao = (g) => g.arte.w / g.arte.h;
 
-const SDXL = [[1024, 1024], [1152, 896], [896, 1152], [1216, 832], [832, 1216], [1344, 768], [768, 1344], [1536, 640], [640, 1536]];
-
-/** Tamanhos de geração sugeridos para a proporção dada (SDXL: grelhas oficiais; Flux: ~1 MP, múltiplos de 16). */
+/** Tamanho sugerido para gerar a arte com a proporção dada: cerca de 1 megapíxel, múltiplos de 16. */
 export function sugestaoGeracao(prop) {
-  const sdxl = SDXL.reduce((m, s) => (Math.abs(Math.log(s[0] / s[1] / prop)) < Math.abs(Math.log(m[0] / m[1] / prop)) ? s : m));
-  const fw = Math.round(Math.sqrt(1024 * 1024 * prop) / 16) * 16;
-  const fh = Math.round(fw / prop / 16) * 16;
-  return { sdxl, flux: [fw, fh] };
+  const w = Math.round(Math.sqrt(1024 * 1024 * prop) / 16) * 16;
+  const h = Math.round(w / prop / 16) * 16;
+  return [w, h];
 }

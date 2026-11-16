@@ -1,6 +1,7 @@
 /* InstaLanding design system · Mistfold · mistfold@1.0.0 — component script
    Vendored verbatim from <script id="mf-components-js"> in https://instalanding.ai/systems/mistfold/specimen.html
-   Card reveal, local-only signup form, and the WebGL shader that lights blackletter headings. */
+   Card reveal, local-only signup form, and the WebGL shader that lights blackletter headings.
+   Local change (Ultimate Jerusalém): the shader loop is capped at 30 fps; marked "alteração local" below. */
 (function () {
   'use strict';
   /* Mistfold components, no libraries. Module cards fade up as they enter;
@@ -196,9 +197,14 @@
     it.ctx.drawImage(glc,0,glc.height-it.h,it.w,it.h,0,0,it.w,it.h);
   }
   // Skip work in a background tab: demos often sit in a preview iframe several tabs deep
+  // Ultimate Jerusalém, alteração local: no máximo 30 fotogramas por segundo (a tinta move-se devagar; poupa CPU e GPU)
+  let ultimo=0;
   function loop(now){
+    requestAnimationFrame(loop);
+    if(now-ultimo<1000/30-1) return;
+    ultimo=now;
     for(let i=items.length-1;i>=0;i--) if(!items[i].el.isConnected){const it=items.splice(i,1)[0];if(io)io.unobserve(it.canvas);ro.unobserve(it.el);}
-    if(!document.hidden)items.forEach(it=>{if(it.visible)render(it,now)});requestAnimationFrame(loop);}
+    if(!document.hidden)items.forEach(it=>{if(it.visible)render(it,now)});}
 
   // The blackletter face must be loaded before text is rasterised into the textures
   const fontsReady=document.fonts
