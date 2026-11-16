@@ -27,7 +27,7 @@ Enquanto uma imagem não existir, o site mostra `assets/placeholder.svg`.
 
 | ✓ | Ficheiro | Papel | Personagem | Equipa |
 |---|---|---|---|---|
-| ☐ | `habitante.webp` | Habitante de Jerusalém | Povo da Cidade Santa | Jerusalém |
+| ☐ | `israelita.webp` | Israelita | Povo da Cidade Santa | Jerusalém |
 | ☐ | `isaias.webp` | Profeta Isaías | O Vidente de Jerusalém | Jerusalém |
 | ☐ | `jeremias.webp` | Profeta Jeremias | O Aprendiz do Profeta | Jerusalém |
 | ☐ | `elias.webp` | Profeta Elias | Fogo do Céu e Vida Restaurada | Jerusalém |
@@ -43,17 +43,17 @@ Enquanto uma imagem não existir, o site mostra `assets/placeholder.svg`.
 | ☐ | `daniel.webp` | Daniel | Na Cova dos Leões | Jerusalém |
 | ☐ | `david.webp` | Rei David | O Pastor Ungido | Jerusalém |
 | ☐ | `trombeteiro.webp` | Trombeteiro | O Toque do Shofar | Jerusalém |
-| ☐ | `abel.webp` | Abel | "Depois de morto, ainda fala" | Jerusalém |
-| ☐ | `construtor.webp` | Construtor de Neemias | Os Reconstrutores do Muro | Jerusalém |
+| ☐ | `baruque.webp` | Baruque | O Escriba e o seu Rolo | Jerusalém |
+| ☐ | `construtor.webp` | Construtor | Reconstrutor do Muro de Neemias | Jerusalém |
 | ☐ | `nabal.webp` | Nabal | O Insensato | Jerusalém |
 | ☐ | `debora.webp` | Juíza Débora | Sob a Palmeira | Jerusalém |
-| ☐ | `gabriel.webp` | Anjo Gabriel | Mensageiro que emudece | Jerusalém |
+| ☐ | `ezequias.webp` | Rei Ezequias | "Não lhe respondais" | Jerusalém |
 | ☐ | `rute.webp` | Rute | A Moabita Fiel | Jerusalém |
 | ☐ | `noemi.webp` | Noemi | A Casamenteira | Jerusalém |
 | ☐ | `matusalem.webp` | Matusalém | O Ancião | Jerusalém |
 | ☐ | `abigail.webp` | Abigail | A Pacificadora | Jerusalém |
-| ☐ | `filisteu.webp` | Guerreiro Filisteu | Infiltrado de Gate | Filisteus |
-| ☐ | `golias.webp` | Golias de Gate | O Gigante | Filisteus |
+| ☐ | `filisteu.webp` | Filisteu | Guerreiro Infiltrado | Filisteus |
+| ☐ | `golias.webp` | Golias | O Gigante de Gate | Filisteus |
 | ☐ | `dalila.webp` | Dalila | A Traidora de Soreque | Filisteus |
 | ☐ | `espia.webp` | Espia Filisteu | Batedor do Templo de Dagom | Filisteus |
 | ☐ | `caldeu.webp` | Agente Caldeu | Ao Serviço de Nabucodonosor | Babilónios |
@@ -65,5 +65,5 @@ Enquanto uma imagem não existir, o site mostra `assets/placeholder.svg`.
 | ☐ | `aca.webp` | Acã | O Cobiçoso | Flutuante |
 | ☐ | `joas.webp` | Joás | O Rei Escondido | Flutuante |
 | ☐ | `manto.webp` | Manto do Profeta | Passado de mão em mão | Objeto |
-| ☐ | `cronista.webp` | Cronista | O Narrador das Crónicas | Objeto |
+| ☐ | `narrador.webp` | Narrador | Quem conta a história | Objeto |
 | ☐ | `verso.webp` | Verso comum de todas as cartas | — | — |

@@ -4,17 +4,18 @@ import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { ROLES, EQUIPAS, ACORDA, TIPOS, inimigosRecomendados } from '../js/data/roles.js';
+import { VOTACOES, VOTACAO_PADRAO } from '../js/data/regras.js';
 
 const raiz = join(dirname(fileURLToPath(import.meta.url)), '..');
 const fmtValor = (v) => (v > 0 ? `+${v}` : v < 0 ? `−${Math.abs(v)}` : '0');
 const fmtRec = (r) => {
   const { min, max, aPartirDe } = r.recomendado;
-  if (r.id === 'habitante') return `o restante (mín. ${min})`;
+  if (r.id === 'israelita') return `o restante (mín. ${min})`;
   if (r.id === 'filisteu') return '~1 por 5 jogadores';
-  if (max === 0) return '—';
+  if (max === 0) return 'não recomendado (votação a apontar)';
   return `${min === max ? max : `${min}–${max}`}, a partir de ${aPartirDe}`;
 };
-const papeis = ROLES.filter((r) => r.id !== 'cronista');
+const papeis = ROLES.filter((r) => r.id !== 'narrador');
 const aviso = '<!-- Ficheiro gerado por tools/gerar-docs.mjs a partir de js/data/roles.js. Não editar à mão. -->';
 
 // ── PAPEIS.md ──
@@ -47,7 +48,7 @@ Inclui Filisteus, Golias, Absalão e Caldeus. Valores de 6 a 15 jogadores segund
 |---|${'---|'.repeat(7)}
 | Inimigos | ${[5, 8, 11, 15, 21, 26, 30].map((n) => inimigosRecomendados(n)).join(' | ')} |
 
-Orientação do livro de regras: se os jogadores não se conhecem, junta +5 a favor de Jerusalém; se é um grupo experiente, junta −5. Abaixo de 15 jogadores, cerca de 1 papel especial por cada Habitante; acima, até 3 por 1.
+Orientação do livro de regras: se os jogadores não se conhecem, junta +5 a favor de Jerusalém; se é um grupo experiente, junta −5. Abaixo de 15 jogadores, cerca de 1 papel especial por cada Israelita; acima, até 3 por 1.
 
 ## Ordem de chamada da noite
 
@@ -59,6 +60,16 @@ ${(() => {
   return [...grupos.values()].map(([p, ...o], i) => `${i + 1}. **${p.nome}**${o.length ? ` (com ${o.map((x) => x.nome).join(' e ')})` : ''} — ${ACORDA[p.acorda].toLowerCase()}`).join('\n');
 })()}
 
+## ${VOTACOES[VOTACAO_PADRAO].nome} (regra por defeito)
+
+${VOTACOES[VOTACAO_PADRAO].resumo}
+
+${VOTACOES[VOTACAO_PADRAO].passos.map((p, i) => `${i + 1}. ${p}`).join('\n')}
+
+**Papéis que mexem no voto:**
+
+${VOTACOES[VOTACAO_PADRAO].papeis.map((p) => `- ${p}`).join('\n')}
+
 ## Descrição de cada papel
 
 ${papeis.map((r) => `### ${r.nome}
@@ -66,7 +77,7 @@ ${papeis.map((r) => `### ${r.nome}
 
 **Carta:** ${r.habilidade}
 ${r.guiaoNoite ? `\n**Guião:** _“${r.guiaoNoite}”_\n` : ''}
-**Nota do Cronista:** ${r.notaModerador}
+**Nota do Narrador:** ${r.notaModerador}
 `).join('\n')}`;
 writeFileSync(join(raiz, 'docs', 'PAPEIS.md'), md);
 

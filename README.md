@@ -1,6 +1,6 @@
 # Ultimate Jerusalém
 
-Assistente do **Cronista** (moderador) para um jogo de dedução social com várias noites, baseado nas regras de
+Assistente do **Narrador** (moderador) para um jogo de dedução social com várias noites, baseado nas regras de
 *Ultimate Werewolf: Ultimate Edition*, re-tematizado: **Jerusalém cercada**, defendida por figuras bíblicas
 (David, Salomão, Isaías, Jeremias…) contra infiltrados **Filisteus** e agentes da **Babilónia**.
 

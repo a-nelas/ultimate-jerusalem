@@ -56,6 +56,11 @@ tr.detalhe .guiao { font-style: italic; }
 .ordem-noite li { break-inside: avoid; margin-bottom: 6px; }
 .ordem-noite .quando { color: var(--muted); font-size: .85rem; }
 
+.votacao { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.votacao h3 { margin: 0 0 .5em; font-size: 1.05rem; }
+.votacao ol, .votacao ul { margin: 0; padding-left: 1.3em; }
+.votacao li { margin-bottom: 6px; }
+
 /* Telemóvel: cada linha vira um cartão */
 @media (max-width: 760px) {
   .grelha thead { display: none; }

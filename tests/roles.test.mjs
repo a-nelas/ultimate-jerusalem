@@ -30,7 +30,7 @@ test('papéis que nunca acordam não têm lugar na ordem da noite', () => {
   }
 });
 
-test('cada passo da noite tem um guião para o Cronista ler', () => {
+test('cada passo da noite tem um guião para o Narrador ler', () => {
   const passos = new Map();
   for (const r of ROLES.filter((p) => p.ordemNoite != null)) {
     passos.set(r.ordemNoite, [...(passos.get(r.ordemNoite) ?? []), r]);
@@ -65,4 +65,15 @@ test('inimigos recomendados crescem com o número de jogadores', () => {
     assert.ok(v >= anterior && v <= Math.ceil(n / 4), `n=${n}`);
     anterior = v;
   }
+});
+
+test('a votação por defeito é a apontar e cita só papéis que existem', async () => {
+  const { VOTACOES, VOTACAO_PADRAO } = await import('../js/data/regras.js');
+  assert.equal(VOTACAO_PADRAO, 'apontar');
+  const nomes = ROLES.map((r) => r.nome);
+  for (const linha of VOTACOES.apontar.papeis) {
+    const nome = linha.split(' — ')[0];
+    assert.ok(nomes.includes(nome), `papel desconhecido na votação: ${nome}`);
+  }
+  assert.equal(papel('nabal').recomendado.max, 0, 'Nabal não deve ser recomendado com a votação a apontar');
 });

@@ -1,4 +1,5 @@
 import { ROLES, EQUIPAS, ACORDA, TIPOS, inimigosRecomendados } from '../data/roles.js';
+import { VOTACOES, VOTACAO_PADRAO } from '../data/regras.js';
 import { imagemPapel } from './imagem.js';
 
 const $ = (sel) => document.querySelector(sel);
@@ -15,7 +16,7 @@ const el = (tag, attrs = {}, ...filhos) => {
 
 const ORDEM_EQUIPAS = Object.keys(EQUIPAS);
 const VALOR_MAX = Math.max(...ROLES.map((r) => Math.abs(r.valor)));
-const PAPEIS = ROLES.filter((r) => r.id !== 'cronista').map((r, i) => ({ ...r, ordem: i + 1 }));
+const PAPEIS = ROLES.filter((r) => r.id !== 'narrador').map((r, i) => ({ ...r, ordem: i + 1 }));
 const corEquipa = (eq) => `var(--t-${eq})`;
 
 const estado = {
@@ -127,7 +128,8 @@ function celValor(r) {
 function textoRecomendado(r) {
   const { min, max, aPartirDe } = r.recomendado;
   if (r.id === 'filisteu') return ['~1 por 5 jogadores', 'ver resumo acima'];
-  if (r.id === 'habitante') return ['O restante', `mínimo ${min}`];
+  if (r.id === 'israelita') return ['O restante', `mínimo ${min}`];
+  if (max === 0) return ['Não recomendado', 'com a votação a apontar'];
   const copias = min === max ? `${max}` : `${min}–${max}`;
   return [`${copias} ${max === 1 ? 'cópia' : 'cópias'}`, `a partir de ${aPartirDe} jogadores`];
 }
@@ -166,8 +168,8 @@ function detalhe(r) {
     el('dt', {}, 'Habilidade'), el('dd', {}, r.habilidade),
     el('dt', {}, 'Referência'), el('dd', {}, r.refBiblica),
     r.guiaoNoite ? [el('dt', {}, 'Guião da noite'), el('dd', { class: 'guiao' }, `“${r.guiaoNoite}”`)] : null,
-    el('dt', {}, 'Nota do Cronista'), el('dd', {}, r.notaModerador),
-    el('dt', {}, 'Isaías vê'), el('dd', {}, r.profetaVe === 'filisteu' ? 'Filisteu' : 'Não-Filisteu'),
+    el('dt', {}, 'Nota do Narrador'), el('dd', {}, r.notaModerador),
+    el('dt', {}, 'Isaías vê'), el('dd', {}, r.profetaVe === 'filisteu' ? 'Filisteu' : 'Israelita'),
   );
   return el('tr', { class: 'detalhe' }, el('td', { colspan: '7' }, dl));
 }
@@ -216,6 +218,14 @@ function ordemNoite() {
   }
 }
 
+function votacao() {
+  const v = VOTACOES[VOTACAO_PADRAO];
+  $('#votacao-resumo').textContent = v.resumo;
+  $('#votacao-passos').append(...v.passos.map((p) => el('li', {}, p)));
+  $('#votacao-papeis').append(...v.papeis.map((p) => el('li', {}, p)));
+}
+
 montarFiltros();
 render();
 ordemNoite();
+votacao();
