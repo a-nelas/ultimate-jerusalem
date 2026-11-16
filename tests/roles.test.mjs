@@ -67,12 +67,12 @@ test('inimigos recomendados crescem com o número de jogadores', () => {
   }
 });
 
-test('a votação por defeito é a apontar e cita só papéis que existem', async () => {
+test('a votação por defeito é a apontar e cita só personagens que existem', async () => {
   const { VOTACOES, VOTACAO_PADRAO } = await import('../js/data/regras.js');
   assert.equal(VOTACAO_PADRAO, 'apontar');
   const nomes = ROLES.map((r) => r.nome);
   for (const linha of VOTACOES.apontar.papeis) {
-    const nome = linha.split(' — ')[0];
+    const nome = linha.split(': ')[0];
     assert.ok(nomes.includes(nome), `papel desconhecido na votação: ${nome}`);
   }
   assert.equal(papel('nabal').recomendado.max, 0, 'Nabal não deve ser recomendado com a votação a apontar');

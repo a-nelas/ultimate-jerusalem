@@ -4,7 +4,7 @@ Assistente do **Narrador** (moderador) para um jogo de dedução social com vár
 *Ultimate Werewolf: Ultimate Edition*, re-tematizado: **Jerusalém cercada**, defendida por figuras bíblicas
 (David, Salomão, Isaías, Jeremias…) contra infiltrados **Filisteus** e agentes da **Babilónia**.
 
-Site estático em português de Portugal, pronto para o GitHub Pages — sem passo de compilação.
+Site estático em português de Portugal, pronto para o GitHub Pages, sem passo de compilação.
 
 ## Estado
 
@@ -22,9 +22,9 @@ Site estático em português de Portugal, pronto para o GitHub Pages — sem pas
 index.html, papeis.html, cartas.html   páginas
 css/vendor/mistfold-1.0.0.css   sistema de design Mistfold (não editar)
 css/app.css, css/papeis.css, css/cartas.css   camada da aplicação, só com tokens --mf-*
-js/data/roles.js             fonte única de todos os papéis
+js/data/roles.js             fonte única de todas as personagens
 js/data/regras.js            regras da casa (votação a apontar)
-js/data/arte.js              descrições e prompts da arte de cada papel (ComfyUI)
+js/data/arte.js              descrições e prompts da arte de cada personagem (ComfyUI)
 js/cartas/                   geometria das cartas, desenho em canvas, armazenamento local da arte
 js/ui/                       código de cada página
 js/vendor/mistfold-1.0.0.js  script do sistema (revelação dos cartões, títulos em WebGL)

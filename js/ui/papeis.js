@@ -176,12 +176,12 @@ function detalhe(r) {
 
 function resumo(lista) {
   const n = estado.jogadores;
-  const partes = [`<strong>${lista.length}</strong> de ${PAPEIS.length} papéis`];
+  const partes = [`<strong>${lista.length}</strong> de ${PAPEIS.length} personagens`];
   if (n) {
     const rec = PAPEIS.filter((r) => r.recomendado.aPartirDe <= n && r.recomendado.max > 0).length;
-    partes.push(`Para <strong>${n}</strong> jogadores: <strong>${inimigosRecomendados(n)}</strong> inimigo(s) (Filisteus, Golias, Absalão ou Caldeus) e <strong>${rec}</strong> papéis adequados (destacados).`);
+    partes.push(`Para <strong>${n}</strong> jogadores: <strong>${inimigosRecomendados(n)}</strong> inimigo(s) (Filisteus, Golias, Absalão ou Caldeus) e <strong>${rec}</strong> personagens adequadas (destacadas).`);
   } else {
-    partes.push('Indica o número de jogadores para destacar os papéis recomendados.');
+    partes.push('Indica o número de jogadores para destacar as personagens recomendadas.');
   }
   $('#resumo').innerHTML = partes.join(' · ');
 }
@@ -214,7 +214,7 @@ function ordemNoite() {
     const nome = outros.length ? `${p.nome} (com ${outros.map((o) => o.nome).join(' e ')})` : p.nome;
     ol.append(el('li', {},
       el('span', { class: 'mf-team' }, marca(p.equipa), nome),
-      ' ', el('span', { class: 'mf-when' }, `— ${ACORDA[p.acorda].toLowerCase()}`)));
+      ' ', el('span', { class: 'mf-when' }, `· ${ACORDA[p.acorda].toLowerCase()}`)));
   }
 }
 

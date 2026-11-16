@@ -10,7 +10,7 @@ export const ESTILO =
   'friendly readable silhouette, one character centered, plain uncluttered background, children\'s storybook style, ' +
   'vector art, no text, no letters, no border';
 
-/** Só tem efeito com CFG acima de 1 (no Z-Image Turbo, com CFG 1, é ignorado — o "no text" já vai no prompt). */
+/** Só tem efeito com CFG acima de 1 (no Z-Image Turbo, com CFG 1, é ignorado; o "no text" já vai no prompt). */
 export const NEGATIVO =
   'text, letters, words, caption, watermark, signature, logo, frame, border, card template, photorealistic, photo, ' +
   'realistic, 3d render, detailed background, intricate details, oil painting, painterly texture, heavy shading, ' +

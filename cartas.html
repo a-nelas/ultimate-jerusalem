@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Oficina de Cartas — Ultimate Jerusalém</title>
+  <title>Oficina de Cartas · Ultimate Jerusalém</title>
   <meta name="description" content="Compõe e exporta as cartas de Ultimate Jerusalém em tamanho TCG, com modelos e prompts para gerar a arte no ComfyUI.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,12 +47,12 @@
     <a href="index.html" class="mf-logo">Ultimate Jerusalém</a>
     <nav class="mf-nav-links" aria-label="Principal">
       <a href="index.html">Início</a>
-      <a href="papeis.html">Papéis</a>
+      <a href="papeis.html">Personagens</a>
       <span class="mf-soon" title="Em breve">Preparar</span>
       <span class="mf-soon" title="Em breve">Moderar</span>
       <a href="cartas.html" aria-current="page">Cartas</a>
     </nav>
-    <a href="papeis.html" class="mf-btn">Papéis</a>
+    <a href="papeis.html" class="mf-btn">Personagens</a>
   </div>
 </header>
 
@@ -68,7 +68,7 @@
       <div class="mf-txt">
         A Oficina desenha a moldura, o nome, a habilidade e a medalha de valor; tu geras apenas a <b>arte</b> da personagem no ComfyUI.
         Descarrega o modelo e o prompt, gera a imagem, guarda-a e carrega-a aqui para a enquadrar.
-        As imagens carregadas ficam guardadas só neste navegador — nada é enviado para lado nenhum.
+        As imagens carregadas ficam guardadas só neste navegador: nada é enviado para lado nenhum.
       </div>
     </div>
   </section>
@@ -81,7 +81,7 @@
     <div class="oficina">
       <form class="controlos" id="controlos" autocomplete="off">
         <fieldset>
-          <legend>Papel</legend>
+          <legend>Personagem</legend>
           <label class="mf-field"><span>Carta</span><select id="papel"></select></label>
         </fieldset>
 
@@ -89,13 +89,13 @@
           <legend>Texto da carta</legend>
           <div class="campos">
             <label class="mf-field"><span>Nome</span><input id="f-nome" maxlength="40"></label>
-            <label class="mf-field"><span>Personagem</span><input id="f-personagem" maxlength="60"></label>
+            <label class="mf-field"><span>Subtítulo</span><input id="f-personagem" maxlength="60"></label>
             <label class="mf-field"><span>Equipa</span><select id="f-equipa"></select></label>
             <label class="mf-field"><span>Valor</span><input id="f-valor" type="number" min="-10" max="10" step="1"></label>
             <label class="mf-field largo"><span>Habilidade</span><textarea id="f-habilidade" rows="4" maxlength="320"></textarea></label>
             <label class="mf-field largo"><span>Referência bíblica</span><input id="f-ref" maxlength="40"></label>
           </div>
-          <div class="botoes"><button type="button" class="mf-btn" id="repor-texto">Repor texto do papel</button></div>
+          <div class="botoes"><button type="button" class="mf-btn" id="repor-texto">Repor texto da personagem</button></div>
         </fieldset>
 
         <fieldset>
@@ -173,8 +173,8 @@
       </div>
       <p class="estado" id="estado" aria-live="polite"></p>
       <p class="dica">
-        <b>Modelo</b>: a carta completa com a área da arte transparente — serve de referência para a composição.
-        <b>Máscara</b>: branco onde vai a arte, preto no resto — para <i>inpainting</i>.
+        <b>Modelo</b>: a carta completa com a área da arte transparente, que serve de referência para a composição.
+        <b>Máscara</b>: branco onde vai a arte, preto no resto, para <i>inpainting</i>.
         Gera de preferência só a arte, sem texto: os modelos de imagem estragam letras e acentos.
       </p>
     </div>
@@ -190,11 +190,11 @@
     </div>
     <div>
       <h4>Ferramentas</h4>
-      <ul><li><a href="papeis.html">Papéis</a></li><li><a href="cartas.html">Cartas</a></li><li><span class="mf-soon">Preparar</span></li><li><span class="mf-soon">Moderar</span></li></ul>
+      <ul><li><a href="papeis.html">Personagens</a></li><li><a href="cartas.html">Cartas</a></li><li><span class="mf-soon">Preparar</span></li><li><span class="mf-soon">Moderar</span></li></ul>
     </div>
     <div>
       <h4>Documentação</h4>
-      <ul><li><a href="docs/PAPEIS.md">Lista de papéis</a></li><li><a href="docs/IMAGENS.md">Guia das imagens</a></li><li><a href="README.md">Leia-me</a></li></ul>
+      <ul><li><a href="docs/PAPEIS.md">Lista de personagens</a></li><li><a href="docs/IMAGENS.md">Guia das imagens</a></li><li><a href="README.md">Leia-me</a></li></ul>
     </div>
     <div>
       <h4>Origem</h4>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Grelha de Papéis — Ultimate Jerusalém</title>
-  <meta name="description" content="Todos os papéis de Ultimate Jerusalém: equipas, valores de equilíbrio, ordem da noite e quantidades recomendadas.">
+  <title>Grelha de Personagens · Ultimate Jerusalém</title>
+  <meta name="description" content="Todas as personagens de Ultimate Jerusalém: equipas, valores de equilíbrio, ordem da noite e quantidades recomendadas.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Cinzel:wght@400..900&family=UnifrakturMaguntia&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@
     <a href="index.html" class="mf-logo">Ultimate Jerusalém</a>
     <nav class="mf-nav-links" aria-label="Principal">
       <a href="index.html">Início</a>
-      <a href="papeis.html" aria-current="page">Papéis</a>
+      <a href="papeis.html" aria-current="page">Personagens</a>
       <span class="mf-soon" title="Em breve">Preparar</span>
       <span class="mf-soon" title="Em breve">Moderar</span>
       <a href="cartas.html">Cartas</a>
@@ -61,7 +61,7 @@
 
   <section class="mf-frame mf-hero">
     <span class="mf-label">o rol da cidade</span>
-    <h1><span class="mf-display">Grelha de Papéis</span></h1>
+    <h1><span class="mf-display">Grelha de Personagens</span></h1>
     <span class="mf-subtitle">Quem joga por quem, quando acorda e quanto pesa na balança.</span>
     <div class="mf-rule" aria-hidden="true"></div>
     <div class="mf-intro">
@@ -73,7 +73,7 @@
       </div>
     </div>
     <div class="mf-stats">
-      <div class="mf-stat"><strong id="st-papeis">–</strong><span>papéis</span></div>
+      <div class="mf-stat"><strong id="st-papeis">–</strong><span>personagens</span></div>
       <div class="mf-stat"><strong id="st-jerusalem">–</strong><span>de Jerusalém</span></div>
       <div class="mf-stat"><strong id="st-inimigos">–</strong><span>inimigos</span></div>
       <div class="mf-stat"><strong id="st-noite">–</strong><span>chamadas da noite</span></div>
@@ -82,14 +82,14 @@
 
   <section class="mf-frame mf-wide" aria-labelledby="t-papeis">
     <span class="mf-label">o rol</span>
-    <h2 class="mf-title" id="t-papeis">Os Papéis</h2>
+    <h2 class="mf-title" id="t-papeis">As Personagens</h2>
     <div class="mf-rule" aria-hidden="true"></div>
 
     <div class="filtros" aria-label="Filtros">
       <div class="linha" id="filtro-equipas" role="group" aria-label="Equipa"></div>
       <div class="linha">
         <label class="mf-field procurar"><span>Procurar</span>
-          <input type="search" id="filtro-texto" placeholder="Nome, personagem, papel original…"></label>
+          <input type="search" id="filtro-texto" placeholder="Nome, subtítulo, papel original…"></label>
         <label class="mf-field"><span>Acorda</span>
           <select id="filtro-acorda"><option value="">Todos</option></select></label>
         <label class="mf-field"><span>Poder</span>
@@ -105,7 +105,7 @@
         <thead>
           <tr>
             <th scope="col" data-ordenar="ordem" aria-sort="none"><button>#</button></th>
-            <th scope="col" data-ordenar="nome" aria-sort="none"><button>Papel</button></th>
+            <th scope="col" data-ordenar="nome" aria-sort="none"><button>Personagem</button></th>
             <th scope="col" data-ordenar="equipa" aria-sort="none"><button>Equipa</button></th>
             <th scope="col" data-ordenar="valor" aria-sort="none"><button>Valor</button></th>
             <th scope="col" data-ordenar="noite" aria-sort="none"><button>Acorda</button></th>
@@ -124,7 +124,7 @@
     <div class="mf-rule" aria-hidden="true"></div>
     <div class="mf-intro">
       <svg class="mf-icon mf-intro-icon" aria-hidden="true"><use href="#mf-i-codex"/></svg>
-      <div class="mf-txt">Só se chamam os papéis em jogo. Chama também os papéis mortos ou ausentes, com uma pausa, para não denunciar quem está em jogo.</div>
+      <div class="mf-txt">Só se chamam as personagens em jogo. Chama também as personagens mortas ou ausentes, com uma pausa, para não denunciar quem está em jogo.</div>
     </div>
     <div class="mf-fleuron" aria-hidden="true">❦</div>
     <ol class="mf-numbered mf-cols" id="ordem-noite"></ol>
@@ -146,7 +146,7 @@
       <article class="mf-card" style="--mf-accent:var(--mf-sage)">
         <div class="mf-card-main">
           <div class="mf-card-info">
-            <span class="mf-name">Papéis que Mexem no Voto</span>
+            <span class="mf-name">Personagens que Mexem no Voto</span>
             <span class="mf-meta">aplicam-se na votação a apontar</span>
             <div class="mf-txt"><ul id="votacao-papeis"></ul></div>
           </div>
@@ -165,11 +165,11 @@
     </div>
     <div>
       <h4>Ferramentas</h4>
-      <ul><li><a href="papeis.html">Papéis</a></li><li><a href="cartas.html">Cartas</a></li><li><span class="mf-soon">Preparar</span></li><li><span class="mf-soon">Moderar</span></li></ul>
+      <ul><li><a href="papeis.html">Personagens</a></li><li><a href="cartas.html">Cartas</a></li><li><span class="mf-soon">Preparar</span></li><li><span class="mf-soon">Moderar</span></li></ul>
     </div>
     <div>
       <h4>Documentação</h4>
-      <ul><li><a href="docs/PAPEIS.md">Lista de papéis</a></li><li><a href="docs/IMAGENS.md">Guia das imagens</a></li><li><a href="README.md">Leia-me</a></li></ul>
+      <ul><li><a href="docs/PAPEIS.md">Lista de personagens</a></li><li><a href="docs/IMAGENS.md">Guia das imagens</a></li><li><a href="README.md">Leia-me</a></li></ul>
     </div>
     <div>
       <h4>Origem</h4>

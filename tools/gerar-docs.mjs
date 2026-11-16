@@ -22,10 +22,10 @@ const aviso = '<!-- Ficheiro gerado por tools/gerar-docs.mjs a partir de js/data
 
 // ── PAPEIS.md ──
 let md = `${aviso}
-# Ultimate Jerusalém — Papéis e Grelha de Poder
+# Ultimate Jerusalém: Personagens e Grelha de Poder
 
-Conversão dos papéis de *Ultimate Werewolf: Ultimate Edition* para o tema **Jerusalém cercada**.
-As mecânicas mantêm-se; muda o nome, a personagem e o texto.
+Conversão das personagens de *Ultimate Werewolf: Ultimate Edition* para o tema **Jerusalém cercada**.
+As mecânicas mantêm-se; mudam o nome, o subtítulo e o texto.
 
 - **Valor**: número de equilíbrio (positivo ajuda Jerusalém, negativo ajuda os inimigos). Um baralho equilibrado soma entre −2 e +2.
 - **?** = valor por confirmar numa carta impressa.
@@ -38,7 +38,7 @@ ${Object.values(EQUIPAS).map((e) => `| **${e.nome}** | ${e.descricao} |`).join('
 
 ## Grelha de poder
 
-| # | Papel | Personagem | Original | Equipa | Valor | Acorda | Poder | Recomendado |
+| # | Personagem | Subtítulo | Original | Equipa | Valor | Acorda | Poder | Recomendado |
 |---|---|---|---|---|---|---|---|---|
 ${papeis.map((r, i) => `| ${i + 1} | **${r.nome}** | ${r.personagem} (${r.refBiblica}) | ${r.original} | ${EQUIPAS[r.equipa].nome} | ${fmtValor(r.valor)}${r.verificar ? ' ?' : ''} | ${ACORDA[r.acorda]} | ${r.tipo.map((t) => TIPOS[t]).join(', ')} | ${fmtRec(r)} |`).join('\n')}
 
@@ -50,7 +50,7 @@ Inclui Filisteus, Golias, Absalão e Caldeus. Valores de 6 a 15 jogadores segund
 |---|${'---|'.repeat(7)}
 | Inimigos | ${[5, 8, 11, 15, 21, 26, 30].map((n) => inimigosRecomendados(n)).join(' | ')} |
 
-Orientação do livro de regras: se os jogadores não se conhecem, junta +5 a favor de Jerusalém; se é um grupo experiente, junta −5. Abaixo de 15 jogadores, cerca de 1 papel especial por cada Israelita; acima, até 3 por 1.
+Orientação do livro de regras: se os jogadores não se conhecem, junta +5 a favor de Jerusalém; se é um grupo experiente, junta −5. Abaixo de 15 jogadores, cerca de 1 personagem especial por cada Israelita; acima, até 3 por 1.
 
 ## Ordem de chamada da noite
 
@@ -59,7 +59,7 @@ ${(() => {
   for (const r of papeis.filter((p) => p.ordemNoite != null).sort((a, b) => a.ordemNoite - b.ordemNoite)) {
     grupos.set(r.ordemNoite, [...(grupos.get(r.ordemNoite) ?? []), r]);
   }
-  return [...grupos.values()].map(([p, ...o], i) => `${i + 1}. **${p.nome}**${o.length ? ` (com ${o.map((x) => x.nome).join(' e ')})` : ''} — ${ACORDA[p.acorda].toLowerCase()}`).join('\n');
+  return [...grupos.values()].map(([p, ...o], i) => `${i + 1}. **${p.nome}**${o.length ? ` (com ${o.map((x) => x.nome).join(' e ')})` : ''} · ${ACORDA[p.acorda].toLowerCase()}`).join('\n');
 })()}
 
 ## ${VOTACOES[VOTACAO_PADRAO].nome} (regra por defeito)
@@ -68,11 +68,11 @@ ${VOTACOES[VOTACAO_PADRAO].resumo}
 
 ${VOTACOES[VOTACAO_PADRAO].passos.map((p, i) => `${i + 1}. ${p}`).join('\n')}
 
-**Papéis que mexem no voto:**
+**Personagens que mexem no voto:**
 
 ${VOTACOES[VOTACAO_PADRAO].papeis.map((p) => `- ${p}`).join('\n')}
 
-## Descrição de cada papel
+## Descrição de cada personagem
 
 ${papeis.map((r) => `### ${r.nome}
 *${r.personagem}* · ${r.refBiblica} · ${EQUIPAS[r.equipa].nome} · ${fmtValor(r.valor)}${r.verificar ? ' (por confirmar)' : ''} · original: ${r.original}
@@ -100,10 +100,10 @@ Os modelos de imagem estragam letras e acentos, por isso a arte deve ser gerada 
 
 ## Fluxo de trabalho
 
-1. Na Oficina, escolhe o papel, o tamanho e o esquema. Descarrega o **modelo** (PNG com a área da arte transparente),
+1. Na Oficina, escolhe a personagem, o tamanho e o esquema. Descarrega o **modelo** (PNG com a área da arte transparente),
    a **máscara** (branco = arte) e a **ficha** (.txt) com o prompt e o tamanho de geração.
 2. Gera a imagem no ComfyUI no tamanho sugerido e aumenta-a (upscale) até pelo menos a área da arte.
-3. Guarda-a como \`assets/roles/<id>.webp\` (ou .png / .jpg) — ou carrega-a diretamente na Oficina,
+3. Guarda-a como \`assets/roles/<id>.webp\` (ou .png / .jpg), ou carrega-a diretamente na Oficina,
    onde fica guardada só nesse navegador.
 4. Enquadra-a (arrastar, setas, zoom) e descarrega a frente e o verso em PNG para imprimir.
 
@@ -122,7 +122,7 @@ O tamanho padrão é o dos jogos de cartas colecionáveis (Riftbound, Magic, Pok
 ${Object.keys(ESQUEMAS).map(linhaEsquema).join('\n')}
 
 Na **janela** a arte fica num painel horizontal no topo; na **arte completa** ocupa a carta inteira (até à sangria)
-e o texto assenta numa placa semitransparente — põe a personagem na metade de cima.
+e o texto assenta numa placa semitransparente: põe a personagem na metade de cima.
 A 600 dpi as áreas duplicam; a Oficina mostra sempre os valores exatos do formato escolhido.
 
 ## Estilo
@@ -138,15 +138,15 @@ Prompt negativo comum (só tem efeito com CFG acima de 1):
 
 ## Lista de imagens a produzir
 
-| ✓ | Ficheiro | Papel | Personagem | Equipa |
+| ✓ | Ficheiro | Personagem | Subtítulo | Equipa |
 |---|---|---|---|---|
 ${ROLES.map((r) => `| ☐ | \`${r.id}.webp\` | ${r.nome} | ${r.personagem} | ${EQUIPAS[r.equipa].nome} |`).join('\n')}
 
 O verso é desenhado pela Oficina e não precisa de imagem.
 
-## Prompts por papel
+## Prompts por personagem
 
-${ROLES.map((r) => `### ${r.nome} — \`${r.id}\`
+${ROLES.map((r) => `### ${r.nome} · \`${r.id}\`
 
 \`\`\`text
 ${promptPara(r)}

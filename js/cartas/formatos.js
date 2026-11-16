@@ -2,9 +2,9 @@
 
 /** Tamanhos comuns de cartas de jogo, em milímetros (largura × altura). */
 export const TAMANHOS = {
-  padrao:  { nome: 'TCG padrão — Riftbound, Magic, Pokémon, Lorcana', mm: [63, 88] },
-  japones: { nome: 'Japonês — Yu-Gi-Oh!, Vanguard', mm: [59, 86] },
-  bridge:  { nome: 'Bridge — baralho de cartas estreito', mm: [57, 89] },
+  padrao:  { nome: 'TCG padrão: Riftbound, Magic, Pokémon, Lorcana', mm: [63, 88] },
+  japones: { nome: 'Japonês: Yu-Gi-Oh!, Vanguard', mm: [59, 86] },
+  bridge:  { nome: 'Bridge: baralho de cartas estreito', mm: [57, 89] },
   taro:    { nome: 'Tarot', mm: [70, 120] },
   mini:    { nome: 'Mini europeu', mm: [44, 68] },
 };

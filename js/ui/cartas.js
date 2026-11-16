@@ -22,7 +22,7 @@ let geoPrev;
 // ── dados da carta atual ──
 function base(id) {
   if (id === PERSONALIZADA) {
-    return { id, nome: 'Nova Carta', personagem: 'Personagem', refBiblica: '', habilidade: 'Escreve aqui a habilidade da carta.', equipa: 'jerusalem', valor: 0 };
+    return { id, nome: 'Nova Carta', personagem: 'Subtítulo', refBiblica: '', habilidade: 'Escreve aqui a habilidade da carta.', equipa: 'jerusalem', valor: 0 };
   }
   return papel(id);
 }
@@ -226,7 +226,7 @@ function atualizarInfo() {
   const id = prefs.id;
   const esc = (x) => String(x).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   const linhas = [
-    ['Papel', esc(d.nome)],
+    ['Personagem', esc(d.nome)],
     ['Guardar como', `<code>assets/roles/${id}.webp</code> (ou .png / .jpg)`],
     ['Área da arte', `${g.arte.w} × ${g.arte.h} px a ${prefs.dpi} dpi${prefs.esquema === 'completa' ? ' (carta inteira, com sangria)' : ''}`],
     ['Proporção', `${p.toFixed(2).replace('.', ',')} : 1`],
@@ -275,9 +275,9 @@ function exportarFicha() {
   const g = geo(prefs.dpi);
   const s = sugestaoGeracao(proporcao(g));
   const txt = [
-    `Ultimate Jerusalém — ficha de arte para o ComfyUI`,
+    `Ultimate Jerusalém · ficha de arte para o ComfyUI`,
     ``,
-    `Papel: ${d.nome} (${d.personagem})`,
+    `Personagem: ${d.nome} (${d.personagem})`,
     `Equipa: ${d.equipaNome}`,
     `Guardar como: assets/roles/${prefs.id}.webp`,
     `Carta: ${mmAtual().join(' × ')} mm, ${ESQUEMAS[prefs.esquema]}`,
@@ -303,7 +303,7 @@ function aviso(msg) {
 
 async function copiar(texto, rotulo) {
   try { await navigator.clipboard.writeText(texto); aviso(`${rotulo} copiado.`); }
-  catch { aviso('Não foi possível copiar — seleciona o texto e copia à mão.'); }
+  catch { aviso('Não foi possível copiar. Seleciona o texto e copia à mão.'); }
 }
 
 // ── enquadramento com o rato / teclado ──

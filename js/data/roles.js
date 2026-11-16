@@ -1,5 +1,5 @@
 // Fonte única de verdade dos papéis de "Ultimate Jerusalém".
-// Mecânicas: Ultimate Werewolf — Ultimate Edition (Bézier Games), re-tematizadas.
+// Mecânicas: Ultimate Werewolf: Ultimate Edition (Bézier Games), re-tematizadas.
 // `valor` = número de equilíbrio impresso no canto da carta original
 //   (positivo ajuda Jerusalém, negativo ajuda os inimigos).
 // `verificar: true` = valor ainda não confirmado numa carta impressa.
@@ -11,7 +11,7 @@ export const EQUIPAS = {
   babilonios:    { nome: 'Babilónios',    cor: '#675A7C', descricao: 'Agentes caldeus de Nabucodonosor. Inimigos tanto de Jerusalém como dos Filisteus.' },
   independentes: { nome: 'Independentes', cor: '#897A5D', descricao: 'Jogam sozinhos, com uma condição de vitória própria.' },
   flutuante:     { nome: 'Flutuante',     cor: '#4E663E', descricao: 'Começam numa equipa, mas podem mudar durante o jogo.' },
-  objeto:        { nome: 'Objeto',        cor: '#85613A', descricao: 'Não é um papel: é um objeto passado entre jogadores.' },
+  objeto:        { nome: 'Objeto',        cor: '#85613A', descricao: 'Não é uma personagem: é um objeto passado entre jogadores.' },
 };
 
 /** Quando o papel acorda. */
@@ -71,7 +71,7 @@ export const ROLES = [
     recomendado: { min: 1, max: 1, aPartirDe: 5 }, profetaVe: 'nao',
     habilidade: 'Todas as noites, aponta para um jogador. O Narrador revela-te se esse jogador é Filisteu.',
     guiaoNoite: 'Profeta Isaías, acorda. Aponta para um jogador sobre quem queres receber uma visão. (Polegar para cima: é Filisteu. Abanar a cabeça: é Israelita.) Profeta Isaías, adormece.',
-    notaModerador: 'Papel mais forte de Jerusalém — inclui-o em quase todas as partidas. Rute aparece como Filisteu; Dalila, o Espia e os Caldeus aparecem como Israelitas.',
+    notaModerador: 'A personagem mais forte de Jerusalém: inclui-a em quase todas as partidas. Rute aparece como Filisteu; Dalila, o Espia e os Caldeus aparecem como Israelitas.',
     original: 'Seer',
   },
   {
@@ -114,8 +114,8 @@ export const ROLES = [
     id: 'salomao', nome: 'Rei Salomão', personagem: 'O Coração Sábio', refBiblica: '1 Reis 3:9',
     equipa: 'jerusalem', valor: 3, verificar: true, acorda: 'todas', ordemNoite: 80, tipo: ['info'],
     recomendado: { min: 1, max: 1, aPartirDe: 12 }, profetaVe: 'nao',
-    habilidade: 'Todas as noites, aponta para um jogador. O Narrador revela-te se esse jogador tem um papel especial.',
-    guiaoNoite: 'Rei Salomão, acorda. Aponta para um jogador. (Polegar para cima: tem papel especial. Abanar a cabeça: não tem.) Rei Salomão, adormece.',
+    habilidade: 'Todas as noites, aponta para um jogador. O Narrador revela-te se esse jogador tem uma personagem especial.',
+    guiaoNoite: 'Rei Salomão, acorda. Aponta para um jogador. (Polegar para cima: tem personagem especial. Abanar a cabeça: não tem.) Rei Salomão, adormece.',
     notaModerador: 'Equivalente ao Medium. Confirmar o texto exato na carta original.',
     original: 'Medium',
   },
@@ -215,7 +215,7 @@ export const ROLES = [
     recomendado: { min: 2, max: 3, aPartirDe: 12 }, profetaVe: 'nao',
     habilidade: 'Na primeira noite, conheces os outros Construtores. Trabalham juntos para reconstruir o muro.',
     guiaoNoite: 'Construtores, acordem e olhem uns para os outros. Construtores, adormeçam.',
-    notaModerador: 'Equivalente ao Maçon. Inclui sempre 2 ou 3 — nunca apenas um.',
+    notaModerador: 'Equivalente ao Maçon. Inclui sempre 2 ou 3, nunca apenas um.',
     original: 'Mason',
   },
   {
@@ -224,7 +224,7 @@ export const ROLES = [
     recomendado: { min: 0, max: 0, aPartirDe: 18 }, profetaVe: 'nao',
     habilidade: 'Nas votações, nunca te podes abster: apontas sempre para alguém.',
     guiaoNoite: null,
-    notaModerador: 'Equivalente ao Tolo (Fool / Village Idiot). Não recomendado com a votação a apontar: quase todos apontam de qualquer forma, por isso o papel não tem efeito. Na votação clássica, vota sempre a executar.',
+    notaModerador: 'Equivalente ao Tolo (Fool / Village Idiot). Não recomendado com a votação a apontar: quase todos apontam de qualquer forma, por isso a personagem não tem efeito. Na votação clássica, vota sempre a executar.',
     original: 'Fool',
   },
   {
@@ -298,7 +298,7 @@ export const ROLES = [
     recomendado: { min: 0, max: 1, aPartirDe: 15 }, profetaVe: 'filisteu',
     habilidade: 'Acordas com os Filisteus. Se morreres, a fúria dos Filisteus faz com que eliminem duas vítimas na noite seguinte.',
     guiaoNoite: null,
-    notaModerador: 'Equivalente à Cria de Lobisomem (Wolf Cub). Acorda com os Filisteus — não tem passo próprio.',
+    notaModerador: 'Equivalente à Cria de Lobisomem (Wolf Cub). Acorda com os Filisteus; não tem passo próprio.',
     original: 'Wolf Cub',
   },
   {
@@ -327,7 +327,7 @@ export const ROLES = [
     recomendado: { min: 1, max: 3, aPartirDe: 20 }, profetaVe: 'nao',
     habilidade: 'Todas as noites, os Caldeus escolhem juntos uma vítima. Os Filisteus não te podem matar. Vencem quando forem os únicos inimigos e igualarem os restantes.',
     guiaoNoite: 'Caldeus, acordem. Escolham juntos a vítima desta noite. Caldeus, adormeçam.',
-    notaModerador: 'Equivalente ao Vampiro. Valor −8 no livro da Ultimate Edition, −7 em edições posteriores — confirmar.',
+    notaModerador: 'Equivalente ao Vampiro. Valor −8 no livro da Ultimate Edition, −7 em edições posteriores (confirmar).',
     original: 'Vampire',
   },
 
@@ -374,7 +374,7 @@ export const ROLES = [
     id: 'jaco', nome: 'Jacó', personagem: 'O que Tomou o Lugar', refBiblica: 'Génesis 27:19',
     equipa: 'flutuante', valor: -2, acorda: 'condicional', ordemNoite: 5, tipo: ['manipular'],
     recomendado: { min: 0, max: 1, aPartirDe: 15 }, profetaVe: 'nao',
-    habilidade: 'Na primeira noite, escolhe um jogador. Quando ele morrer, tomas o seu papel e a sua equipa.',
+    habilidade: 'Na primeira noite, escolhe um jogador. Quando ele morrer, tomas a sua personagem e a sua equipa.',
     guiaoNoite: 'Jacó, acorda. Aponta para o jogador cujo lugar queres tomar quando ele cair. Jacó, adormece.',
     notaModerador: 'Equivalente ao Doppelgänger. Quando o escolhido morre, toca no ombro de Jacó e mostra-lhe a nova carta.',
     original: 'Doppelgänger',
@@ -405,14 +405,14 @@ export const ROLES = [
     recomendado: { min: 0, max: 1, aPartirDe: 10 }, profetaVe: 'nao',
     habilidade: 'Enquanto tiveres o Manto, nada te pode matar: nem os inimigos de noite, nem a execução de dia. No fim de cada noite, tens de o passar a outro jogador.',
     guiaoNoite: 'Portador do Manto, acorda. Aponta para quem vai receber o Manto. Adormece. (Toca no ombro do novo portador.)',
-    notaModerador: 'Equivalente ao Amuleto (Charm). Não é um papel: na 1.ª noite, o Narrador toca no ombro de um jogador ao acaso, que fica com o Manto além da sua carta. Não conta para o número de cartas, mas o valor entra no equilíbrio. É sempre o último passo da noite, por isso o novo portador fica protegido até à noite seguinte (inclui a votação). Se o portador for condenado, revela o Manto e sobrevive — a cidade fica a saber quem o tem até ele o passar. Protege qualquer equipa: nas mãos de um Filisteu ajuda os inimigos. Regra da casa sugerida: não se pode devolver o Manto a quem o deu na noite anterior (evita que dois aliados o troquem entre si para sempre).',
+    notaModerador: 'Equivalente ao Amuleto (Charm). Não é uma personagem: na 1.ª noite, o Narrador toca no ombro de um jogador ao acaso, que fica com o Manto além da sua carta. Não conta para o número de cartas, mas o valor entra no equilíbrio. É sempre o último passo da noite, por isso o novo portador fica protegido até à noite seguinte (inclui a votação). Se o portador for condenado, revela o Manto e sobrevive, e a cidade fica a saber quem o tem até ele o passar. Protege qualquer equipa: nas mãos de um Filisteu ajuda os inimigos. Regra da casa sugerida: não se pode devolver o Manto a quem o deu na noite anterior (evita que dois aliados o troquem entre si para sempre).',
     original: 'Charm',
   },
   {
     id: 'narrador', nome: 'Narrador', personagem: 'Quem conta a história', refBiblica: '1 Crónicas 29:29',
     equipa: 'objeto', valor: 0, acorda: 'nunca', ordemNoite: null, tipo: ['nenhum'],
     recomendado: { min: 0, max: 0, aPartirDe: 5 }, profetaVe: 'nao',
-    habilidade: 'Conduzes o jogo: chamas os papéis de noite e orientas as votações de dia. Não jogas.',
+    habilidade: 'Conduzes o jogo: chamas as personagens de noite e orientas as votações de dia. Não jogas.',
     guiaoNoite: null,
     notaModerador: 'Carta do moderador. Não entra no baralho dos jogadores.',
     original: 'Moderator',

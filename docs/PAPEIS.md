@@ -1,8 +1,8 @@
 <!-- Ficheiro gerado por tools/gerar-docs.mjs a partir de js/data/roles.js. Não editar à mão. -->
-# Ultimate Jerusalém — Papéis e Grelha de Poder
+# Ultimate Jerusalém: Personagens e Grelha de Poder
 
-Conversão dos papéis de *Ultimate Werewolf: Ultimate Edition* para o tema **Jerusalém cercada**.
-As mecânicas mantêm-se; muda o nome, a personagem e o texto.
+Conversão das personagens de *Ultimate Werewolf: Ultimate Edition* para o tema **Jerusalém cercada**.
+As mecânicas mantêm-se; mudam o nome, o subtítulo e o texto.
 
 - **Valor**: número de equilíbrio (positivo ajuda Jerusalém, negativo ajuda os inimigos). Um baralho equilibrado soma entre −2 e +2.
 - **?** = valor por confirmar numa carta impressa.
@@ -16,11 +16,11 @@ As mecânicas mantêm-se; muda o nome, a personagem e o texto.
 | **Babilónios** | Agentes caldeus de Nabucodonosor. Inimigos tanto de Jerusalém como dos Filisteus. |
 | **Independentes** | Jogam sozinhos, com uma condição de vitória própria. |
 | **Flutuante** | Começam numa equipa, mas podem mudar durante o jogo. |
-| **Objeto** | Não é um papel: é um objeto passado entre jogadores. |
+| **Objeto** | Não é uma personagem: é um objeto passado entre jogadores. |
 
 ## Grelha de poder
 
-| # | Papel | Personagem | Original | Equipa | Valor | Acorda | Poder | Recomendado |
+| # | Personagem | Subtítulo | Original | Equipa | Valor | Acorda | Poder | Recomendado |
 |---|---|---|---|---|---|---|---|---|
 | 1 | **Israelita** | Povo da Cidade Santa (Salmo 122:6) | Villager | Jerusalém | +1 | Nunca | Sem poder | o restante (mín. 2) |
 | 2 | **Profeta Isaías** | O Vidente de Jerusalém (Isaías 6:8) | Seer | Jerusalém | +7 | Todas as noites | Informação | 1, a partir de 5 |
@@ -69,57 +69,57 @@ Inclui Filisteus, Golias, Absalão e Caldeus. Valores de 6 a 15 jogadores segund
 |---|---|---|---|---|---|---|---|
 | Inimigos | 1 | 1 | 2 | 3 | 4 | 5 | 6 |
 
-Orientação do livro de regras: se os jogadores não se conhecem, junta +5 a favor de Jerusalém; se é um grupo experiente, junta −5. Abaixo de 15 jogadores, cerca de 1 papel especial por cada Israelita; acima, até 3 por 1.
+Orientação do livro de regras: se os jogadores não se conhecem, junta +5 a favor de Jerusalém; se é um grupo experiente, junta −5. Abaixo de 15 jogadores, cerca de 1 personagem especial por cada Israelita; acima, até 3 por 1.
 
 ## Ordem de chamada da noite
 
-1. **Jacó** — quando ativado
-2. **Noemi** — só na 1.ª noite
-3. **Construtor** — só na 1.ª noite
-4. **Barrabás** — só na 1.ª noite
-5. **Sumo Sacerdote Zadoque** — todas as noites
-6. **Benaia** — todas as noites
-7. **Filisteu** (com Golias e Absalão) — todas as noites
-8. **Dalila** — só na 1.ª noite
-9. **Agente Caldeu** — todas as noites
-10. **Profeta Elias** — todas as noites
-11. **Profeta Eliseu** — todas as noites
-12. **Profeta Isaías** — todas as noites
-13. **Profeta Jeremias** — quando ativado
-14. **Calebe** — todas as noites
-15. **Rei Salomão** — todas as noites
-16. **Espia Filisteu** — todas as noites
-17. **Rei Ezequias** — todas as noites
-18. **Juíza Débora** — todas as noites
-19. **Hananias** — todas as noites
-20. **Trombeteiro** — todas as noites
-21. **Baruque** — todas as noites
-22. **Joás** — quando ativado
-23. **Manto do Profeta** — todas as noites
+1. **Jacó** · quando ativado
+2. **Noemi** · só na 1.ª noite
+3. **Construtor** · só na 1.ª noite
+4. **Barrabás** · só na 1.ª noite
+5. **Sumo Sacerdote Zadoque** · todas as noites
+6. **Benaia** · todas as noites
+7. **Filisteu** (com Golias e Absalão) · todas as noites
+8. **Dalila** · só na 1.ª noite
+9. **Agente Caldeu** · todas as noites
+10. **Profeta Elias** · todas as noites
+11. **Profeta Eliseu** · todas as noites
+12. **Profeta Isaías** · todas as noites
+13. **Profeta Jeremias** · quando ativado
+14. **Calebe** · todas as noites
+15. **Rei Salomão** · todas as noites
+16. **Espia Filisteu** · todas as noites
+17. **Rei Ezequias** · todas as noites
+18. **Juíza Débora** · todas as noites
+19. **Hananias** · todas as noites
+20. **Trombeteiro** · todas as noites
+21. **Baruque** · todas as noites
+22. **Joás** · quando ativado
+23. **Manto do Profeta** · todas as noites
 
 ## Votação a apontar (regra por defeito)
 
 Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 
 1. Terminada a discussão, o Narrador diz: "Um, dois, três… apontem!"
-2. Ao mesmo tempo, cada jogador vivo aponta para um jogador — ou para o céu, se não quiser acusar ninguém (abstenção).
+2. Ao mesmo tempo, cada jogador vivo aponta para um jogador, ou para o céu, se não quiser acusar ninguém (abstenção).
 3. O Narrador conta os votos. O voto do Rei David conta a dobrar, sem o anunciar.
 4. Quem tiver mais votos é condenado. Antes da execução, a Rainha Ester pode oferecer-se para morrer no seu lugar.
 5. Empate: nova votação só entre os empatados (os outros apontam para um deles ou para o céu). Se voltar a haver empate, ninguém é executado nesse dia.
 6. Se ninguém tiver votos (todos apontam para o céu), ninguém é executado.
 
-**Papéis que mexem no voto:**
+**Personagens que mexem no voto:**
 
-- Rei David — o seu voto conta como dois.
-- Abigail — aponta sempre para o céu.
-- Nabal — não recomendado neste modo (todos apontam de qualquer forma).
-- Rei Ezequias — o jogador silenciado não fala, mas aponta.
-- Juíza Débora — o jogador expulso não aponta nem pode receber votos.
-- Príncipe Jónatas — se for o mais votado, revela a carta e sobrevive.
-- Trombeteiro — no dia a seguir ao toque do shofar, faz-se uma segunda votação depois da primeira execução.
-- Manto do Profeta — o portador condenado revela o Manto e sobrevive.
+- Rei David: o seu voto conta como dois.
+- Abigail: aponta sempre para o céu.
+- Nabal: não recomendado neste modo (todos apontam de qualquer forma).
+- Rei Ezequias: o jogador silenciado não fala, mas aponta.
+- Juíza Débora: o jogador expulso não aponta nem pode receber votos.
+- Príncipe Jónatas: se for o mais votado, revela a carta e sobrevive.
+- Trombeteiro: no dia a seguir ao toque do shofar, faz-se uma segunda votação depois da primeira execução.
+- Manto do Profeta: o portador condenado revela o Manto e sobrevive.
 
-## Descrição de cada papel
+## Descrição de cada personagem
 
 ### Israelita
 *Povo da Cidade Santa* · Salmo 122:6 · Jerusalém · +1 · original: Villager
@@ -135,7 +135,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 
 **Guião:** _“Profeta Isaías, acorda. Aponta para um jogador sobre quem queres receber uma visão. (Polegar para cima: é Filisteu. Abanar a cabeça: é Israelita.) Profeta Isaías, adormece.”_
 
-**Nota do Narrador:** Papel mais forte de Jerusalém — inclui-o em quase todas as partidas. Rute aparece como Filisteu; Dalila, o Espia e os Caldeus aparecem como Israelitas.
+**Nota do Narrador:** A personagem mais forte de Jerusalém: inclui-a em quase todas as partidas. Rute aparece como Filisteu; Dalila, o Espia e os Caldeus aparecem como Israelitas.
 
 ### Profeta Jeremias
 *O Aprendiz do Profeta* · Jeremias 1:5 · Jerusalém · +4 · original: Apprentice Seer
@@ -176,9 +176,9 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 ### Rei Salomão
 *O Coração Sábio* · 1 Reis 3:9 · Jerusalém · +3 (por confirmar) · original: Medium
 
-**Carta:** Todas as noites, aponta para um jogador. O Narrador revela-te se esse jogador tem um papel especial.
+**Carta:** Todas as noites, aponta para um jogador. O Narrador revela-te se esse jogador tem uma personagem especial.
 
-**Guião:** _“Rei Salomão, acorda. Aponta para um jogador. (Polegar para cima: tem papel especial. Abanar a cabeça: não tem.) Rei Salomão, adormece.”_
+**Guião:** _“Rei Salomão, acorda. Aponta para um jogador. (Polegar para cima: tem personagem especial. Abanar a cabeça: não tem.) Rei Salomão, adormece.”_
 
 **Nota do Narrador:** Equivalente ao Medium. Confirmar o texto exato na carta original.
 
@@ -267,14 +267,14 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 
 **Guião:** _“Construtores, acordem e olhem uns para os outros. Construtores, adormeçam.”_
 
-**Nota do Narrador:** Equivalente ao Maçon. Inclui sempre 2 ou 3 — nunca apenas um.
+**Nota do Narrador:** Equivalente ao Maçon. Inclui sempre 2 ou 3, nunca apenas um.
 
 ### Nabal
 *O Insensato* · 1 Samuel 25:25 · Jerusalém · +2 (por confirmar) · original: Fool
 
 **Carta:** Nas votações, nunca te podes abster: apontas sempre para alguém.
 
-**Nota do Narrador:** Equivalente ao Tolo (Fool / Village Idiot). Não recomendado com a votação a apontar: quase todos apontam de qualquer forma, por isso o papel não tem efeito. Na votação clássica, vota sempre a executar.
+**Nota do Narrador:** Equivalente ao Tolo (Fool / Village Idiot). Não recomendado com a votação a apontar: quase todos apontam de qualquer forma, por isso a personagem não tem efeito. Na votação clássica, vota sempre a executar.
 
 ### Juíza Débora
 *Sob a Palmeira* · Juízes 4:5 · Jerusalém · +1 · original: Old Hag
@@ -338,7 +338,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 
 **Carta:** Acordas com os Filisteus. Se morreres, a fúria dos Filisteus faz com que eliminem duas vítimas na noite seguinte.
 
-**Nota do Narrador:** Equivalente à Cria de Lobisomem (Wolf Cub). Acorda com os Filisteus — não tem passo próprio.
+**Nota do Narrador:** Equivalente à Cria de Lobisomem (Wolf Cub). Acorda com os Filisteus; não tem passo próprio.
 
 ### Dalila
 *A Traidora de Soreque* · Juízes 16:5 · Filisteus · −6 · original: Minion
@@ -365,7 +365,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 
 **Guião:** _“Caldeus, acordem. Escolham juntos a vítima desta noite. Caldeus, adormeçam.”_
 
-**Nota do Narrador:** Equivalente ao Vampiro. Valor −8 no livro da Ultimate Edition, −7 em edições posteriores — confirmar.
+**Nota do Narrador:** Equivalente ao Vampiro. Valor −8 no livro da Ultimate Edition, −7 em edições posteriores (confirmar).
 
 ### Absalão
 *O Filho Rebelde* · 2 Samuel 15:10 · Independentes · −5 · original: Lone Wolf
@@ -402,7 +402,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 ### Jacó
 *O que Tomou o Lugar* · Génesis 27:19 · Flutuante · −2 · original: Doppelgänger
 
-**Carta:** Na primeira noite, escolhe um jogador. Quando ele morrer, tomas o seu papel e a sua equipa.
+**Carta:** Na primeira noite, escolhe um jogador. Quando ele morrer, tomas a sua personagem e a sua equipa.
 
 **Guião:** _“Jacó, acorda. Aponta para o jogador cujo lugar queres tomar quando ele cair. Jacó, adormece.”_
 
@@ -431,4 +431,4 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 
 **Guião:** _“Portador do Manto, acorda. Aponta para quem vai receber o Manto. Adormece. (Toca no ombro do novo portador.)”_
 
-**Nota do Narrador:** Equivalente ao Amuleto (Charm). Não é um papel: na 1.ª noite, o Narrador toca no ombro de um jogador ao acaso, que fica com o Manto além da sua carta. Não conta para o número de cartas, mas o valor entra no equilíbrio. É sempre o último passo da noite, por isso o novo portador fica protegido até à noite seguinte (inclui a votação). Se o portador for condenado, revela o Manto e sobrevive — a cidade fica a saber quem o tem até ele o passar. Protege qualquer equipa: nas mãos de um Filisteu ajuda os inimigos. Regra da casa sugerida: não se pode devolver o Manto a quem o deu na noite anterior (evita que dois aliados o troquem entre si para sempre).
+**Nota do Narrador:** Equivalente ao Amuleto (Charm). Não é uma personagem: na 1.ª noite, o Narrador toca no ombro de um jogador ao acaso, que fica com o Manto além da sua carta. Não conta para o número de cartas, mas o valor entra no equilíbrio. É sempre o último passo da noite, por isso o novo portador fica protegido até à noite seguinte (inclui a votação). Se o portador for condenado, revela o Manto e sobrevive, e a cidade fica a saber quem o tem até ele o passar. Protege qualquer equipa: nas mãos de um Filisteu ajuda os inimigos. Regra da casa sugerida: não se pode devolver o Manto a quem o deu na noite anterior (evita que dois aliados o troquem entre si para sempre).
