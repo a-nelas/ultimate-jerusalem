@@ -266,7 +266,7 @@ Minimalist flat cartoon illustration of Baruch the scribe, a focused young adult
 ### Construtor · 1 (Pedreiro) · `construtor`
 
 ```text
-Minimalist flat cartoon illustration of a builder with short brown hair and a beard, confident smile, holding a trowel and a limestone block, a sword on his belt, a small stack of stones beside him, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of a builder with short brown hair and a beard, confident smile, holding a trowel and a limestone block, a small stack of stones beside him, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 #### Construtor · 2 (Canteiro) · `construtor-2`
@@ -278,7 +278,7 @@ Minimalist flat cartoon illustration of a stonemason with short grey hair and a 
 #### Construtor · 3 (Carregadora) · `construtor-3`
 
 ```text
-Minimalist flat cartoon illustration of a strong young adult woman with a dark braid and a head scarf, cheerful face, carrying a stack of bricks, a sword on her belt, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of a strong young adult woman with a dark braid and a head scarf, cheerful face, carrying a stack of bricks, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 #### Construtor · 4 (Aprendiz) · `construtor-4`

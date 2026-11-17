@@ -53,7 +53,7 @@ export const ARTE = {
   david: 'King David, a young adult king with curly red hair and a golden crown, happy smile, playing a small harp',
   trombeteiro: 'a trumpeter with curly black hair and a short beard, puffed cheeks, blowing a long curved ram\'s horn shofar',
   baruque: 'Baruch the scribe, a focused young adult man with short dark hair, writing on a long scroll with a reed pen, a small oil lamp beside him',
-  construtor: 'a builder with short brown hair and a beard, confident smile, holding a trowel and a limestone block, a sword on his belt, a small stack of stones beside him',
+  construtor: 'a builder with short brown hair and a beard, confident smile, holding a trowel and a limestone block, a small stack of stones beside him',
   nabal: 'Nabal, a chubby rich man with greasy black hair and a curly beard, smug face, holding a big golden goblet, a fluffy sheep beside him',
   debora: 'Deborah the judge, a wise woman with long grey-streaked hair under a light veil, calm kind face, sitting under a small palm tree',
   ezequias: 'King Hezekiah, a crowned king with dark hair and a full beard, stern face, holding one finger to his lips asking for silence',
@@ -100,7 +100,7 @@ export const VARIANTES = {
   ],
   construtor: [
     { nome: 'Canteiro', descricao: 'a stonemason with short grey hair and a grey beard, determined smile, holding a hammer and a chisel, a cut limestone block beside him' },
-    { nome: 'Carregadora', descricao: 'a strong young adult woman with a dark braid and a head scarf, cheerful face, carrying a stack of bricks, a sword on her belt' },
+    { nome: 'Carregadora', descricao: 'a strong young adult woman with a dark braid and a head scarf, cheerful face, carrying a stack of bricks' },
     { nome: 'Aprendiz', descricao: 'a young adult apprentice builder with messy brown hair and no beard, eager smile, carrying a wooden bucket of mortar and a trowel' },
   ],
   caldeu: [
