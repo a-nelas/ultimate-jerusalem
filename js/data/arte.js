@@ -61,7 +61,7 @@ export const ARTE = {
   noemi: 'Naomi, a kind older woman with grey hair in a bun under a shawl, warm smile, holding a long red ribbon tied into a bow between two small rings',
   matusalem: 'Methuselah, a tiny very old man with sleepy happy eyes and an extremely long white beard reaching the ground, leaning on a cane',
   abigail: 'Abigail, a gentle woman with long dark hair, pleading peaceful face, offering a basket of bread and figs',
-  filisteu: 'a sneaky Philistine soldier with a sly sideways glance, wearing a tall feathered helmet over short black hair and a dark cloak, holding a bronze sword',
+  filisteu: 'a Philistine soldier with a simple angry face, slanted frowning eyebrows and a small grumpy downturned mouth, wearing a tall feathered helmet over short black hair and a dark cloak, holding a bronze sword',
   golias: 'Goliath, a huge grumpy giant with a thick black beard and a frowning face, in bronze scale armor and a feathered helmet, holding an enormous spear',
   dalila: 'Delilah, a sly woman with long glossy black hair, dark eyes and a mischievous smile, holding a pair of scissors and a small pouch of coins',
   espia: 'a Philistine spy with short black hair, a hood pushed back to show his face, narrow suspicious eyes, holding a small fish-tailed idol',
@@ -76,6 +76,56 @@ export const ARTE = {
   manto: 'a prophet\'s brown woven cloak floating in a swirl of wind and golden light',
   narrador: 'an old storyteller with white hair, a white beard and round glasses, friendly smile, holding a big open book and a lit candle',
 };
+
+/**
+ * Desenhos alternativos para as personagens que costumam ter várias cartas no mesmo jogo (10 a 20 jogadores).
+ * A carta n.º 1 é a descrição principal (ARTE); estas são a n.º 2, 3, … pela ordem da lista.
+ * Imagens: assets/roles/<id>-<n>.png (a n.º 1 pode chamar-se <id>.png ou <id>-1.png).
+ */
+export const VARIANTES = {
+  israelita: [
+    { nome: 'Oleiro', descricao: 'a cheerful Israelite potter with short curly black hair and a short beard, clay-stained apron, holding a small clay bowl' },
+    { nome: 'Lavrador', descricao: 'an Israelite farmer with short brown hair and a brown beard, proud smile, holding a sickle and a bundle of wheat' },
+    { nome: 'Pastora', descricao: 'a young adult shepherd girl with a long dark braid and a light head scarf, kind smile, holding a shepherd staff, a fluffy lamb beside her' },
+    { nome: 'Avó com pão', descricao: 'an old Israelite woman with grey hair under a soft shawl, warm grandmotherly smile, holding a round loaf of bread' },
+    { nome: 'Pescador', descricao: 'an Israelite fisherman with messy black hair and a short beard, happy grin, holding a small net with one fish' },
+    { nome: 'Rapaz com cordeiro', descricao: 'a small Israelite boy with short curly brown hair, big happy eyes, hugging a little lamb' },
+    { nome: 'Tecedeira', descricao: 'an Israelite weaver woman with dark hair in a bun, focused gentle face, holding a ball of yarn and a small spindle' },
+  ],
+  filisteu: [
+    { nome: 'Lanceiro', descricao: 'a Philistine spearman with a simple angry face, furrowed eyebrows and a tight frowning mouth, short black hair under a tall feathered helmet, holding a long bronze spear' },
+    { nome: 'Arqueiro', descricao: 'a Philistine archer with a simple angry face, sharp V-shaped eyebrows and a small scowling mouth, a feathered headband over black hair, holding a short bow, a quiver on his back' },
+    { nome: 'Guarda', descricao: 'a Philistine guard with a simple angry face, heavy frowning eyebrows and a gritted-teeth mouth, a feathered helmet over short hair, holding a round bronze shield and a short sword' },
+    { nome: 'Oficial', descricao: 'a Philistine officer with a simple angry face, slanted eyebrows and an open shouting mouth, a tall red-plumed feathered helmet over black hair and a pointy beard, holding a bronze sword raised' },
+  ],
+  construtor: [
+    { nome: 'Canteiro', descricao: 'a stonemason with short grey hair and a grey beard, determined smile, holding a hammer and a chisel, a cut limestone block beside him' },
+    { nome: 'Carregadora', descricao: 'a strong young adult woman with a dark braid and a head scarf, cheerful face, carrying a stack of bricks, a sword on her belt' },
+    { nome: 'Aprendiz', descricao: 'a young adult apprentice builder with messy brown hair and no beard, eager smile, carrying a wooden bucket of mortar and a trowel' },
+  ],
+  caldeu: [
+    { nome: 'Escriba', descricao: 'a Babylonian scribe agent with a curled black beard and a tall blue cap, sly smile, writing on a clay tablet with a stylus' },
+    { nome: 'Mercador', descricao: 'a Babylonian merchant spy with a curled black beard and a gold headband, scheming grin, holding a jingling coin purse' },
+  ],
+};
+
+/**
+ * Decompõe o id de uma carta: 'israelita' → n.º 1; 'israelita-3' → n.º 3 (segunda variante).
+ * @returns {{papel:string, n:number, nome:string|null, descricao:string|undefined}}
+ */
+export function variante(idCarta) {
+  const m = /^(.+)-(\d+)$/.exec(idCarta ?? '');
+  if (m && VARIANTES[m[1]]) {
+    const n = Number(m[2]);
+    if (n === 1) return { papel: m[1], n: 1, nome: null, descricao: ARTE[m[1]] };
+    const v = VARIANTES[m[1]][n - 2];
+    if (v) return { papel: m[1], n, nome: v.nome, descricao: v.descricao };
+  }
+  return { papel: idCarta, n: 1, nome: null, descricao: ARTE[idCarta] };
+}
+
+/** Todos os ids de carta com variantes: ['israelita-2', 'israelita-3', …]. */
+export const IDS_VARIANTES = Object.entries(VARIANTES).flatMap(([id, lista]) => lista.map((_, i) => `${id}-${i + 2}`));
 
 /** Prompt completo para uma personagem (aceita uma descrição alternativa). O Manto é um objeto: não leva rosto. */
 export function promptPara(papel, descricao) {

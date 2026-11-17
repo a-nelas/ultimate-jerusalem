@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { ROLES, EQUIPAS, ACORDA, TIPOS, inimigosRecomendados } from '../js/data/roles.js';
 import { VOTACOES, VOTACAO_PADRAO } from '../js/data/regras.js';
-import { PREFIXO, ESTILO, NEGATIVO, promptPara } from '../js/data/arte.js';
+import { PREFIXO, ESTILO, NEGATIVO, VARIANTES, promptPara } from '../js/data/arte.js';
 import { TAMANHOS, ESQUEMAS, SANGRIA_MM, geometria, proporcao, sugestaoGeracao, mmParaPx } from '../js/cartas/formatos.js';
 
 const raiz = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -91,6 +91,8 @@ const linhaEsquema = (esquema) => {
   const s = sugestaoGeracao(p);
   return `| ${ESQUEMAS[esquema]} | ${g.arte.w} × ${g.arte.h} px | ${fmt(p.toFixed(2))} : 1 | ${s.join(' × ')} px |`;
 };
+const variantesDe = (r) => (VARIANTES[r.id] ?? []).map((v, i) => ({ ...v, id: `${r.id}-${i + 2}`, n: i + 2 }));
+const totalImagens = ROLES.reduce((n, r) => n + 1 + variantesDe(r).length, 0);
 const img = `${aviso}
 # Guia de imagens das cartas
 
@@ -140,9 +142,17 @@ Prompt negativo comum (só tem efeito com CFG acima de 1):
 
 | ✓ | Ficheiro | Personagem | Subtítulo | Equipa |
 |---|---|---|---|---|
-${ROLES.map((r) => `| ☐ | \`${r.id}.webp\` | ${r.nome} | ${r.personagem} | ${EQUIPAS[r.equipa].nome} |`).join('\n')}
+${ROLES.map((r) => [`| ☐ | \`${r.id}.png\` | ${r.nome} | ${r.personagem} | ${EQUIPAS[r.equipa].nome} |`,
+  ...variantesDe(r).map((v) => `| ☐ | \`${v.id}.png\` | ${r.nome} · ${v.n} (${v.nome}) | ${r.personagem} | ${EQUIPAS[r.equipa].nome} |`)].join('\n')).join('\n')}
 
 O verso é desenhado pela Oficina e não precisa de imagem.
+
+## Desenhos alternativos
+
+As personagens que costumam ter várias cartas no mesmo jogo (10 a 20 jogadores) têm desenhos alternativos:
+${Object.keys(VARIANTES).map((id) => `${ROLES.find((r) => r.id === id).nome} (${1 + VARIANTES[id].length})`).join(', ')}.
+A n.º 1 é a imagem principal (\`<id>.png\` ou \`<id>-1.png\`); as outras chamam-se \`<id>-2.png\`, \`<id>-3.png\`, …
+Na Oficina aparecem na lista de personagens como *Israelita · 2 (Oleiro)*, etc.
 
 ## Prompts por personagem
 
@@ -151,6 +161,12 @@ ${ROLES.map((r) => `### ${r.nome} · \`${r.id}\`
 \`\`\`text
 ${promptPara(r)}
 \`\`\`
-`).join('\n')}`;
+${variantesDe(r).map((v) => `
+#### ${r.nome} · ${v.n} (${v.nome}) · \`${v.id}\`
+
+\`\`\`text
+${promptPara(r, v.descricao)}
+\`\`\`
+`).join('')}`).join('\n')}`;
 writeFileSync(join(raiz, 'docs', 'IMAGENS.md'), img);
-console.log(`Gerados docs/PAPEIS.md (${papeis.length} papéis) e docs/IMAGENS.md (${ROLES.length} imagens).`);
+console.log(`Gerados docs/PAPEIS.md (${papeis.length} papéis) e docs/IMAGENS.md (${totalImagens} imagens).`);

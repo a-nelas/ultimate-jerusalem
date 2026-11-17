@@ -1,5 +1,5 @@
 import { ROLES, EQUIPAS, papel } from '../data/roles.js';
-import { ARTE, NEGATIVO, promptPara } from '../data/arte.js';
+import { NEGATIVO, VARIANTES, promptPara, variante } from '../data/arte.js';
 import { TAMANHOS, ESQUEMAS, RESOLUCOES, SANGRIA_MM, geometria, proporcao, sugestaoGeracao, mmParaPx } from '../cartas/formatos.js';
 import { lerTema, carregarFontes, desenharFrente, desenharVerso, desenharMascara, enquadrar } from '../cartas/render.js';
 import { lerArte, guardarArte, apagarArte, listarArte, lerJSON, guardarJSON } from '../cartas/armazem.js';
@@ -26,8 +26,11 @@ function base(id) {
   if (id === PERSONALIZADA) {
     return { id, nome: 'Nova Carta', personagem: 'Subtítulo', refBiblica: '', habilidade: 'Escreve aqui a habilidade da carta.', equipa: 'jerusalem', valor: 0 };
   }
-  return papel(id);
+  const v = variante(id);
+  return { ...papel(v.papel), id };
 }
+/** Descrição da arte por omissão da carta (principal ou variante). */
+const descricaoBase = (id) => variante(id).descricao ?? '';
 function dados() {
   const b = base(prefs.id);
   const d = { ...b, ...(textos[prefs.id] ?? {}) };
@@ -47,7 +50,12 @@ async function montarControlos() {
     const grupo = document.createElement('optgroup');
     grupo.label = info.nome;
     for (const r of ROLES.filter((x) => x.equipa === eq)) {
-      grupo.append(new Option(`${r.nome}${comArte.has(r.id) ? ' ✓' : ''}`, r.id));
+      const extra = VARIANTES[r.id];
+      grupo.append(new Option(`${r.nome}${extra ? ' · 1' : ''}${comArte.has(r.id) ? ' ✓' : ''}`, r.id));
+      extra?.forEach((v, i) => {
+        const id = `${r.id}-${i + 2}`;
+        grupo.append(new Option(`${r.nome} · ${i + 2} (${v.nome})${comArte.has(id) ? ' ✓' : ''}`, id));
+      });
     }
     if (grupo.children.length) sel.append(grupo);
   }
@@ -77,7 +85,7 @@ function preencherFormulario() {
   $('#f-valor').value = d.valor;
   $('#f-habilidade').value = d.habilidade;
   $('#f-ref').value = d.refBiblica ?? '';
-  $('#descricao').value = textos[prefs.id]?.arte ?? ARTE[prefs.id] ?? '';
+  $('#descricao').value = textos[prefs.id]?.arte ?? descricaoBase(prefs.id);
   $('#tamanho').value = prefs.tamanho;
   $('#larg').value = prefs.mm[0];
   $('#alt').value = prefs.mm[1];
@@ -96,7 +104,7 @@ function lerFormulario() {
   };
   const diff = {};
   for (const [k, v] of Object.entries(novo)) {
-    const original = k === 'arte' ? (ARTE[prefs.id] ?? '') : b[k];
+    const original = k === 'arte' ? descricaoBase(prefs.id) : b[k];
     if (String(v) !== String(original ?? '')) diff[k] = v;
   }
   if (Object.keys(diff).length) textos[prefs.id] = diff; else delete textos[prefs.id];
@@ -254,7 +262,7 @@ function atualizarInfo() {
     ['Depois', 'aumenta a resolução (upscale) até pelo menos a área da arte'],
   ];
   $('#ficha').innerHTML = linhas.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('');
-  $('#prompt').value = promptPara({ id, equipa: d.equipa }, $('#descricao').value || undefined);
+  $('#prompt').value = promptPara({ id: variante(id).papel, equipa: d.equipa }, $('#descricao').value || descricaoBase(id));
   $('#negativo').value = NEGATIVO;
 }
 

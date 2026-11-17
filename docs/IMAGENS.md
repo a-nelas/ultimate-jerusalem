@@ -52,47 +52,70 @@ Prompt negativo comum (só tem efeito com CFG acima de 1):
 
 | ✓ | Ficheiro | Personagem | Subtítulo | Equipa |
 |---|---|---|---|---|
-| ☐ | `israelita.webp` | Israelita | Povo da Cidade Santa | Jerusalém |
-| ☐ | `isaias.webp` | Profeta Isaías | O Vidente de Jerusalém | Jerusalém |
-| ☐ | `jeremias.webp` | Profeta Jeremias | O Aprendiz do Profeta | Jerusalém |
-| ☐ | `elias.webp` | Profeta Elias | Fogo do Céu e Vida Restaurada | Jerusalém |
-| ☐ | `eliseu.webp` | Profeta Eliseu | Porção Dobrada do Espírito | Jerusalém |
-| ☐ | `zadoque.webp` | Sumo Sacerdote Zadoque | A Bênção do Templo | Jerusalém |
-| ☐ | `salomao.webp` | Rei Salomão | O Coração Sábio | Jerusalém |
-| ☐ | `calebe.webp` | Calebe | O Espia de Canaã | Jerusalém |
-| ☐ | `benaia.webp` | Benaia | Capitão da Guarda do Rei | Jerusalém |
-| ☐ | `sansao.webp` | Sansão | A Força do Nazireu | Jerusalém |
-| ☐ | `ester.webp` | Rainha Ester | "Se eu perecer, pereci" | Jerusalém |
-| ☐ | `eleazar.webp` | Eleazar | Valente de David | Jerusalém |
-| ☐ | `jonatas.webp` | Príncipe Jónatas | Resgatado pelo Povo | Jerusalém |
-| ☐ | `daniel.webp` | Daniel | Na Cova dos Leões | Jerusalém |
-| ☐ | `david.webp` | Rei David | O Pastor Ungido | Jerusalém |
-| ☐ | `trombeteiro.webp` | Trombeteiro | O Toque do Shofar | Jerusalém |
-| ☐ | `baruque.webp` | Baruque | O Escriba e o seu Rolo | Jerusalém |
-| ☐ | `construtor.webp` | Construtor | Reconstrutor do Muro de Neemias | Jerusalém |
-| ☐ | `nabal.webp` | Nabal | O Insensato | Jerusalém |
-| ☐ | `debora.webp` | Juíza Débora | Sob a Palmeira | Jerusalém |
-| ☐ | `ezequias.webp` | Rei Ezequias | "Não lhe respondais" | Jerusalém |
-| ☐ | `rute.webp` | Rute | A Moabita Fiel | Jerusalém |
-| ☐ | `noemi.webp` | Noemi | A Casamenteira | Jerusalém |
-| ☐ | `matusalem.webp` | Matusalém | O Ancião | Jerusalém |
-| ☐ | `abigail.webp` | Abigail | A Pacificadora | Jerusalém |
-| ☐ | `filisteu.webp` | Filisteu | Guerreiro Infiltrado | Filisteus |
-| ☐ | `golias.webp` | Golias | O Gigante de Gate | Filisteus |
-| ☐ | `dalila.webp` | Dalila | A Traidora de Soreque | Filisteus |
-| ☐ | `espia.webp` | Espia Filisteu | Batedor do Templo de Dagom | Filisteus |
-| ☐ | `caldeu.webp` | Agente Caldeu | Ao Serviço de Nabucodonosor | Babilónios |
-| ☐ | `absalao.webp` | Absalão | O Filho Rebelde | Independentes |
-| ☐ | `hananias.webp` | Hananias | O Falso Profeta | Independentes |
-| ☐ | `jonas.webp` | Jonas | "Lançai-me ao mar" | Independentes |
-| ☐ | `barrabas.webp` | Barrabás | O Salteador | Independentes |
-| ☐ | `jaco.webp` | Jacó | O que Tomou o Lugar | Flutuante |
-| ☐ | `aca.webp` | Acã | O Cobiçoso | Flutuante |
-| ☐ | `joas.webp` | Joás | O Rei Escondido | Flutuante |
-| ☐ | `manto.webp` | Manto do Profeta | Passado de mão em mão | Objeto |
-| ☐ | `narrador.webp` | Narrador | Quem conta a história | Objeto |
+| ☐ | `israelita.png` | Israelita | Povo da Cidade Santa | Jerusalém |
+| ☐ | `israelita-2.png` | Israelita · 2 (Oleiro) | Povo da Cidade Santa | Jerusalém |
+| ☐ | `israelita-3.png` | Israelita · 3 (Lavrador) | Povo da Cidade Santa | Jerusalém |
+| ☐ | `israelita-4.png` | Israelita · 4 (Pastora) | Povo da Cidade Santa | Jerusalém |
+| ☐ | `israelita-5.png` | Israelita · 5 (Avó com pão) | Povo da Cidade Santa | Jerusalém |
+| ☐ | `israelita-6.png` | Israelita · 6 (Pescador) | Povo da Cidade Santa | Jerusalém |
+| ☐ | `israelita-7.png` | Israelita · 7 (Rapaz com cordeiro) | Povo da Cidade Santa | Jerusalém |
+| ☐ | `israelita-8.png` | Israelita · 8 (Tecedeira) | Povo da Cidade Santa | Jerusalém |
+| ☐ | `isaias.png` | Profeta Isaías | O Vidente de Jerusalém | Jerusalém |
+| ☐ | `jeremias.png` | Profeta Jeremias | O Aprendiz do Profeta | Jerusalém |
+| ☐ | `elias.png` | Profeta Elias | Fogo do Céu e Vida Restaurada | Jerusalém |
+| ☐ | `eliseu.png` | Profeta Eliseu | Porção Dobrada do Espírito | Jerusalém |
+| ☐ | `zadoque.png` | Sumo Sacerdote Zadoque | A Bênção do Templo | Jerusalém |
+| ☐ | `salomao.png` | Rei Salomão | O Coração Sábio | Jerusalém |
+| ☐ | `calebe.png` | Calebe | O Espia de Canaã | Jerusalém |
+| ☐ | `benaia.png` | Benaia | Capitão da Guarda do Rei | Jerusalém |
+| ☐ | `sansao.png` | Sansão | A Força do Nazireu | Jerusalém |
+| ☐ | `ester.png` | Rainha Ester | "Se eu perecer, pereci" | Jerusalém |
+| ☐ | `eleazar.png` | Eleazar | Valente de David | Jerusalém |
+| ☐ | `jonatas.png` | Príncipe Jónatas | Resgatado pelo Povo | Jerusalém |
+| ☐ | `daniel.png` | Daniel | Na Cova dos Leões | Jerusalém |
+| ☐ | `david.png` | Rei David | O Pastor Ungido | Jerusalém |
+| ☐ | `trombeteiro.png` | Trombeteiro | O Toque do Shofar | Jerusalém |
+| ☐ | `baruque.png` | Baruque | O Escriba e o seu Rolo | Jerusalém |
+| ☐ | `construtor.png` | Construtor | Reconstrutor do Muro de Neemias | Jerusalém |
+| ☐ | `construtor-2.png` | Construtor · 2 (Canteiro) | Reconstrutor do Muro de Neemias | Jerusalém |
+| ☐ | `construtor-3.png` | Construtor · 3 (Carregadora) | Reconstrutor do Muro de Neemias | Jerusalém |
+| ☐ | `construtor-4.png` | Construtor · 4 (Aprendiz) | Reconstrutor do Muro de Neemias | Jerusalém |
+| ☐ | `nabal.png` | Nabal | O Insensato | Jerusalém |
+| ☐ | `debora.png` | Juíza Débora | Sob a Palmeira | Jerusalém |
+| ☐ | `ezequias.png` | Rei Ezequias | "Não lhe respondais" | Jerusalém |
+| ☐ | `rute.png` | Rute | A Moabita Fiel | Jerusalém |
+| ☐ | `noemi.png` | Noemi | A Casamenteira | Jerusalém |
+| ☐ | `matusalem.png` | Matusalém | O Ancião | Jerusalém |
+| ☐ | `abigail.png` | Abigail | A Pacificadora | Jerusalém |
+| ☐ | `filisteu.png` | Filisteu | Guerreiro Infiltrado | Filisteus |
+| ☐ | `filisteu-2.png` | Filisteu · 2 (Lanceiro) | Guerreiro Infiltrado | Filisteus |
+| ☐ | `filisteu-3.png` | Filisteu · 3 (Arqueiro) | Guerreiro Infiltrado | Filisteus |
+| ☐ | `filisteu-4.png` | Filisteu · 4 (Guarda) | Guerreiro Infiltrado | Filisteus |
+| ☐ | `filisteu-5.png` | Filisteu · 5 (Oficial) | Guerreiro Infiltrado | Filisteus |
+| ☐ | `golias.png` | Golias | O Gigante de Gate | Filisteus |
+| ☐ | `dalila.png` | Dalila | A Traidora de Soreque | Filisteus |
+| ☐ | `espia.png` | Espia Filisteu | Batedor do Templo de Dagom | Filisteus |
+| ☐ | `caldeu.png` | Agente Caldeu | Ao Serviço de Nabucodonosor | Babilónios |
+| ☐ | `caldeu-2.png` | Agente Caldeu · 2 (Escriba) | Ao Serviço de Nabucodonosor | Babilónios |
+| ☐ | `caldeu-3.png` | Agente Caldeu · 3 (Mercador) | Ao Serviço de Nabucodonosor | Babilónios |
+| ☐ | `absalao.png` | Absalão | O Filho Rebelde | Independentes |
+| ☐ | `hananias.png` | Hananias | O Falso Profeta | Independentes |
+| ☐ | `jonas.png` | Jonas | "Lançai-me ao mar" | Independentes |
+| ☐ | `barrabas.png` | Barrabás | O Salteador | Independentes |
+| ☐ | `jaco.png` | Jacó | O que Tomou o Lugar | Flutuante |
+| ☐ | `aca.png` | Acã | O Cobiçoso | Flutuante |
+| ☐ | `joas.png` | Joás | O Rei Escondido | Flutuante |
+| ☐ | `manto.png` | Manto do Profeta | Passado de mão em mão | Objeto |
+| ☐ | `narrador.png` | Narrador | Quem conta a história | Objeto |
 
 O verso é desenhado pela Oficina e não precisa de imagem.
+
+## Desenhos alternativos
+
+As personagens que costumam ter várias cartas no mesmo jogo (10 a 20 jogadores) têm desenhos alternativos:
+Israelita (8), Filisteu (5), Construtor (4), Agente Caldeu (3).
+A n.º 1 é a imagem principal (`<id>.png` ou `<id>-1.png`); as outras chamam-se `<id>-2.png`, `<id>-3.png`, …
+Na Oficina aparecem na lista de personagens como *Israelita · 2 (Oleiro)*, etc.
 
 ## Prompts por personagem
 
@@ -100,6 +123,48 @@ O verso é desenhado pela Oficina e não precisa de imagem.
 
 ```text
 Minimalist flat cartoon illustration of a friendly Israelite villager with short dark hair under a simple head scarf, a simple striped tunic, smiling, carrying a clay water jar, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+```
+
+#### Israelita · 2 (Oleiro) · `israelita-2`
+
+```text
+Minimalist flat cartoon illustration of a cheerful Israelite potter with short curly black hair and a short beard, clay-stained apron, holding a small clay bowl, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+```
+
+#### Israelita · 3 (Lavrador) · `israelita-3`
+
+```text
+Minimalist flat cartoon illustration of an Israelite farmer with short brown hair and a brown beard, proud smile, holding a sickle and a bundle of wheat, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+```
+
+#### Israelita · 4 (Pastora) · `israelita-4`
+
+```text
+Minimalist flat cartoon illustration of a young adult shepherd girl with a long dark braid and a light head scarf, kind smile, holding a shepherd staff, a fluffy lamb beside her, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+```
+
+#### Israelita · 5 (Avó com pão) · `israelita-5`
+
+```text
+Minimalist flat cartoon illustration of an old Israelite woman with grey hair under a soft shawl, warm grandmotherly smile, holding a round loaf of bread, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+```
+
+#### Israelita · 6 (Pescador) · `israelita-6`
+
+```text
+Minimalist flat cartoon illustration of an Israelite fisherman with messy black hair and a short beard, happy grin, holding a small net with one fish, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+```
+
+#### Israelita · 7 (Rapaz com cordeiro) · `israelita-7`
+
+```text
+Minimalist flat cartoon illustration of a small Israelite boy with short curly brown hair, big happy eyes, hugging a little lamb, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+```
+
+#### Israelita · 8 (Tecedeira) · `israelita-8`
+
+```text
+Minimalist flat cartoon illustration of an Israelite weaver woman with dark hair in a bun, focused gentle face, holding a ball of yarn and a small spindle, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 ### Profeta Isaías · `isaias`
@@ -204,6 +269,24 @@ Minimalist flat cartoon illustration of Baruch the scribe, a focused young adult
 Minimalist flat cartoon illustration of a builder with short brown hair and a beard, confident smile, holding a trowel and a limestone block, a sword on his belt, a small stack of stones beside him, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
+#### Construtor · 2 (Canteiro) · `construtor-2`
+
+```text
+Minimalist flat cartoon illustration of a stonemason with short grey hair and a grey beard, determined smile, holding a hammer and a chisel, a cut limestone block beside him, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+```
+
+#### Construtor · 3 (Carregadora) · `construtor-3`
+
+```text
+Minimalist flat cartoon illustration of a strong young adult woman with a dark braid and a head scarf, cheerful face, carrying a stack of bricks, a sword on her belt, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+```
+
+#### Construtor · 4 (Aprendiz) · `construtor-4`
+
+```text
+Minimalist flat cartoon illustration of a young adult apprentice builder with messy brown hair and no beard, eager smile, carrying a wooden bucket of mortar and a trowel, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+```
+
 ### Nabal · `nabal`
 
 ```text
@@ -249,7 +332,31 @@ Minimalist flat cartoon illustration of Abigail, a gentle woman with long dark h
 ### Filisteu · `filisteu`
 
 ```text
-Minimalist flat cartoon illustration of a sneaky Philistine soldier with a sly sideways glance, wearing a tall feathered helmet over short black hair and a dark cloak, holding a bronze sword, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of oxblood red, bronze and charcoal, soft dusty red background
+Minimalist flat cartoon illustration of a Philistine soldier with a simple angry face, slanted frowning eyebrows and a small grumpy downturned mouth, wearing a tall feathered helmet over short black hair and a dark cloak, holding a bronze sword, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of oxblood red, bronze and charcoal, soft dusty red background
+```
+
+#### Filisteu · 2 (Lanceiro) · `filisteu-2`
+
+```text
+Minimalist flat cartoon illustration of a Philistine spearman with a simple angry face, furrowed eyebrows and a tight frowning mouth, short black hair under a tall feathered helmet, holding a long bronze spear, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of oxblood red, bronze and charcoal, soft dusty red background
+```
+
+#### Filisteu · 3 (Arqueiro) · `filisteu-3`
+
+```text
+Minimalist flat cartoon illustration of a Philistine archer with a simple angry face, sharp V-shaped eyebrows and a small scowling mouth, a feathered headband over black hair, holding a short bow, a quiver on his back, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of oxblood red, bronze and charcoal, soft dusty red background
+```
+
+#### Filisteu · 4 (Guarda) · `filisteu-4`
+
+```text
+Minimalist flat cartoon illustration of a Philistine guard with a simple angry face, heavy frowning eyebrows and a gritted-teeth mouth, a feathered helmet over short hair, holding a round bronze shield and a short sword, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of oxblood red, bronze and charcoal, soft dusty red background
+```
+
+#### Filisteu · 5 (Oficial) · `filisteu-5`
+
+```text
+Minimalist flat cartoon illustration of a Philistine officer with a simple angry face, slanted eyebrows and an open shouting mouth, a tall red-plumed feathered helmet over black hair and a pointy beard, holding a bronze sword raised, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of oxblood red, bronze and charcoal, soft dusty red background
 ```
 
 ### Golias · `golias`
@@ -274,6 +381,18 @@ Minimalist flat cartoon illustration of a Philistine spy with short black hair, 
 
 ```text
 Minimalist flat cartoon illustration of a Babylonian agent with a curled black beard and a tall cap, blue and gold robes, sly smile, holding a clay tablet, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of violet, lapis blue and gold, soft lavender background
+```
+
+#### Agente Caldeu · 2 (Escriba) · `caldeu-2`
+
+```text
+Minimalist flat cartoon illustration of a Babylonian scribe agent with a curled black beard and a tall blue cap, sly smile, writing on a clay tablet with a stylus, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of violet, lapis blue and gold, soft lavender background
+```
+
+#### Agente Caldeu · 3 (Mercador) · `caldeu-3`
+
+```text
+Minimalist flat cartoon illustration of a Babylonian merchant spy with a curled black beard and a gold headband, scheming grin, holding a jingling coin purse, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of violet, lapis blue and gold, soft lavender background
 ```
 
 ### Absalão · `absalao`

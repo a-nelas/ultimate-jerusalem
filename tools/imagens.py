@@ -1,6 +1,7 @@
 """Prepara as imagens das personagens para o site.
 
-Para cada imagem em assets/roles/ (.webp, .png ou .jpg):
+Para cada imagem em assets/roles/ (.webp, .png ou .jpg), com o nome <id>.png ou, para os desenhos
+alternativos, <id>-<n>.png (a n.º 1, <id>-1.png, conta como a imagem principal de <id>):
   - cria uma miniatura leve em assets/roles/mini/<id>.webp (para a grelha de personagens);
   - regista-a em js/data/imagens.js, para o site só pedir imagens que existem (sem pedidos 404).
 
@@ -23,9 +24,10 @@ def main():
     escolhidas = {}
     for f in sorted(PASTA.iterdir()):
         if f.is_file() and f.suffix.lower() in ORDEM:
-            atual = escolhidas.get(f.stem)
+            id_ = f.stem[:-2] if f.stem.endswith('-1') else f.stem
+            atual = escolhidas.get(id_)
             if atual is None or ORDEM.index(f.suffix.lower()) < ORDEM.index(atual.suffix.lower()):
-                escolhidas[f.stem] = f
+                escolhidas[id_] = f
 
     for id_, f in escolhidas.items():
         destino = MINI / f'{id_}.webp'
@@ -39,7 +41,8 @@ def main():
         if velha.stem not in escolhidas:
             velha.unlink()
 
-    linhas = [f"  {id_}: {{ arte: 'assets/roles/{f.name}', mini: 'assets/roles/mini/{id_}.webp' }},"
+    chave = lambda id_: f"'{id_}'" if '-' in id_ else id_   # 'israelita-2' precisa de aspas em JS
+    linhas = [f"  {chave(id_)}: {{ arte: 'assets/roles/{f.name}', mini: 'assets/roles/mini/{id_}.webp' }},"
               for id_, f in sorted(escolhidas.items())]
     MANIFESTO.write_text(
         '// Gerado por tools/imagens.py (npm run imagens). Não editar à mão.\n'

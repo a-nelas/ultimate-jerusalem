@@ -73,14 +73,32 @@ test('a lista de imagens está em dia com assets/roles/ (corre npm run imagens)'
   const { readdirSync, existsSync } = await import('node:fs');
   const { IMAGENS } = await import('../js/data/imagens.js');
   const { ROLES } = await import('../js/data/roles.js');
-  const ids = new Set(ROLES.map((r) => r.id));
+  const { IDS_VARIANTES } = await import('../js/data/arte.js');
+  const ids = new Set([...ROLES.map((r) => r.id), ...IDS_VARIANTES]);
   const ficheiros = readdirSync(new URL('../assets/roles/', import.meta.url))
     .filter((f) => /\.(webp|png|jpe?g)$/i.test(f));
-  const naPasta = new Set(ficheiros.map((f) => f.replace(/\.[^.]+$/, '')));
+  const naPasta = new Set(ficheiros.map((f) => f.replace(/\.[^.]+$/, '').replace(/-1$/, '')));
   assert.deepEqual([...naPasta].sort(), Object.keys(IMAGENS).sort());
   for (const [id, { arte, mini }] of Object.entries(IMAGENS)) {
     assert.ok(ids.has(id), `imagem sem personagem: ${id}`);
     assert.ok(existsSync(new URL(`../${arte}`, import.meta.url)), arte);
     assert.ok(existsSync(new URL(`../${mini}`, import.meta.url)), mini);
+  }
+});
+
+test('as variantes de arte pertencem a personagens com várias cópias e têm prompt', async () => {
+  const { VARIANTES, IDS_VARIANTES, variante, promptPara } = await import('../js/data/arte.js');
+  const { papel } = await import('../js/data/roles.js');
+  for (const id of Object.keys(VARIANTES)) {
+    assert.ok(papel(id), `variante de personagem desconhecida: ${id}`);
+    assert.ok(papel(id).recomendado.max > 1, `${id} não costuma ter várias cartas`);
+  }
+  assert.equal(variante('israelita').n, 1);
+  assert.equal(variante('israelita-1').descricao, variante('israelita').descricao);
+  assert.equal(variante('israelita-2').nome, 'Oleiro');
+  for (const id of IDS_VARIANTES) {
+    const v = variante(id);
+    assert.ok(v.descricao && v.n >= 2, id);
+    assert.ok(promptPara({ id: v.papel, equipa: papel(v.papel).equipa }, v.descricao).includes(v.descricao), id);
   }
 });
