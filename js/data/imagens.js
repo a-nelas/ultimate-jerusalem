@@ -1,6 +1,13 @@
 // Gerado por tools/imagens.py (npm run imagens). Não editar à mão.
 // Imagens das personagens que existem em assets/roles/, para o site não pedir ficheiros em falta.
 export const IMAGENS = {
+  benaia: { arte: 'assets/roles/benaia.png', mini: 'assets/roles/mini/benaia.webp' },
+  calebe: { arte: 'assets/roles/calebe.png', mini: 'assets/roles/mini/calebe.webp' },
+  daniel: { arte: 'assets/roles/daniel.png', mini: 'assets/roles/mini/daniel.webp' },
+  eleazar: { arte: 'assets/roles/eleazar.png', mini: 'assets/roles/mini/eleazar.webp' },
+  elias: { arte: 'assets/roles/elias.png', mini: 'assets/roles/mini/elias.webp' },
+  eliseu: { arte: 'assets/roles/eliseu.png', mini: 'assets/roles/mini/eliseu.webp' },
+  ester: { arte: 'assets/roles/ester.png', mini: 'assets/roles/mini/ester.webp' },
   filisteu: { arte: 'assets/roles/filisteu-1.png', mini: 'assets/roles/mini/filisteu.webp' },
   isaias: { arte: 'assets/roles/isaias.png', mini: 'assets/roles/mini/isaias.webp' },
   israelita: { arte: 'assets/roles/israelita-1.png', mini: 'assets/roles/mini/israelita.webp' },
@@ -11,5 +18,10 @@ export const IMAGENS = {
   'israelita-6': { arte: 'assets/roles/israelita-6.png', mini: 'assets/roles/mini/israelita-6.webp' },
   'israelita-7': { arte: 'assets/roles/israelita-7.png', mini: 'assets/roles/mini/israelita-7.webp' },
   'israelita-8': { arte: 'assets/roles/israelita-8.png', mini: 'assets/roles/mini/israelita-8.webp' },
+  jaco: { arte: 'assets/roles/jaco.png', mini: 'assets/roles/mini/jaco.webp' },
   jeremias: { arte: 'assets/roles/jeremias.png', mini: 'assets/roles/mini/jeremias.webp' },
+  jonatas: { arte: 'assets/roles/jonatas.png', mini: 'assets/roles/mini/jonatas.webp' },
+  salomao: { arte: 'assets/roles/salomao.png', mini: 'assets/roles/mini/salomao.webp' },
+  sansao: { arte: 'assets/roles/sansao.png', mini: 'assets/roles/mini/sansao.webp' },
+  zadoque: { arte: 'assets/roles/zadoque.png', mini: 'assets/roles/mini/zadoque.webp' },
 };
