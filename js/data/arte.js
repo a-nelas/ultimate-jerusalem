@@ -109,6 +109,14 @@ export const VARIANTES = {
   ],
 };
 
+/** Nome do desenho n.º 1 (a descrição principal, ARTE) das personagens com variantes. */
+export const NOMES_PRINCIPAIS = {
+  israelita: 'Aguadeiro',
+  filisteu: 'Soldado',
+  construtor: 'Pedreiro',
+  caldeu: 'Emissário',
+};
+
 /**
  * Decompõe o id de uma carta: 'israelita' → n.º 1; 'israelita-3' → n.º 3 (segunda variante).
  * @returns {{papel:string, n:number, nome:string|null, descricao:string|undefined}}
@@ -117,11 +125,11 @@ export function variante(idCarta) {
   const m = /^(.+)-(\d+)$/.exec(idCarta ?? '');
   if (m && VARIANTES[m[1]]) {
     const n = Number(m[2]);
-    if (n === 1) return { papel: m[1], n: 1, nome: null, descricao: ARTE[m[1]] };
+    if (n === 1) return { papel: m[1], n: 1, nome: NOMES_PRINCIPAIS[m[1]] ?? null, descricao: ARTE[m[1]] };
     const v = VARIANTES[m[1]][n - 2];
     if (v) return { papel: m[1], n, nome: v.nome, descricao: v.descricao };
   }
-  return { papel: idCarta, n: 1, nome: null, descricao: ARTE[idCarta] };
+  return { papel: idCarta, n: 1, nome: NOMES_PRINCIPAIS[idCarta] ?? null, descricao: ARTE[idCarta] };
 }
 
 /** Todos os ids de carta com variantes: ['israelita-2', 'israelita-3', …]. */

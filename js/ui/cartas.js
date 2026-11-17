@@ -1,5 +1,5 @@
 import { ROLES, EQUIPAS, papel } from '../data/roles.js';
-import { NEGATIVO, VARIANTES, promptPara, variante } from '../data/arte.js';
+import { NEGATIVO, NOMES_PRINCIPAIS, VARIANTES, promptPara, variante } from '../data/arte.js';
 import { TAMANHOS, ESQUEMAS, RESOLUCOES, SANGRIA_MM, geometria, proporcao, sugestaoGeracao, mmParaPx } from '../cartas/formatos.js';
 import { lerTema, carregarFontes, desenharFrente, desenharVerso, desenharMascara, enquadrar } from '../cartas/render.js';
 import { lerArte, guardarArte, apagarArte, listarArte, lerJSON, guardarJSON } from '../cartas/armazem.js';
@@ -51,7 +51,7 @@ async function montarControlos() {
     grupo.label = info.nome;
     for (const r of ROLES.filter((x) => x.equipa === eq)) {
       const extra = VARIANTES[r.id];
-      grupo.append(new Option(`${r.nome}${extra ? ' · 1' : ''}${comArte.has(r.id) ? ' ✓' : ''}`, r.id));
+      grupo.append(new Option(`${r.nome}${extra ? ` · 1 (${NOMES_PRINCIPAIS[r.id]})` : ''}${comArte.has(r.id) ? ' ✓' : ''}`, r.id));
       extra?.forEach((v, i) => {
         const id = `${r.id}-${i + 2}`;
         grupo.append(new Option(`${r.nome} · ${i + 2} (${v.nome})${comArte.has(id) ? ' ✓' : ''}`, id));

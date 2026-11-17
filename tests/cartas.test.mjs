@@ -89,6 +89,8 @@ test('a lista de imagens está em dia com assets/roles/ (corre npm run imagens)'
 test('as variantes de arte pertencem a personagens com várias cópias e têm prompt', async () => {
   const { VARIANTES, IDS_VARIANTES, variante, promptPara } = await import('../js/data/arte.js');
   const { papel } = await import('../js/data/roles.js');
+  const { NOMES_PRINCIPAIS } = await import('../js/data/arte.js');
+  assert.deepEqual(Object.keys(NOMES_PRINCIPAIS).sort(), Object.keys(VARIANTES).sort(), 'cada personagem com variantes tem nome para a n.º 1');
   for (const id of Object.keys(VARIANTES)) {
     assert.ok(papel(id), `variante de personagem desconhecida: ${id}`);
     assert.ok(papel(id).recomendado.max > 1, `${id} não costuma ter várias cartas`);
@@ -96,6 +98,8 @@ test('as variantes de arte pertencem a personagens com várias cópias e têm pr
   assert.equal(variante('israelita').n, 1);
   assert.equal(variante('israelita-1').descricao, variante('israelita').descricao);
   assert.equal(variante('israelita-2').nome, 'Oleiro');
+  assert.equal(variante('israelita').nome, 'Aguadeiro');
+  assert.equal(variante('israelita-1').nome, 'Aguadeiro');
   for (const id of IDS_VARIANTES) {
     const v = variante(id);
     assert.ok(v.descricao && v.n >= 2, id);
