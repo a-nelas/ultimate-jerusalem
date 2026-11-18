@@ -221,15 +221,6 @@ function votacao() {
   $('#votacao-papeis').append(...v.papeis.map((p) => el('li', {}, p)));
 }
 
-function estatisticas() {
-  const contar = (f) => PAPEIS.filter(f).length;
-  $('#st-papeis').textContent = PAPEIS.length;
-  $('#st-jerusalem').textContent = contar((r) => r.equipa === 'jerusalem');
-  $('#st-inimigos').textContent = contar((r) => ['filisteus', 'babilonios'].includes(r.equipa));
-  $('#st-noite').textContent = new Set(PAPEIS.filter((r) => r.ordemNoite != null).map((r) => r.ordemNoite)).size;
-}
-
-estatisticas();
 montarFiltros();
 render();
 ordemNoite();

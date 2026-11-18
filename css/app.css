@@ -81,3 +81,7 @@ body.mf { min-height: 100vh; }
 
 /* Rodapé: texto que não é ligação */
 .mf .mf-finale-foot li .mf-soon { font-size: var(--mf-foot-text); }
+
+/* Títulos e números do topo */
+.mf .mf-subtitle { text-wrap: balance; }
+.mf .mf-stats.dois { grid-template-columns: repeat(2, 1fr); --mf-stats-w: 300px; }
