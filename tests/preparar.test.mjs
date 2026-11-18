@@ -2,9 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   MIN_JOGADORES, MAX_JOGADORES, maxCopias, contarCartas, cartasNecessarias, equilibrio, inimigos, avisos,
-  classificar, sugerirSimples, sugerirAleatoria, aplicarCenario, ordemDaNoite, codificar, descodificar,
+  classificar, sugerirSimples, sugerirAleatoria, ordemDaNoite, codificar, descodificar,
 } from '../js/engine/preparar.js';
-import { CENARIOS } from '../js/data/cenarios.js';
 import { inimigosRecomendados, ROLES } from '../js/data/roles.js';
 
 const erros = (b) => avisos(b).filter((a) => a.nivel === 'erro');
@@ -38,13 +37,6 @@ test('a sugestão aleatória é válida para várias sementes e varia', () => {
       vistos.add(codificar(b));
     }
     if (n >= 10) assert.ok(vistos.size > 5, `aleatória ${n}: pouca variedade (${vistos.size})`);
-  }
-});
-
-test('os cenários são válidos em todo o seu intervalo', () => {
-  for (const c of CENARIOS) {
-    assert.ok(c.min >= MIN_JOGADORES && c.max <= MAX_JOGADORES && c.min <= c.max, c.id);
-    for (let n = c.min; n <= c.max; n++) baralhoValido(aplicarCenario(c, n), `${c.id} ${n}`);
   }
 });
 
@@ -93,7 +85,7 @@ test('a ordem da noite filtra as personagens do baralho', () => {
   assert.equal(todas.flat().length, ROLES.filter((r) => r.ordemNoite != null).length);
 });
 
-test('o equilíbrio desejado puxa as sugestões e os cenários para o alvo', () => {
+test('o equilíbrio desejado puxa as sugestões para o alvo', () => {
   for (const alvo of [-4, -2, 2, 4]) {
     for (let n = 10; n <= MAX_JOGADORES; n++) {
       const s = sugerirSimples(n, alvo);
@@ -102,13 +94,6 @@ test('o equilíbrio desejado puxa as sugestões e os cenários para o alvo', () 
       let perto = 0;
       for (let k = 1; k <= 10; k++) if (Math.abs(equilibrio(sugerirAleatoria(n, k, alvo)) - alvo) <= 2) perto++;
       assert.ok(perto >= 8, `aleatória ${n} alvo ${alvo}: só ${perto}/10 perto`);
-    }
-    for (const c of CENARIOS) {
-      for (let n = Math.max(10, c.min); n <= c.max; n++) {
-        const b = aplicarCenario(c, n, alvo);
-        assert.ok(Math.abs(equilibrio(b) - alvo) <= 2, `${c.id} ${n} alvo ${alvo}: ${equilibrio(b)}`);
-        assert.deepEqual(erros(b), [], `${c.id} ${n} alvo ${alvo}`);
-      }
     }
   }
   assert.deepEqual(sugerirSimples(12, 0), sugerirSimples(12));

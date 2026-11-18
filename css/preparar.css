@@ -13,20 +13,7 @@
 .mf .alvo input[type="range"] { width: 100%; box-shadow: none; border: 0; padding: 4px 0; background: none; accent-color: var(--mf-sage); }
 .mf .alvo output { font-family: var(--mf-font-numeral); color: var(--mf-ink-strong); letter-spacing: 0; text-transform: none; margin-left: 6px; }
 
-/* Cenários */
-.mf .cenarios { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 4px 0 18px; text-align: left; }
-.mf .cenario {
-  all: unset; box-sizing: border-box; cursor: pointer; display: grid; gap: 4px; padding: 14px 16px;
-  background: var(--mf-white); border: var(--mf-hair) solid var(--mf-line); border-radius: var(--mf-radius-lg); corner-shape: var(--mf-corner);
-  box-shadow: inset var(--mf-spine) 0 0 var(--mf-line-dark); transition: border-color var(--mf-dur), box-shadow var(--mf-dur), opacity var(--mf-dur);
-}
-.mf .cenario:hover { border-color: var(--mf-sage); }
-.mf .cenario:focus-visible { outline: var(--mf-focus) solid var(--mf-sage); outline-offset: 3px; }
-.mf .cenario[aria-pressed="true"] { border-color: var(--mf-sage); box-shadow: inset var(--mf-spine) 0 0 var(--mf-sage), var(--mf-shadow-card); background: color-mix(in srgb, var(--mf-sage) 6%, var(--mf-white)); }
-.mf .cenario.fora { opacity: .5; }
-.mf .cenario-nome { font-family: var(--mf-font-display); font-size: var(--mf-name-sm); color: var(--mf-ink-strong); line-height: 1.1; }
-.mf .cenario-faixa { font-size: var(--mf-caps); text-transform: uppercase; letter-spacing: 1px; color: var(--mf-sage); }
-.mf .cenario-desc { font-size: var(--mf-small); color: var(--mf-ink); font-style: italic; }
+/* Sugestões */
 .mf .botoes { display: flex; flex-wrap: wrap; gap: 8px; }
 .mf .botoes.centro { justify-content: center; }
 .mf #simples[aria-pressed="true"], .mf #aleatoria[aria-pressed="true"] { outline: var(--mf-focus) solid color-mix(in srgb, var(--mf-sage) 45%, transparent); outline-offset: 3px; }

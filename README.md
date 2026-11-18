@@ -12,7 +12,7 @@ Site estático em português de Portugal, pronto para o GitHub Pages, sem passo 
 |---|---|---|
 | 1 | Lista de papéis convertidos + grelha de poder (`papeis.html`, [docs/PAPEIS.md](docs/PAPEIS.md)) | ✅ para revisão |
 | 2 | Oficina de cartas em tamanho TCG, com modelos, prompts para gerar a arte e impressão em folhas A4 com marcas de corte (`cartas.html`, [docs/IMAGENS.md](docs/IMAGENS.md)) | ✅ disponível |
-| 3 | Preparar partida: baralho equilibrado por n.º de jogadores, com cenários, sugestões, equilíbrio desejado e avisos (`preparar.html`) | ✅ disponível |
+| 3 | Preparar partida: baralho equilibrado por n.º de jogadores, com sugestões, equilíbrio desejado e avisos (`preparar.html`) | ✅ disponível |
 | 4 | Moderar: guião da noite, amanhecer, votações, vitória | por fazer |
 | 5 | Versão *Uma Noite* (One Night) | futuro |
 
@@ -25,7 +25,6 @@ css/app.css, css/papeis.css, css/preparar.css, css/cartas.css   camada da aplica
 js/data/roles.js             fonte única de todas as personagens
 js/data/regras.js            regras da casa (votação a apontar)
 js/data/arte.js              descrições e prompts da arte de cada personagem
-js/data/cenarios.js          cenários prontos para preparar a partida
 js/engine/preparar.js        contas do baralho: equilíbrio, avisos, sugestões, ordem da noite
 js/cartas/                   geometria das cartas, desenho em canvas, folhas A4 para imprimir, armazenamento local da arte
 js/ui/                       código de cada página

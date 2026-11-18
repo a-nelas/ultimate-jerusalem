@@ -197,17 +197,6 @@ export function sugerirAleatoria(jogadores, semente = Date.now(), alvo = 0) {
   return normalizar(equilibrar(b, lista, fixos, rnd, [], limitarAlvo(alvo)));
 }
 
-/** Monta um cenário de js/data/cenarios.js para n jogadores, com o equilíbrio perto do alvo. */
-export function aplicarCenario(c, jogadores, alvo = 0) {
-  const n = normalizar({ jogadores }).jogadores;
-  const b = { jogadores: n, cartas: { ...c.inimigos(n, inimigosRecomendados(n)) } };
-  const cabe = (id) => papel(id).recomendado.aPartirDe <= n;
-  for (const id of c.papeis.filter(cabe)) b.cartas[id] = blocoDe(id);
-  completar(b);
-  const presentes = c.papeis.filter(cabe);
-  return normalizar(equilibrar(b, c.reserva.filter(cabe), [...ASSASSINOS, 'isaias'], null, presentes, limitarAlvo(alvo)));
-}
-
 // ── Noite ──
 
 /** Passos da noite (agrupados por ordem), só com as personagens indicadas, ou todas. */

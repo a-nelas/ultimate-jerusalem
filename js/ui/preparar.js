@@ -1,9 +1,8 @@
 // Preparar a Partida: monta e equilibra o baralho. As contas estão em js/engine/preparar.js.
 import { EQUIPAS, ACORDA, inimigosRecomendados } from '../data/roles.js';
-import { CENARIOS, cenario } from '../data/cenarios.js';
 import {
   MIN_JOGADORES, MAX_JOGADORES, JOGAVEIS, ASSASSINOS, maxCopias, copias, normalizar, contarCartas, cartasNecessarias,
-  equilibrio, inimigos, classificar, avisos, sugerirSimples, sugerirAleatoria, aplicarCenario, ordemDaNoite,
+  equilibrio, inimigos, classificar, avisos, sugerirSimples, sugerirAleatoria, ordemDaNoite,
   codificar, descodificar,
 } from '../engine/preparar.js';
 import { imagemPapel } from './imagem.js';
@@ -28,7 +27,7 @@ const sinal = (v) => (v > 0 ? `+${v}` : v < 0 ? `−${Math.abs(v)}` : '0');
 // `origem` lembra de onde veio o baralho, para o refazer quando muda o n.º de jogadores.
 const CHAVE = 'uj:preparar';
 let baralho = null;
-let origem = null;   // { tipo: 'simples' | 'aleatoria' | 'cenario', id?, semente? }
+let origem = null;   // { tipo: 'simples' | 'aleatoria', semente? }
 let alvo = 0;        // equilíbrio desejado para as sugestões e os cenários
 
 function carregar() {
@@ -38,7 +37,7 @@ function carregar() {
   if (daLigacao) return { baralho: daLigacao, origem: null, alvo: alvoGuardado };
   try {
     const g = JSON.parse(localStorage.getItem(CHAVE) || 'null');
-    if (g?.jogadores) return { baralho: normalizar(g), origem: g.origem ?? null, alvo: g.alvo ?? 0 };
+    if (g?.jogadores) return { baralho: normalizar(g), origem: ['simples', 'aleatoria'].includes(g.origem?.tipo) ? g.origem : null, alvo: g.alvo ?? 0 };
   } catch { /* sem armazenamento */ }
   return { baralho: sugerirSimples(10), origem: { tipo: 'simples' }, alvo: 0 };
 }
@@ -48,11 +47,10 @@ function guardar() {
   history.replaceState(null, '', `#${codificar(baralho)}`);
 }
 
-/** Refaz o baralho a partir da origem (cenário ou sugestão) para o n.º de jogadores atual. */
+/** Refaz o baralho a partir da sugestão de origem para o n.º de jogadores atual. */
 function gerar(o, n = baralho.jogadores) {
   if (o.tipo === 'simples') return sugerirSimples(n, alvo);
-  if (o.tipo === 'aleatoria') return sugerirAleatoria(n, o.semente, alvo);
-  return aplicarCenario(cenario(o.id), n, alvo);   // fora do intervalo do cenário, os avisos dizem o que falta
+  return sugerirAleatoria(n, o.semente, alvo);
 }
 
 function usar(o) {
@@ -77,18 +75,6 @@ function mudarCopias(id, delta) {
 }
 
 // ── Montagem ──
-function montarCenarios() {
-  const caixa = $('#cenarios');
-  for (const c of CENARIOS) {
-    const b = el('button', { type: 'button', class: 'cenario', 'data-id': c.id, 'aria-pressed': 'false' },
-      el('span', { class: 'cenario-nome' }, c.nome),
-      el('span', { class: 'cenario-faixa' }, `${c.min} a ${c.max} jogadores`),
-      el('span', { class: 'cenario-desc' }, c.descricao));
-    b.addEventListener('click', () => usar({ tipo: 'cenario', id: c.id }));
-    caixa.append(b);
-  }
-}
-
 const linhas = new Map();   // id → { linha, num, menos, mais }
 
 function montarEquipas() {
@@ -130,12 +116,7 @@ function atualizar() {
   $('#menos').disabled = n <= MIN_JOGADORES;
   $('#mais').disabled = n >= MAX_JOGADORES;
 
-  // cenários e botões de sugestão
-  for (const b of document.querySelectorAll('.cenario')) {
-    const c = cenario(b.dataset.id);
-    b.setAttribute('aria-pressed', String(origem?.tipo === 'cenario' && origem.id === c.id));
-    b.classList.toggle('fora', n < c.min || n > c.max);
-  }
+  // botões de sugestão
   $('#simples').setAttribute('aria-pressed', String(origem?.tipo === 'simples'));
   $('#aleatoria').setAttribute('aria-pressed', String(origem?.tipo === 'aleatoria'));
   $('#aleatoria').textContent = origem?.tipo === 'aleatoria' ? 'Outra sugestão' : 'Sugestão aleatória';
@@ -197,13 +178,9 @@ function textoAlvo(a) {
 }
 
 function textoOrigem() {
-  if (!origem) return 'Baralho montado à mão. Escolhe um cenário ou uma sugestão para recomeçar.';
+  if (!origem) return 'Baralho montado à mão. Escolhe uma sugestão para recomeçar.';
   if (origem.tipo === 'simples') return 'Sugestão simples: as personagens clássicas, sempre iguais para este número de jogadores.';
-  if (origem.tipo === 'aleatoria') return 'Sugestão aleatória: carrega em “Outra sugestão” para variar.';
-  const c = cenario(origem.id);
-  const n = baralho.jogadores;
-  const fora = n < c.min || n > c.max ? ` (pensado para ${c.min} a ${c.max} jogadores)` : '';
-  return `Cenário: ${c.nome}${fora}. Mudar o número de jogadores refaz o cenário.`;
+  return 'Sugestão aleatória: carrega em “Outra sugestão” para variar.';
 }
 
 // ── Eventos ──
@@ -212,7 +189,7 @@ $('#mais').addEventListener('click', () => mudarJogadores(baralho.jogadores + 1)
 $('#jogadores').addEventListener('change', (e) => mudarJogadores(Number(e.target.value)));
 $('#alvo').addEventListener('input', (e) => {
   alvo = Number(e.target.value) || 0;
-  if (origem) baralho = gerar(origem);   // o cenário ou a sugestão refaz-se com o novo alvo
+  if (origem) baralho = gerar(origem);   // a sugestão refaz-se com o novo alvo
   atualizar();
 });
 $('#simples').addEventListener('click', () => usar({ tipo: 'simples' }));
@@ -234,6 +211,5 @@ window.addEventListener('hashchange', () => {
 });
 
 ({ baralho, origem, alvo } = carregar());
-montarCenarios();
 montarEquipas();
 atualizar();

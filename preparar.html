@@ -68,7 +68,7 @@
     <div class="mf-intro">
       <svg class="mf-icon mf-intro-icon" aria-hidden="true"><use href="#mf-i-branch"/></svg>
       <div class="mf-txt">
-        Indica o número de jogadores e começa por um cenário ou por uma sugestão. Depois ajusta à mão: o medidor mostra o <b>equilíbrio</b> (perto de zero é justo) e os avisos apontam combinações que não funcionam.
+        Indica o número de jogadores, escolhe o equilíbrio e começa por uma sugestão. Depois ajusta à mão: o medidor mostra o <b>equilíbrio</b> (perto de zero é justo) e os avisos apontam combinações que não funcionam.
         O baralho fica guardado neste navegador e pode ser partilhado por ligação.
       </div>
     </div>
@@ -78,31 +78,24 @@
         <input type="number" id="jogadores" min="5" max="30" inputmode="numeric" value="10"></label>
       <button type="button" class="mf-btn" id="mais" aria-label="Mais um jogador">+</button>
     </div>
-    <div class="mf-stats">
-      <div class="mf-stat"><strong id="st-cartas">–</strong><span>cartas</span></div>
-      <div class="mf-stat"><strong id="st-inimigos">–</strong><span>inimigos</span></div>
-      <div class="mf-stat"><strong id="st-especiais">–</strong><span>personagens</span></div>
-      <div class="mf-stat"><strong id="st-equilibrio">–</strong><span>equilíbrio</span></div>
-    </div>
-  </section>
-
-  <section class="mf-frame mf-wide" aria-labelledby="t-comecar">
-    <span class="mf-label">o ponto de partida</span>
-    <h2 class="mf-title" id="t-comecar">Começar por</h2>
-    <div class="mf-rule" aria-hidden="true"></div>
     <div class="alvo">
       <label class="mf-field"><span>Equilíbrio desejado <output id="alvo-val">0 · justo</output></span>
         <input type="range" id="alvo" min="-6" max="6" step="1" value="0" list="alvo-marcas"></label>
       <datalist id="alvo-marcas"><option value="-6"></option><option value="0"></option><option value="6"></option></datalist>
       <div class="escala-leg" aria-hidden="true"><span>a favor dos inimigos</span><span>justo</span><span>a favor de Jerusalém</span></div>
     </div>
-    <div class="cenarios" id="cenarios"></div>
     <div class="botoes centro">
       <button type="button" class="mf-btn mf-solid" id="simples">Sugestão simples</button>
       <button type="button" class="mf-btn mf-solid" id="aleatoria">Sugestão aleatória</button>
       <button type="button" class="mf-btn" id="limpar">Limpar</button>
     </div>
     <p class="resumo" id="origem" aria-live="polite"></p>
+    <div class="mf-stats">
+      <div class="mf-stat"><strong id="st-cartas">–</strong><span>cartas</span></div>
+      <div class="mf-stat"><strong id="st-inimigos">–</strong><span>inimigos</span></div>
+      <div class="mf-stat"><strong id="st-especiais">–</strong><span>personagens</span></div>
+      <div class="mf-stat"><strong id="st-equilibrio">–</strong><span>equilíbrio</span></div>
+    </div>
   </section>
 
   <section class="mf-frame mf-wide" aria-labelledby="t-baralho">
