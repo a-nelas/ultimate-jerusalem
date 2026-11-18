@@ -135,10 +135,13 @@ export function variante(idCarta) {
 /** Todos os ids de carta com variantes: ['israelita-2', 'israelita-3', …]. */
 export const IDS_VARIANTES = Object.entries(VARIANTES).flatMap(([id, lista]) => lista.map((_, i) => `${id}-${i + 2}`));
 
-/** Prompt completo para uma personagem (aceita uma descrição alternativa). O Manto é um objeto: não leva rosto. */
+/** Cartas cuja arte é uma coisa, não uma pessoa: sem rosto. (O Narrador também é da equipa objeto, mas é uma pessoa.) */
+export const SEM_ROSTO = new Set(['manto']);
+
+/** Prompt completo para uma personagem (aceita uma descrição alternativa). */
 export function promptPara(papel, descricao) {
   const base = (descricao ?? ARTE[papel?.id] ?? 'a biblical figure in ancient Jerusalem').trim().replace(/[.,;\s]+$/, '');
-  const objeto = papel?.equipa === 'objeto';
+  const objeto = SEM_ROSTO.has(papel?.id);
   const rosto = objeto ? 'an inanimate object only, no character, no creature, no head, no face, no eyes' : ROSTO;
   // Num objeto, "chibi" e "personagem" fazem o modelo inventar uma cabeça: troca-se por uma natureza-morta.
   const estilo = objeto ? ESTILO.replace('cute chibi-like proportions, one character centered', 'one single object centered, still life') : ESTILO;

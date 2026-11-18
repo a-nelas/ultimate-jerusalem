@@ -53,7 +53,8 @@ test('todos os papéis têm descrição de arte e prompt', () => {
     assert.ok(prompt.startsWith(PREFIXO), r.id);
     assert.ok(prompt.includes(ARTE[r.id]), r.id);
     assert.ok(prompt.includes('no text'), r.id);
-    if (r.equipa !== 'objeto') assert.ok(prompt.includes(ROSTO), `sem rosto: ${r.id}`);
+    if (r.id === 'manto') assert.ok(!prompt.includes(ROSTO) && !prompt.includes('chibi'), 'o Manto não leva rosto');
+    else assert.ok(prompt.includes(ROSTO), `sem rosto: ${r.id}`);
   }
 });
 
