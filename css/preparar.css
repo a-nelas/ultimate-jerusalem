@@ -8,6 +8,11 @@
 .mf .jogadores-ctl .mf-btn { min-width: 46px; font-size: var(--mf-lead); padding: 6px 12px; }
 .mf .mf-btn[disabled] { opacity: .45; cursor: not-allowed; }
 
+/* Equilíbrio desejado */
+.mf .alvo { max-width: 460px; margin: 0 auto 18px; text-align: left; }
+.mf .alvo input[type="range"] { width: 100%; box-shadow: none; border: 0; padding: 4px 0; background: none; accent-color: var(--mf-sage); }
+.mf .alvo output { font-family: var(--mf-font-numeral); color: var(--mf-ink-strong); letter-spacing: 0; text-transform: none; margin-left: 6px; }
+
 /* Cenários */
 .mf .cenarios { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 4px 0 18px; text-align: left; }
 .mf .cenario {
@@ -69,7 +74,7 @@
 .mf .medidor[data-classe="desequilibrado"] .medidor-topo strong { color: var(--mf-neg); }
 .mf .escala { position: relative; height: 10px; margin-top: 10px; border-radius: var(--mf-radius-sm);
   background: linear-gradient(90deg, color-mix(in srgb, var(--mf-neg) 35%, var(--mf-line-faint)), var(--mf-line-faint) 40%, var(--mf-line-faint) 60%, color-mix(in srgb, var(--mf-team-jerusalem) 35%, var(--mf-line-faint))); }
-.mf .escala .zona { position: absolute; top: 0; bottom: 0; left: calc(50% - 2 / 15 * 50%); width: calc(4 / 15 * 50%); background: color-mix(in srgb, var(--mf-sage) 45%, transparent); }
+.mf .escala .zona { position: absolute; top: 0; bottom: 0; left: calc(50% - 2 / 15 * 50%); width: calc(4 / 15 * 50%); background: color-mix(in srgb, var(--mf-sage) 45%, transparent); transition: left var(--mf-dur); }
 .mf .escala .marca { position: absolute; top: -5px; bottom: -5px; width: 4px; margin-left: -2px; border-radius: 2px; background: var(--mf-ink-strong); transition: left var(--mf-dur); }
 .mf .escala-leg { display: flex; justify-content: space-between; margin-top: 6px; font-size: var(--mf-micro); text-transform: uppercase; letter-spacing: .5px; color: var(--mf-ink-soft); }
 .mf .contagem { margin: 0; font-size: var(--mf-small); color: var(--mf-ink); }

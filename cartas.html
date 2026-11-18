@@ -141,6 +141,43 @@
     </div>
   </section>
 
+  <section class="mf-frame mf-wide" aria-labelledby="t-imprimir">
+    <span class="mf-label">a prensa</span>
+    <h2 class="mf-title" id="t-imprimir">Imprimir em A4</h2>
+    <div class="mf-rule" aria-hidden="true"></div>
+    <div class="oficina impressao">
+      <div class="controlos">
+        <fieldset>
+          <legend>Folhas</legend>
+          <div class="campos">
+            <label class="mf-field largo"><span>Cartas</span>
+              <select id="imp-conjunto">
+                <option value="todas">Uma de cada personagem</option>
+                <option value="variantes">Todas, com os desenhos alternativos</option>
+                <option value="baralho">O baralho de Preparar (com as cópias)</option>
+                <option value="atual">Uma folha cheia da carta da bancada</option>
+              </select></label>
+            <label class="mf-field largo"><span>Disposição</span>
+              <select id="imp-disposicao">
+                <option value="encostadas">Encostadas: um só corte entre cartas</option>
+                <option value="sangria">Com sangria: dois cortes, mais margem para erros</option>
+              </select></label>
+            <label class="mf-check"><input type="checkbox" id="imp-versos"> Juntar os versos, para imprimir frente e verso</label>
+          </div>
+          <p class="origem" id="imp-resumo" aria-live="polite"></p>
+          <div class="botoes">
+            <button type="button" class="mf-btn mf-solid" id="imprimir">Imprimir todas</button>
+          </div>
+          <p class="dica">Na janela de impressão escolhe <b>A4</b>, escala <b>100 %</b> (tamanho real) e <b>sem margens</b>; para um ficheiro, escolhe <b>Guardar como PDF</b>. As marcas à volta da grelha mostram onde cortar. Com versos, imprime frente e verso virando pela margem comprida.</p>
+        </fieldset>
+      </div>
+      <figure class="pre folha-pre">
+        <canvas id="imp-tela" aria-label="Pré-visualização da primeira folha A4"></canvas>
+        <figcaption id="imp-info">Primeira folha</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section class="mf-frame" aria-labelledby="t-gerar">
     <span class="mf-label">o pincel</span>
     <h2 class="mf-title" id="t-gerar">Gerar a Arte</h2>

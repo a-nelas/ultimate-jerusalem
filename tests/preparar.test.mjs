@@ -92,3 +92,24 @@ test('a ordem da noite filtra as personagens do baralho', () => {
   assert.ok(!todas.flat().some((r) => r.id === 'narrador'));
   assert.equal(todas.flat().length, ROLES.filter((r) => r.ordemNoite != null).length);
 });
+
+test('o equilíbrio desejado puxa as sugestões e os cenários para o alvo', () => {
+  for (const alvo of [-4, -2, 2, 4]) {
+    for (let n = 10; n <= MAX_JOGADORES; n++) {
+      const s = sugerirSimples(n, alvo);
+      assert.ok(Math.abs(equilibrio(s) - alvo) <= 2, `simples ${n} alvo ${alvo}: ${equilibrio(s)}`);
+      assert.deepEqual(erros(s), [], `simples ${n} alvo ${alvo}`);
+      let perto = 0;
+      for (let k = 1; k <= 10; k++) if (Math.abs(equilibrio(sugerirAleatoria(n, k, alvo)) - alvo) <= 2) perto++;
+      assert.ok(perto >= 8, `aleatória ${n} alvo ${alvo}: só ${perto}/10 perto`);
+    }
+    for (const c of CENARIOS) {
+      for (let n = Math.max(10, c.min); n <= c.max; n++) {
+        const b = aplicarCenario(c, n, alvo);
+        assert.ok(Math.abs(equilibrio(b) - alvo) <= 2, `${c.id} ${n} alvo ${alvo}: ${equilibrio(b)}`);
+        assert.deepEqual(erros(b), [], `${c.id} ${n} alvo ${alvo}`);
+      }
+    }
+  }
+  assert.deepEqual(sugerirSimples(12, 0), sugerirSimples(12));
+});

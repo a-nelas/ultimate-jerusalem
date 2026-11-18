@@ -4,6 +4,7 @@ import { TAMANHOS, ESQUEMAS, RESOLUCOES, SANGRIA_MM, geometria, proporcao, suges
 import { lerTema, carregarFontes, desenharFrente, desenharVerso, desenharMascara, enquadrar } from '../cartas/render.js';
 import { lerArte, guardarArte, apagarArte, listarArte, lerJSON, guardarJSON } from '../cartas/armazem.js';
 import { IMAGENS } from '../data/imagens.js';
+import { montarImpressao } from './impressao.js';
 
 const $ = (s) => document.querySelector(s);
 const PREFS = 'uj:cartas:prefs';
@@ -20,6 +21,7 @@ const textos = lerJSON(TEXTOS, {});
 let tema;
 let arte = { img: null, origem: null, nome: '', corte: { cx: 0.5, cy: 0.5, zoom: 1 } };
 let geoPrev;
+let impressao;
 
 // ── dados da carta atual ──
 function base(id) {
@@ -31,13 +33,13 @@ function base(id) {
 }
 /** Descrição da arte por omissão da carta (principal ou variante). */
 const descricaoBase = (id) => variante(id).descricao ?? '';
-function dados() {
-  const b = base(prefs.id);
-  const d = { ...b, ...(textos[prefs.id] ?? {}) };
+function dadosDe(id) {
+  const d = { ...base(id), ...(textos[id] ?? {}) };
   d.equipaNome = EQUIPAS[d.equipa]?.nome ?? '';
   d.valor = Number(d.valor) || 0;
   return d;
 }
+const dados = () => dadosDe(prefs.id);
 const mmAtual = () => (prefs.tamanho === 'personalizado' ? prefs.mm : TAMANHOS[prefs.tamanho].mm);
 const geo = (dpi) => geometria({ mm: mmAtual(), dpi, sangria: true, esquema: prefs.esquema });
 
@@ -145,6 +147,19 @@ function imagemDoProjeto(id) {
   });
 }
 
+/** Arte de qualquer carta (para imprimir): a guardada no navegador, a do projeto ou a da personagem base. */
+async function arteDe(id) {
+  const semCorte = { cx: 0.5, cy: 0.5, zoom: 1 };
+  try {
+    const guardada = await lerArte(id);
+    if (guardada) return { img: await imagemDeBlob(guardada.blob), corte: guardada.corte ?? semCorte };
+  } catch { /* segue para a arte do projeto */ }
+  const proj = await imagemDoProjeto(id);
+  if (proj) return { img: proj.img, corte: lerJSON(`uj:cartas:corte:${id}`, semCorte) };
+  const papelBase = variante(id).papel;
+  return papelBase !== id ? arteDe(papelBase) : null;
+}
+
 async function carregarArteDoPapel() {
   const id = prefs.id;
   const guardada = await lerArte(id);
@@ -239,6 +254,7 @@ function desenharJa() {
     if (arte.img) arte.corte = enquadrar(arte.img, geoPrev.arte, arte.corte).corte;
   }
   atualizarInfo();
+  impressao?.atualizar();
 }
 
 function atualizarInfo() {
@@ -417,4 +433,5 @@ function ligarEventos() {
   await carregarFontes(tema);
   desenhar();                 // e de novo, já com as fontes do sistema
   carregarArteDoPapel();
+  impressao = montarImpressao({ tema: () => tema, prefs, mm: mmAtual, dadosDe, arteDe, aviso });
 })();

@@ -117,16 +117,20 @@ function completar(b) {
 
 const blocoDe = (id) => (id === 'construtor' ? 2 : 1);
 
+/** Equilíbrio desejado: de −ALVO_MAX (a favor dos inimigos) a +ALVO_MAX (a favor de Jerusalém). 0 é um jogo justo. */
+export const ALVO_MAX = 6;
+const limitarAlvo = (a) => Math.max(-ALVO_MAX, Math.min(ALVO_MAX, Math.round(Number(a) || 0)));
+
 /**
- * Aproxima o equilíbrio de zero trocando Israelitas por personagens (ou o contrário).
+ * Aproxima o equilíbrio do alvo (0 = justo) trocando Israelitas por personagens (ou o contrário).
  * `candidatos` é a lista de personagens que se podem acrescentar, por ordem de preferência.
  * `fixos` não se tiram. Isaías e os `preferidos` (as personagens de um cenário) só saem em último caso.
  */
-function equilibrar(b, candidatos, fixos, rnd, preferidos = []) {
-  const pontos = (x) => Math.abs(equilibrio(x)) + (copias(x, 'isaias') ? 0 : 2.5)
+function equilibrar(b, candidatos, fixos, rnd, preferidos = [], alvo = 0) {
+  const pontos = (x) => Math.abs(equilibrio(x) - alvo) + (copias(x, 'isaias') ? 0 : 2.5)
     + Math.max(0, inimigos(x) - inimigosRecomendados(x.jogadores)) * 1.5
     + preferidos.filter((id) => !copias(x, id)).length * 2;   // tirar uma personagem do cenário custa mais
-  for (let volta = 0; volta < 40 && Math.abs(equilibrio(b)) > 1; volta++) {
+  for (let volta = 0; volta < 40 && Math.abs(equilibrio(b) - alvo) > 1; volta++) {
     const opcoes = [];
     const isr = copias(b, 'israelita');
     for (const id of candidatos) {
@@ -153,19 +157,19 @@ function equilibrar(b, candidatos, fixos, rnd, preferidos = []) {
   return b;
 }
 
-/** Sugestão simples: sempre a mesma para cada n.º de jogadores, com as personagens clássicas. */
-export function sugerirSimples(jogadores) {
+/** Sugestão simples: sempre a mesma para cada n.º de jogadores (e alvo), com as personagens clássicas. */
+export function sugerirSimples(jogadores, alvo = 0) {
   const n = normalizar({ jogadores }).jogadores;
   const b = { jogadores: n, cartas: { filisteu: inimigosRecomendados(n), isaias: 1 } };
   const lista = CLASSICOS.filter((id) => elegiveis(n).some((r) => r.id === id));
   const especiais = Math.floor((n - inimigosRecomendados(n) - 1) * 0.45);
   for (const id of lista.filter((x) => papel(x).valor > 0).slice(0, especiais)) b.cartas[id] = blocoDe(id);
   completar(b);
-  return normalizar(equilibrar(b, lista, ['filisteu', 'isaias'], null));
+  return normalizar(equilibrar(b, lista, ['filisteu', 'isaias'], null, [], limitarAlvo(alvo)));
 }
 
 /** Sugestão aleatória: varia com a semente, mantendo o n.º de inimigos e o equilíbrio. */
-export function sugerirAleatoria(jogadores, semente = Date.now()) {
+export function sugerirAleatoria(jogadores, semente = Date.now(), alvo = 0) {
   const rnd = prng(semente);
   const n = normalizar({ jogadores }).jogadores;
   const rec = inimigosRecomendados(n);
@@ -183,25 +187,25 @@ export function sugerirAleatoria(jogadores, semente = Date.now()) {
 
   const fora = ['isaias', 'manto', ...(b.cartas.isaias ? [] : ['jeremias'])];   // Jeremias só faz sentido com Isaías
   const lista = elegiveis(n, fora).map((r) => r.id).sort(() => rnd() - 0.5);
-  const alvo = Math.floor((n - rec - 1) * (0.35 + rnd() * 0.25));
+  const quantas = Math.floor((n - rec - 1) * (0.35 + rnd() * 0.25));
   for (const id of lista) {
-    if (contarCartas(b) - rec + blocoDe(id) > alvo) continue;
+    if (contarCartas(b) - rec + blocoDe(id) > quantas) continue;
     b.cartas[id] = blocoDe(id);
   }
   completar(b);
   const fixos = ['filisteu', 'golias', 'caldeu', 'absalao', 'isaias'];
-  return normalizar(equilibrar(b, lista, fixos, rnd));
+  return normalizar(equilibrar(b, lista, fixos, rnd, [], limitarAlvo(alvo)));
 }
 
-/** Monta um cenário de js/data/cenarios.js para n jogadores (fora do intervalo usa o mais próximo). */
-export function aplicarCenario(c, jogadores) {
+/** Monta um cenário de js/data/cenarios.js para n jogadores, com o equilíbrio perto do alvo. */
+export function aplicarCenario(c, jogadores, alvo = 0) {
   const n = normalizar({ jogadores }).jogadores;
   const b = { jogadores: n, cartas: { ...c.inimigos(n, inimigosRecomendados(n)) } };
   const cabe = (id) => papel(id).recomendado.aPartirDe <= n;
   for (const id of c.papeis.filter(cabe)) b.cartas[id] = blocoDe(id);
   completar(b);
   const presentes = c.papeis.filter(cabe);
-  return normalizar(equilibrar(b, c.reserva.filter(cabe), [...ASSASSINOS, 'isaias'], null, presentes));
+  return normalizar(equilibrar(b, c.reserva.filter(cabe), [...ASSASSINOS, 'isaias'], null, presentes, limitarAlvo(alvo)));
 }
 
 // ── Noite ──

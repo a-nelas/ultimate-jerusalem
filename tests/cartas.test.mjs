@@ -107,3 +107,34 @@ test('as variantes de arte pertencem a personagens com várias cópias e têm pr
     assert.ok(promptPara({ id: v.papel, equipa: papel(v.papel).equipa }, v.descricao).includes(v.descricao), id);
   }
 });
+
+test('folha A4: as cartas cabem, ficam centradas e as marcas de corte ficam fora das cartas', async () => {
+  const { folha, paginar, posicaoVerso, marcasNaMargem, marcasNaSangria, A4 } = await import('../js/cartas/folha.js');
+  const { TAMANHOS } = await import('../js/cartas/formatos.js');
+  const f = folha({ mm: [63, 88] });
+  assert.equal(f.cols, 3);
+  assert.equal(f.linhas, 3);
+  assert.equal(f.porFolha, 9);
+  assert.ok(Math.abs(f.grelha.x * 2 + f.grelha.w - A4[0]) < 1e-9 && Math.abs(f.grelha.y * 2 + f.grelha.h - A4[1]) < 1e-9, 'centrada');
+  assert.deepEqual(f.cortesX.length, 4);
+  assert.deepEqual(f.cortesY.length, 4);
+  const s = folha({ mm: [63, 88], sangria: true });
+  assert.equal(s.porFolha, 9);
+  assert.equal(s.cortesX.length, 6);
+  for (const t of Object.values(TAMANHOS)) {
+    for (const sangria of [false, true]) {
+      const g = folha({ mm: t.mm, sangria });
+      assert.ok(g.porFolha >= 1, t.nome);
+      for (const c of g.celulas) assert.ok(c.x >= 0 && c.y >= 0 && c.x + c.w <= A4[0] + 1e-9 && c.y + c.h <= A4[1] + 1e-9, `${t.nome} dentro da folha`);
+      for (const [x1, y1, x2, y2] of marcasNaMargem(g)) {
+        assert.ok(Math.min(x1, x2) >= 0 && Math.max(x1, x2) <= A4[0] && Math.min(y1, y2) >= 0 && Math.max(y1, y2) <= A4[1], 'marca dentro da folha');
+        const dentro = g.celulas.some((k) => Math.max(x1, x2) > k.corte.x && Math.min(x1, x2) < k.corte.x + k.corte.w && Math.max(y1, y2) > k.corte.y && Math.min(y1, y2) < k.corte.y + k.corte.h);
+        assert.ok(!dentro, 'marca sobre uma carta');
+      }
+    }
+  }
+  assert.equal(marcasNaSangria(f).length, 0);
+  assert.equal(marcasNaSangria(s).length, 9 * 8);
+  assert.deepEqual(paginar([1, 2, 3, 4, 5], 2), [[1, 2], [3, 4], [5]]);
+  assert.deepEqual([0, 1, 2, 3, 4, 5].map((i) => posicaoVerso(i, 3)), [2, 1, 0, 5, 4, 3]);
+});

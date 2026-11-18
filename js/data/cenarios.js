@@ -14,7 +14,7 @@ export const CENARIOS = [
     min: 5, max: 10,
     inimigos: (n, rec) => ({ filisteu: rec }),
     papeis: ['isaias'],
-    reserva: ['benaia', 'sansao', 'david'],
+    reserva: ['benaia', 'sansao', 'david', 'rute'],
   },
   {
     id: 'vigilia',

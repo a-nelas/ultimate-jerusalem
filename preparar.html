@@ -90,6 +90,12 @@
     <span class="mf-label">o ponto de partida</span>
     <h2 class="mf-title" id="t-comecar">Começar por</h2>
     <div class="mf-rule" aria-hidden="true"></div>
+    <div class="alvo">
+      <label class="mf-field"><span>Equilíbrio desejado <output id="alvo-val">0 · justo</output></span>
+        <input type="range" id="alvo" min="-6" max="6" step="1" value="0" list="alvo-marcas"></label>
+      <datalist id="alvo-marcas"><option value="-6"></option><option value="0"></option><option value="6"></option></datalist>
+      <div class="escala-leg" aria-hidden="true"><span>a favor dos inimigos</span><span>justo</span><span>a favor de Jerusalém</span></div>
+    </div>
     <div class="cenarios" id="cenarios"></div>
     <div class="botoes centro">
       <button type="button" class="mf-btn mf-solid" id="simples">Sugestão simples</button>
@@ -108,14 +114,13 @@
       <aside class="painel" aria-label="Equilíbrio e avisos">
         <div class="medidor">
           <div class="medidor-topo"><strong id="total">0</strong><span id="classe">Equilibrado</span></div>
-          <div class="escala" aria-hidden="true"><i class="zona"></i><i class="marca" id="marca"></i></div>
+          <div class="escala" aria-hidden="true"><i class="zona" id="zona"></i><i class="marca" id="marca"></i></div>
           <div class="escala-leg" aria-hidden="true"><span>inimigos</span><span>0</span><span>Jerusalém</span></div>
         </div>
         <p class="contagem" id="contagem"></p>
         <ul class="avisos" id="avisos" aria-live="polite"></ul>
         <div class="botoes">
           <button type="button" class="mf-btn" id="copiar">Copiar ligação</button>
-          <a class="mf-btn" href="cartas.html">Imprimir as cartas</a>
         </div>
       </aside>
     </div>

@@ -59,3 +59,11 @@
   .mf .ficha { grid-template-columns: 1fr; gap: 2px; }
   .mf .ficha dd { margin-bottom: 6px; }
 }
+
+/* Imprimir em A4 */
+.mf .impressao { grid-template-columns: minmax(0, 1fr) minmax(220px, 300px); }
+.mf .folha-pre canvas { aspect-ratio: 210 / 297; box-shadow: var(--mf-shadow-card); border-radius: 0; }
+@media (max-width: 860px) {
+  .mf .impressao { grid-template-columns: 1fr; }
+  .mf .folha-pre { width: min(100%, 280px); }
+}

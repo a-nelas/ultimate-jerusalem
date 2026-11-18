@@ -29,27 +29,30 @@ const sinal = (v) => (v > 0 ? `+${v}` : v < 0 ? `−${Math.abs(v)}` : '0');
 const CHAVE = 'uj:preparar';
 let baralho = null;
 let origem = null;   // { tipo: 'simples' | 'aleatoria' | 'cenario', id?, semente? }
+let alvo = 0;        // equilíbrio desejado para as sugestões e os cenários
 
 function carregar() {
   const daLigacao = descodificar(location.hash);
-  if (daLigacao) return { baralho: daLigacao, origem: null };
+  let alvoGuardado = 0;
+  try { alvoGuardado = JSON.parse(localStorage.getItem(CHAVE) || 'null')?.alvo ?? 0; } catch { /* sem armazenamento */ }
+  if (daLigacao) return { baralho: daLigacao, origem: null, alvo: alvoGuardado };
   try {
     const g = JSON.parse(localStorage.getItem(CHAVE) || 'null');
-    if (g?.jogadores) return { baralho: normalizar(g), origem: g.origem ?? null };
+    if (g?.jogadores) return { baralho: normalizar(g), origem: g.origem ?? null, alvo: g.alvo ?? 0 };
   } catch { /* sem armazenamento */ }
-  return { baralho: sugerirSimples(10), origem: { tipo: 'simples' } };
+  return { baralho: sugerirSimples(10), origem: { tipo: 'simples' }, alvo: 0 };
 }
 
 function guardar() {
-  try { localStorage.setItem(CHAVE, JSON.stringify({ ...baralho, origem })); } catch { /* ignorar */ }
+  try { localStorage.setItem(CHAVE, JSON.stringify({ ...baralho, origem, alvo })); } catch { /* ignorar */ }
   history.replaceState(null, '', `#${codificar(baralho)}`);
 }
 
 /** Refaz o baralho a partir da origem (cenário ou sugestão) para o n.º de jogadores atual. */
 function gerar(o, n = baralho.jogadores) {
-  if (o.tipo === 'simples') return sugerirSimples(n);
-  if (o.tipo === 'aleatoria') return sugerirAleatoria(n, o.semente);
-  return aplicarCenario(cenario(o.id), n);   // fora do intervalo do cenário, os avisos dizem o que falta
+  if (o.tipo === 'simples') return sugerirSimples(n, alvo);
+  if (o.tipo === 'aleatoria') return sugerirAleatoria(n, o.semente, alvo);
+  return aplicarCenario(cenario(o.id), n, alvo);   // fora do intervalo do cenário, os avisos dizem o que falta
 }
 
 function usar(o) {
@@ -160,7 +163,11 @@ function atualizar() {
   $('#total').textContent = sinal(total);
   $('#classe').textContent = cl.texto;
   document.querySelector('.medidor').dataset.classe = cl.id;
-  $('#marca').style.left = `${50 + (Math.max(-15, Math.min(15, total)) / 15) * 50}%`;
+  const pos = (v) => `${50 + (Math.max(-15, Math.min(15, v)) / 15) * 50}%`;
+  $('#marca').style.left = pos(total);
+  $('#zona').style.left = `calc(${pos(alvo)} - 2 / 15 * 50%)`;   // faixa de ±2 à volta do equilíbrio desejado
+  $('#alvo').value = alvo;
+  $('#alvo-val').textContent = textoAlvo(alvo);
   const cartas = contarCartas(baralho);
   const precisa = cartasNecessarias(baralho);
   $('#contagem').innerHTML = `<strong>${cartas}</strong> de <strong>${precisa}</strong> cartas · <strong>${inimigos(baralho)}</strong> ${inimigos(baralho) === 1 ? 'inimigo' : 'inimigos'} (recomendado: ${inimigosRecomendados(n)})`;
@@ -184,6 +191,11 @@ function atualizar() {
   guardar();
 }
 
+function textoAlvo(a) {
+  if (!a) return '0 · justo';
+  return `${sinal(a)} · ${a > 0 ? 'a favor de Jerusalém' : 'a favor dos inimigos'}`;
+}
+
 function textoOrigem() {
   if (!origem) return 'Baralho montado à mão. Escolhe um cenário ou uma sugestão para recomeçar.';
   if (origem.tipo === 'simples') return 'Sugestão simples: as personagens clássicas, sempre iguais para este número de jogadores.';
@@ -198,6 +210,11 @@ function textoOrigem() {
 $('#menos').addEventListener('click', () => mudarJogadores(baralho.jogadores - 1));
 $('#mais').addEventListener('click', () => mudarJogadores(baralho.jogadores + 1));
 $('#jogadores').addEventListener('change', (e) => mudarJogadores(Number(e.target.value)));
+$('#alvo').addEventListener('input', (e) => {
+  alvo = Number(e.target.value) || 0;
+  if (origem) baralho = gerar(origem);   // o cenário ou a sugestão refaz-se com o novo alvo
+  atualizar();
+});
 $('#simples').addEventListener('click', () => usar({ tipo: 'simples' }));
 $('#aleatoria').addEventListener('click', () => usar({ tipo: 'aleatoria', semente: (Math.random() * 2 ** 32) >>> 0 }));
 $('#limpar').addEventListener('click', () => { origem = null; baralho = { jogadores: baralho.jogadores, cartas: {} }; atualizar(); });
@@ -216,7 +233,7 @@ window.addEventListener('hashchange', () => {
   if (b && codificar(b) !== codificar(baralho)) { baralho = b; origem = null; atualizar(); }
 });
 
-({ baralho, origem } = carregar());
+({ baralho, origem, alvo } = carregar());
 montarCenarios();
 montarEquipas();
 atualizar();
