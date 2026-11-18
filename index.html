@@ -61,19 +61,17 @@
   <section class="mf-frame mf-hero">
     <span class="mf-label">a cidade santa está cercada</span>
     <h1><span class="mf-display">Ultimate Jerusalém</span></h1>
-    <span class="mf-subtitle">Um jogo de dedução social de muitas noites: o povo de Jerusalém contra Filisteus e agentes da Babilónia escondidos entre os seus.</span>
+    <span class="mf-subtitle">Um jogo de dedução social para muitas noites: o povo de Jerusalém contra Filisteus escondidos no seu meio.</span>
     <div class="mf-rule" aria-hidden="true"></div>
     <div class="mf-intro">
       <svg class="mf-icon mf-intro-icon" aria-hidden="true"><use href="#mf-i-codex"/></svg>
       <div class="mf-txt">
-        O assistente do <b>Narrador</b>, com as mecânicas de <i>Ultimate Werewolf: Ultimate Edition</i> e as figuras das Escrituras. De noite, os inimigos escolhem uma vítima e os fiéis usam os seus dons; de dia, a cidade aponta quem julga ser o traidor. Jerusalém vence quando todos os inimigos forem descobertos.
+        Esta página é um assistente para o <b>Narrador</b>. Este jogo utiliza as mecânicas <i>Ultimate Werewolf: Ultimate Edition (2008)</i>. As personagens foram adaptadas para figuras da Bíblia. De noite, os inimigos escolhem uma vítima e os israelitas usam os seus dons. De dia, a cidade expulsa o jogador mais votado. Quando um jogador morre ou sai, este revela a sua carta. Jerusalém vence quando todos os inimigos foram expulsos.
       </div>
     </div>
     <div class="mf-stats">
       <div class="mf-stat"><strong id="st-papeis">38</strong><span>personagens</span></div>
       <div class="mf-stat"><strong>5–30</strong><span>jogadores</span></div>
-      <div class="mf-stat"><strong id="st-noite">23</strong><span>chamadas da noite</span></div>
-      <div class="mf-stat"><strong>3</strong><span>fações em guerra</span></div>
     </div>
   </section>
 
@@ -182,7 +180,6 @@
   import { ROLES } from './js/data/roles.js';
   const papeis = ROLES.filter((r) => r.id !== 'narrador');
   document.getElementById('st-papeis').textContent = papeis.length;
-  document.getElementById('st-noite').textContent = new Set(papeis.filter((r) => r.ordemNoite != null).map((r) => r.ordemNoite)).size;
 </script>
 <script src="js/vendor/mistfold-1.0.0.js" defer></script>
 </body>
