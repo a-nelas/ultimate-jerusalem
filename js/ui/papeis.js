@@ -1,6 +1,7 @@
 import { ROLES, EQUIPAS, ACORDA, TIPOS, inimigosRecomendados } from '../data/roles.js';
 import { VOTACOES, VOTACAO_PADRAO } from '../data/regras.js';
 import { imagemPapel } from './imagem.js';
+import { ordemDaNoite } from '../engine/preparar.js';
 
 const $ = (sel) => document.querySelector(sel);
 const el = (tag, attrs = {}, ...filhos) => {
@@ -203,13 +204,8 @@ function render() {
 }
 
 function ordemNoite() {
-  const grupos = new Map();
-  for (const r of PAPEIS.filter((p) => p.ordemNoite != null).sort((a, b) => a.ordemNoite - b.ordemNoite)) {
-    if (!grupos.has(r.ordemNoite)) grupos.set(r.ordemNoite, []);
-    grupos.get(r.ordemNoite).push(r);
-  }
   const ol = $('#ordem-noite');
-  for (const papeis of grupos.values()) {
+  for (const papeis of ordemDaNoite()) {
     const [p, ...outros] = papeis;
     const nome = outros.length ? `${p.nome} (com ${outros.map((o) => o.nome).join(' e ')})` : p.nome;
     ol.append(el('li', {},

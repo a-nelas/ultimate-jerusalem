@@ -12,19 +12,21 @@ Site estático em português de Portugal, pronto para o GitHub Pages, sem passo 
 |---|---|---|
 | 1 | Lista de papéis convertidos + grelha de poder (`papeis.html`, [docs/PAPEIS.md](docs/PAPEIS.md)) | ✅ para revisão |
 | 2 | Oficina de cartas em tamanho TCG, com modelos e prompts para gerar a arte (`cartas.html`, [docs/IMAGENS.md](docs/IMAGENS.md)) | ✅ disponível |
-| 3 | Preparar partida: baralho equilibrado por n.º de jogadores | por fazer |
+| 3 | Preparar partida: baralho equilibrado por n.º de jogadores, com cenários, sugestões e avisos (`preparar.html`) | ✅ disponível |
 | 4 | Moderar: guião da noite, amanhecer, votações, vitória | por fazer |
 | 5 | Versão *Uma Noite* (One Night) | futuro |
 
 ## Estrutura
 
 ```
-index.html, papeis.html, cartas.html   páginas
+index.html, papeis.html, preparar.html, cartas.html   páginas
 css/vendor/mistfold-1.0.0.css   sistema de design Mistfold (não editar)
-css/app.css, css/papeis.css, css/cartas.css   camada da aplicação, só com tokens --mf-*
+css/app.css, css/papeis.css, css/preparar.css, css/cartas.css   camada da aplicação, só com tokens --mf-*
 js/data/roles.js             fonte única de todas as personagens
 js/data/regras.js            regras da casa (votação a apontar)
 js/data/arte.js              descrições e prompts da arte de cada personagem
+js/data/cenarios.js          cenários prontos para preparar a partida
+js/engine/preparar.js        contas do baralho: equilíbrio, avisos, sugestões, ordem da noite
 js/cartas/                   geometria das cartas, desenho em canvas, armazenamento local da arte
 js/ui/                       código de cada página
 js/vendor/mistfold-1.0.0.js  script do sistema (revelação dos cartões, títulos em WebGL)
