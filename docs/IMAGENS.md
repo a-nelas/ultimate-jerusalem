@@ -440,11 +440,11 @@ Minimalist flat cartoon illustration of the boy king Joash, a small child with s
 ### Manto do Profeta · `manto`
 
 ```text
-Minimalist flat cartoon illustration of a prophet's brown woven cloak floating in a swirl of wind and golden light, no people, no face, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of umber brown and gold, soft tan background
+Minimalist flat cartoon illustration of an empty prophet's mantle lying open on its own: a flat brown woven cloak spread out like a blanket, with no one inside, no hood, its loose edges lifted by a swirl of wind and golden light, an inanimate object only, no character, no creature, no head, no face, no eyes, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, one single object centered, still life, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of umber brown and gold, soft tan background
 ```
 
 ### Narrador · `narrador`
 
 ```text
-Minimalist flat cartoon illustration of an old storyteller with white hair, a white beard and round glasses, friendly smile, holding a big open book and a lit candle, no people, no face, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of umber brown and gold, soft tan background
+Minimalist flat cartoon illustration of an old storyteller with white hair, a white beard and round glasses, friendly smile, holding a big open book and a lit candle, an inanimate object only, no character, no creature, no head, no face, no eyes, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, one single object centered, still life, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of umber brown and gold, soft tan background
 ```

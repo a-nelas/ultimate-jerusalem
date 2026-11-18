@@ -73,7 +73,7 @@ export const ARTE = {
   jaco: 'Jacob, a young adult man with smooth brown hair and no beard, sneaky smile, goat skins on his arms, carrying a bowl of stew',
   aca: 'Achan, a man with short curly hair and a short beard, nervous face, glancing sideways, hiding a gold bar behind his back',
   joas: 'the boy king Joash, a small child with short dark hair and big surprised eyes, wearing a crown that is too big for him',
-  manto: 'a prophet\'s brown woven cloak floating in a swirl of wind and golden light',
+  manto: 'an empty prophet\'s mantle lying open on its own: a flat brown woven cloak spread out like a blanket, with no one inside, no hood, its loose edges lifted by a swirl of wind and golden light',
   narrador: 'an old storyteller with white hair, a white beard and round glasses, friendly smile, holding a big open book and a lit candle',
 };
 
@@ -138,7 +138,10 @@ export const IDS_VARIANTES = Object.entries(VARIANTES).flatMap(([id, lista]) => 
 /** Prompt completo para uma personagem (aceita uma descrição alternativa). O Manto é um objeto: não leva rosto. */
 export function promptPara(papel, descricao) {
   const base = (descricao ?? ARTE[papel?.id] ?? 'a biblical figure in ancient Jerusalem').trim().replace(/[.,;\s]+$/, '');
-  const rosto = papel?.equipa === 'objeto' ? 'no people, no face' : ROSTO;
+  const objeto = papel?.equipa === 'objeto';
+  const rosto = objeto ? 'an inanimate object only, no character, no creature, no head, no face, no eyes' : ROSTO;
+  // Num objeto, "chibi" e "personagem" fazem o modelo inventar uma cabeça: troca-se por uma natureza-morta.
+  const estilo = objeto ? ESTILO.replace('cute chibi-like proportions, one character centered', 'one single object centered, still life') : ESTILO;
   const acento = ACENTO_EQUIPA[papel?.equipa] ?? '';
-  return [`${PREFIXO} ${base}`, rosto, ESTILO, acento].filter(Boolean).join(', ');
+  return [`${PREFIXO} ${base}`, rosto, estilo, acento].filter(Boolean).join(', ');
 }
