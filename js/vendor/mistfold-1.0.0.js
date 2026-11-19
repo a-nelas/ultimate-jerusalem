@@ -249,4 +249,6 @@
     items.forEach(it=>ro.observe(it.el));
     if(!reduce) requestAnimationFrame(loop);
   });
+  // Ultimate Jerusalém: ao mudar de tema, os títulos voltam a ler a paleta e a pintar
+  window.addEventListener('mf-tema',()=>{if(!ready)return;const now=performance.now();items.forEach(it=>{it.palT=-1e9;render(it,now);});});
 })();

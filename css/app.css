@@ -94,3 +94,80 @@ body.mf { min-height: 100vh; }
 
 /* Sem traços verticais centrados: por baixo dos títulos e entre os números do topo */
 .mf .mf-rule { height: 0; margin: 14px auto; background: none; }
+
+/* ── Tema escuro ──
+   O script no <head> põe data-theme="light" ou "dark" no <html> (escolha guardada ou a do sistema).
+   Os tokens escuros ficam no <body>: o :root mantém os claros, que o desenho das cartas lê (as cartas impressas são sempre claras). */
+html[data-theme="dark"] { color-scheme: dark; background: #151917; }
+html[data-theme="dark"] body.mf {
+  --mf-paper: #151917;
+  --mf-card: #1C211E;
+  --mf-card-deep: #191D1B;
+  --mf-tint: #1E2622;
+  --mf-white: #212724;
+  --mf-glass: #181C1A;
+  --mf-ink: #C4CAC5;
+  --mf-ink-strong: #ECEFEA;
+  --mf-ink-soft: #939A95;
+  --mf-placeholder: #7E857F;
+  --mf-line: #313833;
+  --mf-line-dark: #414943;
+  --mf-line-faint: #272D29;
+
+  --mf-sage: #7FAE9C;
+  --mf-sage-dark: #95C0AF;
+  --mf-sage-deep: #A9CFC0;
+  --mf-sage-light: #A6CDBD;
+  --mf-mint: #8FBCAA;
+  --mf-blue: #84A7B7;
+  --mf-violet: #A898C2;
+  --mf-mauve: #BE9DB6;
+  --mf-lilac: #C7B9D8;
+
+  --mf-ochre: #C4AF86;
+  --mf-umber: #C79C6E;
+  --mf-moss: #95B081;
+  --mf-olive: #B8B57F;
+  --mf-oxblood: #D47F7F;
+  --mf-plum: #B58D91;
+  --mf-rust: #C48C76;
+
+  --mf-foot: #121614;
+  --mf-medal-mid: #212724;
+  --mf-medal-edge: #2D3430;
+  --mf-code-bg: #1C211E;
+  --mf-code-ink: #A9CFC0;
+  --mf-code-comment: #858B86;
+  --mf-code-string: #C2BE8A;
+
+  /* Tokens que dependem dos de cima: declarados de novo para usarem as cores escuras */
+  --mf-team-jerusalem: var(--mf-blue);
+  --mf-team-filisteus: var(--mf-oxblood);
+  --mf-team-babilonios: var(--mf-violet);
+  --mf-team-independentes: var(--mf-ochre);
+  --mf-team-flutuante: var(--mf-moss);
+  --mf-team-objeto: var(--mf-umber);
+  --mf-pos: var(--mf-sage);
+  --mf-neg: var(--mf-oxblood);
+  --mf-title-grad: linear-gradient(298deg, var(--mf-ink-strong) 5%, var(--mf-sage), var(--mf-sage-light) 70%, var(--mf-sage));
+  --mf-mark-grad: linear-gradient(110deg, var(--mf-sage), var(--mf-mint), var(--mf-blue), var(--mf-violet), var(--mf-lilac), var(--mf-sage));
+  --mf-ring-stops: var(--mf-line-dark) 0%, var(--mf-sage) 12%, var(--mf-mint) 19%, var(--mf-blue) 27%, var(--mf-line-dark) 40%, var(--mf-line-dark) 52%, var(--mf-violet) 64%, var(--mf-lilac) 70%, var(--mf-sage) 80%, var(--mf-line-dark) 92%;
+  --mf-shadow-btn: 0 6px 18px -8px rgb(0 0 0 / .6);
+  --mf-shadow-card: 0 14px 30px -22px rgb(0 0 0 / .8);
+  --mf-shadow-medal: 0 6px 14px -8px rgb(0 0 0 / .7);
+  --mf-shadow-field: 0 18px 40px -26px rgb(0 0 0 / .8);
+  --mf-shadow-field-focus: 0 18px 40px -22px color-mix(in srgb, var(--mf-sage) 40%, transparent);
+}
+
+/* Botão do tema, à direita na barra de navegação */
+.mf .tema-btn {
+  display: inline-grid; place-items: center; flex: none; width: 36px; height: 36px; padding: 0;
+  border: var(--mf-hair) solid var(--mf-line-dark); border-radius: var(--mf-radius-sm); corner-shape: var(--mf-corner);
+  background: transparent; color: var(--mf-ink); cursor: pointer; transition: var(--mf-dur);
+}
+.mf .tema-btn:hover { border-color: var(--mf-sage); color: var(--mf-sage); }
+.mf .tema-btn:focus-visible { outline: var(--mf-focus) solid var(--mf-sage); outline-offset: 3px; }
+.mf .tema-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.mf .tema-btn .sol { display: none; }
+html[data-theme="dark"] .mf .tema-btn .lua { display: none; }
+html[data-theme="dark"] .mf .tema-btn .sol { display: block; }
