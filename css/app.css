@@ -88,5 +88,9 @@ body.mf { min-height: 100vh; }
 
 /* Sem animações contínuas (poupam CPU): os títulos ficam fixos e as barras do topo sem brilho a correr */
 .mf .mf-hero .mf-rule:after, .mf .mf-hero .mf-intro:after { display: none; }
-.mf .mf-hero .mf-stat:before { animation: none; }
+.mf .mf-stat { border-left: 0; }
+.mf .mf-hero .mf-stat:before { display: none; }
 .mf .mf-frame .mf-display, .mf .mf-frame h2.mf-title, .mf .mf-finale-mark .mf-mark-fallback { animation: none; }
+
+/* Sem traços verticais centrados: por baixo dos títulos e entre os números do topo */
+.mf .mf-rule { height: 0; margin: 14px auto; background: none; }

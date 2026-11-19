@@ -82,10 +82,7 @@
     col*=.8+.38*f;
     vec3 L=normalize(vec3((uLight-vUv)*asp,.75));
     float diff=clamp(dot(n,L),0.,1.);
-    float spec=pow(clamp(dot(n,normalize(L+vec3(0.,0.,1.))),0.,1.),48.);
-    col=col*(.5+.62*diff)+vec3(spec*.6);
-    float band=vUv.x+(vUv.y-.5)*.45*asp.y/asp.x*4.-(fract(uTime*.06)*1.9-.45);
-    col+=vec3(.95,1.,.97)*smoothstep(.06,0.,abs(band))*.4;
+    col=col*(.85+.3*diff);   // Ultimate Jerusalém, alteração local: sem brilho branco nem faixa de reflexo, só a cor
     col+=(hash(gl_FragCoord.xy+fract(uTime))-.5)*.03;
     gl_FragColor=vec4(clamp(col,0.,1.)*a,a);
   }`;
