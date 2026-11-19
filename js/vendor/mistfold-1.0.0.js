@@ -53,7 +53,8 @@
   const glc=document.createElement('canvas');
   const gl=glc.getContext('webgl',{premultipliedAlpha:true,alpha:true,antialias:false});
   if(!gl) return;                                   // CSS gradient text stays as the fallback
-  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Ultimate Jerusalém, alteração local: títulos fixos, desenhados uma vez (sem seguir o rato nem animar), para a página ficar leve
+  const reduce=true;
 
   const vs=`attribute vec2 p;varying vec2 vUv;void main(){vUv=p*.5+.5;gl_Position=vec4(p,0.,1.);}`;
   const fs=`precision highp float;
@@ -173,8 +174,6 @@
   }
 
   let pointer=null;
-  addEventListener('pointermove',e=>pointer=[e.clientX,e.clientY],{passive:true});
-  document.addEventListener('pointerleave',()=>pointer=null);
 
   function render(it,now){
     if(!it.w||!it.h) return;

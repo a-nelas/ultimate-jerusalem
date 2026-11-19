@@ -85,3 +85,8 @@ body.mf { min-height: 100vh; }
 /* Títulos e números do topo */
 .mf .mf-subtitle { text-wrap: balance; }
 .mf .mf-stats.dois { grid-template-columns: repeat(2, 1fr); --mf-stats-w: 300px; }
+
+/* Sem animações contínuas (poupam CPU): os títulos ficam fixos e as barras do topo sem brilho a correr */
+.mf .mf-hero .mf-rule:after, .mf .mf-hero .mf-intro:after { display: none; }
+.mf .mf-hero .mf-stat:before { animation: none; }
+.mf .mf-frame .mf-display, .mf .mf-frame h2.mf-title, .mf .mf-finale-mark .mf-mark-fallback { animation: none; }
