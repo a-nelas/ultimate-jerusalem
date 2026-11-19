@@ -94,6 +94,31 @@
     </div>
   </section>
 
+  <section class="mf-frame" aria-labelledby="t-votacao">
+    <span class="mf-label">o juízo</span>
+    <h2 class="mf-title" id="t-votacao">Votação a Apontar</h2>
+    <div class="mf-rule" aria-hidden="true"></div>
+    <div class="mf-intro">
+      <svg class="mf-icon mf-intro-icon" aria-hidden="true"><use href="#mf-i-seal"/></svg>
+      <div class="mf-txt" id="votacao-resumo"></div>
+    </div>
+    <div class="mf-fleuron" aria-hidden="true">❦</div>
+    <div class="mf-block">
+      <ol class="mf-numbered" id="votacao-passos"></ol>
+    </div>
+    <div class="mf-cards">
+      <article class="mf-card" style="--mf-accent:var(--mf-sage)">
+        <div class="mf-card-main">
+          <div class="mf-card-info">
+            <span class="mf-name">Personagens que Mexem no Voto</span>
+            <span class="mf-meta">aplicam-se na votação a apontar</span>
+            <div class="mf-txt"><ul id="votacao-papeis"></ul></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <section class="mf-frame">
     <span class="mf-label">os instrumentos</span>
     <h2 class="mf-title">Ferramentas do Narrador</h2>
@@ -163,8 +188,16 @@
 
 <script type="module">
   import { ROLES } from './js/data/roles.js';
+  import { VOTACOES, VOTACAO_PADRAO } from './js/data/regras.js';
   const papeis = ROLES.filter((r) => r.id !== 'narrador');
   document.getElementById('st-papeis').textContent = papeis.length;
+
+  // Votação a apontar (texto em js/data/regras.js)
+  const v = VOTACOES[VOTACAO_PADRAO];
+  const itens = (id, textos) => document.getElementById(id).append(...textos.map((t) => Object.assign(document.createElement('li'), { textContent: t })));
+  document.getElementById('votacao-resumo').textContent = v.resumo;
+  itens('votacao-passos', v.passos);
+  itens('votacao-papeis', v.papeis);
 </script>
 <script type="module" src="js/ui/tema.js"></script>
 <script src="js/vendor/mistfold-1.0.0.js" defer></script>

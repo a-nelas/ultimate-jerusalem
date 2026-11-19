@@ -1,5 +1,4 @@
 import { ROLES, EQUIPAS, ACORDA, TIPOS, inimigosRecomendados } from '../data/roles.js';
-import { VOTACOES, VOTACAO_PADRAO } from '../data/regras.js';
 import { imagemPapel } from './imagem.js';
 import { ordemDaNoite } from '../engine/preparar.js';
 
@@ -214,14 +213,6 @@ function ordemNoite() {
   }
 }
 
-function votacao() {
-  const v = VOTACOES[VOTACAO_PADRAO];
-  $('#votacao-resumo').textContent = v.resumo;
-  $('#votacao-passos').append(...v.passos.map((p) => el('li', {}, p)));
-  $('#votacao-papeis').append(...v.papeis.map((p) => el('li', {}, p)));
-}
-
 montarFiltros();
 render();
 ordemNoite();
-votacao();
