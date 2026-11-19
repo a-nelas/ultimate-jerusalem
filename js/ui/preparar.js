@@ -1,4 +1,4 @@
-// Preparar a Partida: monta e equilibra o baralho. As contas estão em js/engine/preparar.js.
+// Jogar (jogar.html): monta e equilibra o baralho. As contas estão em js/engine/preparar.js.
 import { EQUIPAS, ACORDA, inimigosRecomendados } from '../data/roles.js';
 import {
   MIN_JOGADORES, MAX_JOGADORES, JOGAVEIS, ASSASSINOS, maxCopias, copias, normalizar, contarCartas, cartasNecessarias,
@@ -23,7 +23,7 @@ const marca = (eq) => el('span', { class: 'mf-dot', style: acento(eq), 'aria-hid
 const sinal = (v) => (v > 0 ? `+${v}` : v < 0 ? `−${Math.abs(v)}` : '0');
 
 // ── Estado ──
-// O baralho fica em localStorage ('uj:preparar'), que Moderar vai ler. A ligação (#…) tem prioridade.
+// O baralho fica em localStorage ('uj:preparar'), que a impressão em Cartas também lê. A ligação (#…) tem prioridade.
 // `origem` lembra de onde veio o baralho, para o refazer quando muda o n.º de jogadores.
 const CHAVE = 'uj:preparar';
 let baralho = null;

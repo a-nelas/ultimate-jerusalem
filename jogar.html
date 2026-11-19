@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Moderar a Partida · Ultimate Jerusalém</title>
-  <meta name="description" content="O guião do Narrador de Ultimate Jerusalém: o que ler em cada noite, o que lembrar ao amanhecer, a votação e a vitória.">
+  <title>Jogar · Ultimate Jerusalém</title>
+  <meta name="description" content="Monta um baralho equilibrado de Ultimate Jerusalém para 5 a 30 jogadores e vê a ordem em que as personagens acordam de noite.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Cinzel:wght@400..900&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/papeis.css">
   <link rel="stylesheet" href="css/preparar.css">
-  <link rel="stylesheet" href="css/moderar.css">
 </head>
 <body class="mf">
 <!-- Ícones e gradiente do sistema mistfold@1.0.0 (uma vez por página) -->
@@ -51,90 +50,79 @@
     <nav class="mf-nav-links" aria-label="Principal">
       <a href="index.html">Início</a>
       <a href="papeis.html">Personagens</a>
-      <a href="preparar.html">Preparar</a>
-      <a href="moderar.html" aria-current="page">Moderar</a>
+      <a href="jogar.html" aria-current="page">Jogar</a>
       <a href="cartas.html">Cartas</a>
     </nav>
-    <a href="papeis.html" class="mf-btn">Personagens</a>
   </div>
 </header>
 
 <main class="mf-main">
 
   <section class="mf-frame mf-hero">
-    <span class="mf-label">a voz do narrador</span>
-    <h1><span class="mf-display">Moderar a Partida</span></h1>
-    <span class="mf-subtitle">O que ler em cada noite e o que lembrar em cada dia.</span>
+    <span class="mf-label">o conselho de guerra</span>
+    <h1><span class="mf-display">Jogar</span></h1>
+    <span class="mf-subtitle">Quantos jogadores há à volta da mesa, e que cartas lhes vais dar.</span>
     <div class="mf-rule" aria-hidden="true"></div>
     <div class="mf-intro">
-      <svg class="mf-icon mf-intro-icon" aria-hidden="true"><use href="#mf-i-codex"/></svg>
+      <svg class="mf-icon mf-intro-icon" aria-hidden="true"><use href="#mf-i-branch"/></svg>
       <div class="mf-txt">
-        Segue o guião passo a passo e marca o que já fizeste. Só aparecem as personagens do baralho preparado, e só nas noites em que acordam.
-        Marca os poderes gastos e os acontecimentos importantes para o guião se ajustar.
+        Indica o número de jogadores, escolhe o equilíbrio e distribui as cartas! Podes ajustar o equilíbrio: valores recomendados entre −2 e 2.
       </div>
     </div>
+    <div class="jogadores-ctl" role="group" aria-label="Número de jogadores">
+      <button type="button" class="mf-btn" id="menos" aria-label="Menos um jogador">−</button>
+      <label class="mf-field"><span>Jogadores</span>
+        <input type="number" id="jogadores" min="5" max="30" inputmode="numeric" value="10"></label>
+      <button type="button" class="mf-btn" id="mais" aria-label="Mais um jogador">+</button>
+    </div>
+    <div class="alvo">
+      <label class="mf-field"><span>Equilíbrio desejado <output id="alvo-val">0 · justo</output></span>
+        <input type="range" id="alvo" min="-6" max="6" step="1" value="0" list="alvo-marcas"></label>
+      <datalist id="alvo-marcas"><option value="-6"></option><option value="0"></option><option value="6"></option></datalist>
+      <div class="escala-leg" aria-hidden="true"><span>a favor dos inimigos</span><span>justo</span><span>a favor de Jerusalém</span></div>
+    </div>
+    <div class="botoes centro">
+      <button type="button" class="mf-btn mf-solid" id="simples">Sugestão simples</button>
+      <button type="button" class="mf-btn mf-solid" id="aleatoria">Sugestão aleatória</button>
+      <button type="button" class="mf-btn" id="limpar">Limpar</button>
+    </div>
+    <p class="resumo" id="origem" aria-live="polite"></p>
     <div class="mf-stats">
-      <div class="mf-stat"><strong id="st-jogadores">–</strong><span>jogadores</span></div>
-      <div class="mf-stat"><strong id="st-papeis">–</strong><span>personagens</span></div>
-      <div class="mf-stat"><strong id="st-noite">–</strong><span>noite</span></div>
+      <div class="mf-stat"><strong id="st-cartas">–</strong><span>cartas</span></div>
+      <div class="mf-stat"><strong id="st-inimigos">–</strong><span>inimigos</span></div>
+      <div class="mf-stat"><strong id="st-especiais">–</strong><span>personagens</span></div>
+      <div class="mf-stat"><strong id="st-equilibrio">–</strong><span>equilíbrio</span></div>
     </div>
   </section>
 
-  <section class="mf-frame mf-wide" id="sem-baralho" hidden>
-    <span class="mf-label">falta o baralho</span>
-    <h2 class="mf-title">Ainda não há baralho</h2>
+  <section class="mf-frame mf-wide" aria-labelledby="t-baralho">
+    <span class="mf-label">as cartas</span>
+    <h2 class="mf-title" id="t-baralho">O Baralho</h2>
     <div class="mf-rule" aria-hidden="true"></div>
-    <p class="resumo">Monta primeiro o baralho para a tua mesa. O guião usa as personagens que escolheres.</p>
-    <div class="botoes centro"><a class="mf-btn mf-solid" href="preparar.html">Preparar a partida</a></div>
+    <div class="preparar">
+      <div class="equipas" id="equipas"></div>
+      <aside class="painel" aria-label="Equilíbrio e avisos">
+        <div class="medidor">
+          <div class="medidor-topo"><strong id="total">0</strong><span id="classe">Equilibrado</span></div>
+          <div class="escala" aria-hidden="true"><i class="zona" id="zona"></i><i class="marca" id="marca"></i></div>
+          <div class="escala-leg" aria-hidden="true"><span>inimigos</span><span>0</span><span>Jerusalém</span></div>
+        </div>
+        <p class="contagem" id="contagem"></p>
+        <ul class="avisos" id="avisos" aria-live="polite"></ul>
+        <div class="botoes">
+          <button type="button" class="mf-btn" id="copiar">Copiar ligação</button>
+        </div>
+      </aside>
+    </div>
   </section>
 
-  <div id="moderar" hidden>
-    <section class="mf-frame mf-wide" aria-labelledby="t-baralho">
-      <span class="mf-label">em jogo</span>
-      <h2 class="mf-title" id="t-baralho">O Baralho</h2>
-      <div class="mf-rule" aria-hidden="true"></div>
-      <ul class="em-jogo" id="baralho-resumo"></ul>
-      <div class="opcoes">
-        <label class="mf-field"><span>Votação</span>
-          <select id="votacao">
-            <option value="apontar">Votação a apontar</option>
-            <option value="polegar">Votação clássica (polegar)</option>
-          </select></label>
-        <a class="mf-btn" id="ligacao-preparar" href="preparar.html">Mudar o baralho</a>
-      </div>
-    </section>
-
-    <section class="mf-frame mf-wide" aria-labelledby="t-guiao">
-      <span class="mf-label">o guião</span>
-      <h2 class="mf-title" id="t-guiao">Noite e Dia</h2>
-      <div class="mf-rule" aria-hidden="true"></div>
-      <div class="moderar">
-        <div class="guiao-caixa" id="guiao" aria-live="polite"></div>
-        <aside class="painel" aria-label="Progresso e acontecimentos">
-          <div class="progresso">
-            <strong id="fase">Preparação</strong>
-            <div class="botoes">
-              <button type="button" class="mf-btn" id="voltar">Voltar</button>
-              <button type="button" class="mf-btn mf-solid" id="avancar">Começar a 1.ª noite</button>
-            </div>
-          </div>
-          <div id="poderes-bloco">
-            <h4>Poderes gastos</h4>
-            <ul class="marcas" id="poderes"></ul>
-          </div>
-          <div id="acontecimentos-bloco">
-            <h4>Acontecimentos</h4>
-            <ul class="marcas" id="acontecimentos"></ul>
-          </div>
-          <div>
-            <h4>Quem vence</h4>
-            <ul class="vitorias" id="vitorias"></ul>
-          </div>
-          <button type="button" class="mf-btn" id="nova">Nova partida</button>
-        </aside>
-      </div>
-    </section>
-  </div>
+  <section class="mf-frame" aria-labelledby="t-noite">
+    <span class="mf-label">a vigília</span>
+    <h2 class="mf-title" id="t-noite">A Noite deste Baralho</h2>
+    <div class="mf-rule" aria-hidden="true"></div>
+    <ol class="mf-numbered mf-cols" id="noite"></ol>
+    <p class="resumo" id="noite-vazia" hidden>Ninguém deste baralho acorda de noite.</p>
+  </section>
 
 </main>
 
@@ -146,7 +134,7 @@
     </div>
     <div>
       <h4>Ferramentas</h4>
-      <ul><li><a href="papeis.html">Personagens</a></li><li><a href="preparar.html">Preparar</a></li><li><a href="moderar.html">Moderar</a></li><li><a href="cartas.html">Cartas</a></li></ul>
+      <ul><li><a href="papeis.html">Personagens</a></li><li><a href="jogar.html">Jogar</a></li><li><a href="cartas.html">Cartas</a></li></ul>
     </div>
     <div>
       <h4>Documentação</h4>
@@ -162,7 +150,7 @@
   <div class="mf-finale-mark" aria-hidden="true"><canvas></canvas><span class="mf-mark-fallback">Jerusalém</span></div>
 </footer>
 
-<script type="module" src="js/ui/moderar.js"></script>
+<script type="module" src="js/ui/preparar.js"></script>
 <script src="js/vendor/mistfold-1.0.0.js" defer></script>
 </body>
 </html>

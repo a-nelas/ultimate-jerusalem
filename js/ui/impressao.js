@@ -16,7 +16,7 @@ function idsDasCopias(id, k) {
   return Array.from({ length: k }, (_, j) => (j % total === 0 ? id : `${id}-${(j % total) + 1}`));
 }
 
-/** Baralho guardado em Preparar (localStorage 'uj:preparar'). */
+/** Baralho guardado em Jogar (localStorage 'uj:preparar'). */
 function baralhoDePreparar() {
   try { return JSON.parse(localStorage.getItem('uj:preparar') || 'null')?.cartas ?? null; } catch { return null; }
 }
@@ -109,7 +109,7 @@ export function montarImpressao({ tema, prefs, mm, dadosDe, arteDe, aviso }) {
     $('#imp-info').textContent = `Primeira folha · ${f.cols} × ${f.linhas} cartas de ${w} × ${h} mm`;
     if (!ids.length) {
       $('#imp-resumo').innerHTML = o.conjunto === 'baralho'
-        ? 'Ainda não há baralho: monta-o em <a href="preparar.html">Preparar</a>.'
+        ? 'Ainda não há baralho: monta-o em <a href="jogar.html">Jogar</a>.'
         : 'Não há cartas para imprimir.';
       $('#imprimir').disabled = true;
       return;
