@@ -64,7 +64,7 @@
     return mix(mix(hash(i),hash(i+vec2(1,0)),u.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),u.x),u.y);}
   float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*noise(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return v;}
   vec3 pal(float t){
-    vec3 c0=uC0,c1=uC1,c2=uC2,c3=uC3,c4=uC4;
+    vec3 c0=uC0,c1=uC0,c2=uC2,c3=uC3,c4=uC3;   // Ultimate Jerusalém: sem os tons claros (menta e lilás), só verde, azul e roxo
     t=fract(t)*5.;vec3 c=mix(c0,c1,smoothstep(0.,1.,t));c=mix(c,c2,smoothstep(1.,2.,t));
     c=mix(c,c3,smoothstep(2.,3.,t));c=mix(c,c4,smoothstep(3.,4.,t));return mix(c,c0,smoothstep(4.,5.,t));}
   float A(vec2 uv){return texture2D(uTex,uv).a;}
@@ -79,11 +79,9 @@
     vec2 q=vec2(fbm(p+t),fbm(p+vec2(5.2,1.3)-t));
     float f=fbm(p+2.2*q+vec2(t*.6,-t*.35));
     vec3 col=pal(f*1.3+p.x*.12+t*.4);
-    col*=.8+.38*f;
     vec3 L=normalize(vec3((uLight-vUv)*asp,.75));
     float diff=clamp(dot(n,L),0.,1.);
-    col=col*(.85+.3*diff);   // Ultimate Jerusalém, alteração local: sem brilho branco nem faixa de reflexo, só a cor
-    col+=(hash(gl_FragCoord.xy+fract(uTime))-.5)*.03;
+    // Ultimate Jerusalém, alteração local: cor lisa, sem relevo, brilho nem reflexo
     gl_FragColor=vec4(clamp(col,0.,1.)*a,a);
   }`;
   function sh(t,src){const o=gl.createShader(t);gl.shaderSource(o,src);gl.compileShader(o);
