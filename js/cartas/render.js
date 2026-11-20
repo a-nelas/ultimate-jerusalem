@@ -230,7 +230,7 @@ export function desenharFrente(ctx, g, d, t, { arte = null, corte = {}, modo = '
 
   // Personagem em itálico
   linhaAjustada(ctx, d.personagem, g.sub.x + g.sub.w / 2, g.sub.y + g.sub.h / 2, g.sub.w,
-    { fonte: t.fontes.texto, tamanho: g.sub.h * 0.62, cor: t.ink, estilo: 'italic' });
+    { fonte: t.fontes.texto, tamanho: g.sub.h * 0.74, cor: t.ink, estilo: 'italic' });
 
   // Filete que se desvanece nas pontas, entre o subtítulo e a habilidade
   const fy = g.fleuronY, fcx = g.b + g.w / 2, fl = g.texto.w * 0.36;
@@ -248,7 +248,7 @@ export function desenharFrente(ctx, g, d, t, { arte = null, corte = {}, modo = '
   // Referência bíblica
   if (d.refBiblica) {
     linhaAjustada(ctx, d.refBiblica, g.ref.x + g.ref.w / 2, g.ref.y + g.ref.h / 2, g.ref.w,
-      { fonte: t.fontes.texto, tamanho: g.ref.h * 0.75, cor: t['ink-soft'], estilo: 'italic' });
+      { fonte: t.fontes.texto, tamanho: g.ref.h * 0.92, cor: t['ink-soft'], estilo: 'italic' });
   }
 
   // Medalha com o valor de equilíbrio
@@ -267,10 +267,10 @@ export function desenharFrente(ctx, g, d, t, { arte = null, corte = {}, modo = '
   const v = Number(d.valor) || 0;
   const valor = v > 0 ? `+${v}` : v < 0 ? `−${Math.abs(v)}` : '0';
   linhaAjustada(ctx, valor, m.cx, m.cy + m.r * 0.04, m.r * 1.6,
-    { fonte: t.fontes.numeral, tamanho: m.r * 0.85, cor: v > 0 ? t.pos : v < 0 ? t.neg : t['ink-strong'], estilo: '600' });
+    { fonte: t.fontes.numeral, tamanho: m.r * 1.0, cor: v > 0 ? t.pos : v < 0 ? t.neg : t['ink-strong'], estilo: '600' });
 
   // Equipa em versaletes, com a estrela
-  const tamEq = w * 0.032;
+  const tamEq = w * 0.039;
   ctx.font = `${tamEq}px ${t.fontes.texto}`;
   if ('letterSpacing' in ctx) ctx.letterSpacing = `${tamEq * 0.12}px`;
   const rotulo = d.equipaNome.toUpperCase();
