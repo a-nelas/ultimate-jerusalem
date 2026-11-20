@@ -17,8 +17,8 @@ export const VOTACOES = {
     ],
     papeis: [
       'Rei David: o seu voto conta como dois.',
-      'Abigail: aponta para qualquer jogador exceto o mais votado ou para o céu (não recomendado neste modo de jogo).',
-      'Nabal: aponta sempre para o jogador mais votado (não recomendado neste modo de jogo).',
+      'Abigail: aponta para qualquer jogador exceto o mais votado ou para o céu / vota sempre com o polegar para cima (não recomendado para jogar: apontar).',
+      'Nabal: aponta sempre para o jogador mais votado / vota sempre com o polegar para baixo (não recomendado para jogar: apontar).',
       'Rei Ezequias: o jogador silenciado não fala, mas aponta.',
       'Juíza Débora: o jogador expulso não vota nem recebe votos.',
       'Príncipe Jónatas: se for o mais votado, revela a carta e sobrevive.',

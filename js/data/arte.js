@@ -36,7 +36,7 @@ export const ACENTO_EQUIPA = {
 
 /** Descrição visual de cada papel (id → texto). */
 export const ARTE = {
-  israelita: 'a friendly Israelite villager with short dark hair under a simple head scarf, a simple striped tunic, smiling, carrying a clay water jar',
+  israelita: 'a friendly Israelite water carrier woman with short dark hair under a simple striped head scarf, a simple striped tunic, smiling, carrying a clay water jar from the well',
   isaias: 'the prophet Isaiah, an old man with a long white beard and a blue mantle, looking up in awe at a glowing star, holding a scroll',
   jeremias: 'the young adult prophet Jeremiah, a slim young man with thick wavy dark brown hair and a short beard, sad and thoughtful, holding a scroll and a small blossoming almond branch',
   elias: 'the prophet Elijah, a wild-haired bearded man in a rough brown fur cloak, determined look, both arms raised, a small flame on a little stone altar beside him',
@@ -87,10 +87,10 @@ export const VARIANTES = {
     { nome: 'Oleiro', descricao: 'a cheerful Israelite potter with short curly black hair and a short beard, clay-stained apron, holding a small clay bowl' },
     { nome: 'Lavrador', descricao: 'an Israelite farmer with short brown hair and a brown beard, proud smile, holding a sickle and a bundle of wheat' },
     { nome: 'Pastora', descricao: 'a young adult shepherd girl with a long dark braid and a light head scarf, kind smile, holding a shepherd staff, a fluffy lamb beside her' },
-    { nome: 'Avó com pão', descricao: 'an old Israelite woman with grey hair under a soft shawl, warm grandmotherly smile, holding a round loaf of bread' },
+    { nome: 'Padeira', descricao: 'an older Israelite baker woman with grey hair under a soft shawl, warm smile, holding a round loaf of freshly baked bread' },
     { nome: 'Pescador', descricao: 'an Israelite fisherman with messy black hair and a short beard, happy grin, holding a small net with one fish' },
-    { nome: 'Rapaz com cordeiro', descricao: 'a small Israelite boy with short curly brown hair, big happy eyes, hugging a little lamb' },
-    { nome: 'Tecedeira', descricao: 'an Israelite weaver woman with dark hair in a bun, focused gentle face, holding a ball of yarn and a small spindle' },
+    { nome: 'Pastor', descricao: 'a young Israelite shepherd boy with short curly brown hair, big happy eyes, hugging a little lamb from his flock' },
+    { nome: 'Tecelã', descricao: 'an Israelite weaver woman with dark hair in a bun, focused gentle face, holding a ball of yarn and a small spindle' },
   ],
   filisteu: [
     { nome: 'Lanceiro', descricao: 'a Philistine spearman with a simple angry face, furrowed eyebrows and a tight frowning mouth, short black hair under a tall feathered helmet, holding a long bronze spear' },
@@ -111,7 +111,7 @@ export const VARIANTES = {
 
 /** Nome do desenho n.º 1 (a descrição principal, ARTE) das personagens com variantes. */
 export const NOMES_PRINCIPAIS = {
-  israelita: 'Aguadeiro',
+  israelita: 'Aguadeira',
   filisteu: 'Soldado',
   construtor: 'Pedreiro',
   caldeu: 'Emissário',
@@ -134,6 +134,9 @@ export function variante(idCarta) {
 
 /** Todos os ids de carta com variantes: ['israelita-2', 'israelita-3', …]. */
 export const IDS_VARIANTES = Object.entries(VARIANTES).flatMap(([id, lista]) => lista.map((_, i) => `${id}-${i + 2}`));
+
+/** Personagens cujas cartas mostram o ofício de cada desenho como subtítulo (Israelita → Aguadeira, Oleiro, …). */
+export const SUBTITULO_DO_DESENHO = new Set(['israelita']);
 
 /** Cartas cuja arte é uma coisa, não uma pessoa: sem rosto. (O Narrador também é da equipa objeto, mas é uma pessoa.) */
 export const SEM_ROSTO = new Set(['manto']);

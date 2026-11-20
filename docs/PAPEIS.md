@@ -22,8 +22,8 @@ As mecânicas mantêm-se; mudam o nome, o subtítulo e o texto.
 
 | # | Personagem | Subtítulo | Original | Equipa | Valor | Acorda | Poder | Recomendado |
 |---|---|---|---|---|---|---|---|---|
-| 1 | **Israelita** | Povo da Cidade Santa (Salmo 122:6) | Villager | Jerusalém | +1 | Nunca | Sem poder | o restante (mín. 2) |
-| 2 | **Profeta Isaías** | O Vidente de Jerusalém (Isaías 6:8) | Seer | Jerusalém | +7 | Todas as noites | Informação | 1, a partir de 5 |
+| 1 | **Israelita** | Povo (Salmo 122:6) | Villager | Jerusalém | +1 | Nunca | Sem poder | o restante (mín. 2) |
+| 2 | **Isaías** | O Profeta (Isaías 6:8) | Seer | Jerusalém | +7 | Todas as noites | Informação | 1, a partir de 5 |
 | 3 | **Profeta Jeremias** | O Aprendiz do Profeta (Jeremias 1:5) | Apprentice Seer | Jerusalém | +4 | Quando ativado | Informação | 1, a partir de 10 |
 | 4 | **Profeta Elias** | Fogo do Céu e Vida Restaurada (1 Reis 17:22; 18:38) | Witch | Jerusalém | +4 | Todas as noites | Proteção, Eliminação | 1, a partir de 9 |
 | 5 | **Profeta Eliseu** | Porção Dobrada do Espírito (2 Reis 2:9; 4:35) | Sorcerer | Jerusalém | +4 | Todas as noites | Proteção, Eliminação | 0–1, a partir de 20 |
@@ -84,7 +84,7 @@ Orientação do livro de regras: se os jogadores não se conhecem, junta +5 a fa
 9. **Agente Caldeu** · todas as noites
 10. **Profeta Elias** · todas as noites
 11. **Profeta Eliseu** · todas as noites
-12. **Profeta Isaías** · todas as noites
+12. **Isaías** · todas as noites
 13. **Profeta Jeremias** · quando ativado
 14. **Calebe** · todas as noites
 15. **Rei Salomão** · todas as noites
@@ -111,8 +111,8 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 **Personagens que mexem no voto:**
 
 - Rei David: o seu voto conta como dois.
-- Abigail: aponta para qualquer jogador exceto o mais votado ou para o céu (não recomendado neste modo de jogo).
-- Nabal: aponta sempre para o jogador mais votado (não recomendado neste modo de jogo).
+- Abigail: aponta para qualquer jogador exceto o mais votado ou para o céu / vota sempre com o polegar para cima (não recomendado para jogar: apontar).
+- Nabal: aponta sempre para o jogador mais votado / vota sempre com o polegar para baixo (não recomendado para jogar: apontar).
 - Rei Ezequias: o jogador silenciado não fala, mas aponta.
 - Juíza Débora: o jogador expulso não vota nem recebe votos.
 - Príncipe Jónatas: se for o mais votado, revela a carta e sobrevive.
@@ -122,25 +122,25 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 ## Descrição de cada personagem
 
 ### Israelita
-*Povo da Cidade Santa* · Salmo 122:6 · Jerusalém · +1 · original: Villager
+*Povo* · Salmo 122:6 · Jerusalém · +1 · original: Villager
 
 **Carta:** Não tens poder especial. Usa a tua sabedoria para descobrir os inimigos escondidos na cidade.
 
 **Nota do Narrador:** Inclui sempre alguns Israelitas: completam o baralho e servem para afinar o equilíbrio.
 
-### Profeta Isaías
-*O Vidente de Jerusalém* · Isaías 6:8 · Jerusalém · +7 · original: Seer
+### Isaías
+*O Profeta* · Isaías 6:8 · Jerusalém · +7 · original: Seer
 
 **Carta:** Todas as noites, aponta para um jogador. O Narrador revela-te se esse jogador é Filisteu.
 
-**Guião:** _“Profeta Isaías, acorda. Aponta para um jogador sobre quem queres receber uma visão. (Polegar para cima: é Filisteu. Abanar a cabeça: é Israelita.) Profeta Isaías, adormece.”_
+**Guião:** _“Isaías, acorda. Aponta para um jogador sobre quem queres receber uma visão. (Polegar para cima: é Israelita. Polegar para baixo: é Filisteu.) Isaías, adormece.”_
 
 **Nota do Narrador:** A personagem mais forte de Jerusalém: inclui-a em quase todas as partidas. Rute aparece como Filisteu; Dalila, o Espia e os Caldeus aparecem como Israelitas.
 
 ### Profeta Jeremias
 *O Aprendiz do Profeta* · Jeremias 1:5 · Jerusalém · +4 · original: Apprentice Seer
 
-**Carta:** Quando o Profeta Isaías morrer, herdas o seu dom e passas a receber visões todas as noites.
+**Carta:** Quando Isaías morrer, herdas o seu dom e passas a receber visões todas as noites.
 
 **Guião:** _“Profeta Jeremias, acorda. Aponta para um jogador sobre quem queres receber uma visão. Profeta Jeremias, adormece.”_
 

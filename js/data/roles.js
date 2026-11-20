@@ -57,7 +57,7 @@ export const TIPOS = {
 export const ROLES = [
   // ───────────────────────── JERUSALÉM ─────────────────────────
   {
-    id: 'israelita', nome: 'Israelita', personagem: 'Povo da Cidade Santa', refBiblica: 'Salmo 122:6',
+    id: 'israelita', nome: 'Israelita', personagem: 'Povo', refBiblica: 'Salmo 122:6',
     equipa: 'jerusalem', valor: 1, acorda: 'nunca', ordemNoite: null, tipo: ['nenhum'],
     recomendado: { min: 2, max: 20, aPartirDe: 5 }, profetaVe: 'nao',
     habilidade: 'Não tens poder especial. Usa a tua sabedoria para descobrir os inimigos escondidos na cidade.',
@@ -66,11 +66,11 @@ export const ROLES = [
     original: 'Villager',
   },
   {
-    id: 'isaias', nome: 'Profeta Isaías', personagem: 'O Vidente de Jerusalém', refBiblica: 'Isaías 6:8',
+    id: 'isaias', nome: 'Isaías', personagem: 'O Profeta', refBiblica: 'Isaías 6:8',
     equipa: 'jerusalem', valor: 7, acorda: 'todas', ordemNoite: 70, tipo: ['info'],
     recomendado: { min: 1, max: 1, aPartirDe: 5 }, profetaVe: 'nao',
     habilidade: 'Todas as noites, aponta para um jogador. O Narrador revela-te se esse jogador é Filisteu.',
-    guiaoNoite: 'Profeta Isaías, acorda. Aponta para um jogador sobre quem queres receber uma visão. (Polegar para cima: é Filisteu. Abanar a cabeça: é Israelita.) Profeta Isaías, adormece.',
+    guiaoNoite: 'Isaías, acorda. Aponta para um jogador sobre quem queres receber uma visão. (Polegar para cima: é Israelita. Polegar para baixo: é Filisteu.) Isaías, adormece.',
     notaModerador: 'A personagem mais forte de Jerusalém: inclui-a em quase todas as partidas. Rute aparece como Filisteu; Dalila, o Espia e os Caldeus aparecem como Israelitas.',
     original: 'Seer',
   },
@@ -78,7 +78,7 @@ export const ROLES = [
     id: 'jeremias', nome: 'Profeta Jeremias', personagem: 'O Aprendiz do Profeta', refBiblica: 'Jeremias 1:5',
     equipa: 'jerusalem', valor: 4, acorda: 'condicional', ordemNoite: 71, tipo: ['info'],
     recomendado: { min: 1, max: 1, aPartirDe: 10 }, profetaVe: 'nao',
-    habilidade: 'Quando o Profeta Isaías morrer, herdas o seu dom e passas a receber visões todas as noites.',
+    habilidade: 'Quando Isaías morrer, herdas o seu dom e passas a receber visões todas as noites.',
     guiaoNoite: 'Profeta Jeremias, acorda. Aponta para um jogador sobre quem queres receber uma visão. Profeta Jeremias, adormece.',
     notaModerador: 'Só acorda depois da morte de Isaías. Na noite seguinte, toca-lhe no ombro para o avisar.',
     original: 'Apprentice Seer',

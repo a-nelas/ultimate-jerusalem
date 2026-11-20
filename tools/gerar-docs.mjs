@@ -153,7 +153,7 @@ O verso é desenhado pela Oficina e não precisa de imagem.
 As personagens que costumam ter várias cartas no mesmo jogo (10 a 20 jogadores) têm desenhos alternativos:
 ${Object.keys(VARIANTES).map((id) => `${ROLES.find((r) => r.id === id).nome} (${1 + VARIANTES[id].length})`).join(', ')}.
 A n.º 1 é a imagem principal (\`<id>.png\` ou \`<id>-1.png\`); as outras chamam-se \`<id>-2.png\`, \`<id>-3.png\`, …
-Na Oficina aparecem na lista de personagens como *Israelita · 1 (Aguadeiro)*, *Israelita · 2 (Oleiro)*, etc.
+Na Oficina aparecem na lista de personagens como *Israelita · 1 (Aguadeira)*, *Israelita · 2 (Oleiro)*, etc.
 
 ## Prompts por personagem
 

@@ -1,5 +1,5 @@
 import { ROLES, EQUIPAS, papel } from '../data/roles.js';
-import { NEGATIVO, NOMES_PRINCIPAIS, VARIANTES, promptPara, variante } from '../data/arte.js';
+import { NEGATIVO, NOMES_PRINCIPAIS, SUBTITULO_DO_DESENHO, VARIANTES, promptPara, variante } from '../data/arte.js';
 import { TAMANHOS, ESQUEMAS, RESOLUCOES, SANGRIA_MM, geometria, proporcao, sugestaoGeracao, mmParaPx } from '../cartas/formatos.js';
 import { lerTema, carregarFontes, desenharFrente, desenharVerso, desenharMascara, enquadrar } from '../cartas/render.js';
 import { lerArte, guardarArte, apagarArte, listarArte, lerJSON, guardarJSON } from '../cartas/armazem.js';
@@ -29,7 +29,9 @@ function base(id) {
     return { id, nome: 'Nova Carta', personagem: 'Subtítulo', refBiblica: '', habilidade: 'Escreve aqui a habilidade da carta.', equipa: 'jerusalem', valor: 0 };
   }
   const v = variante(id);
-  return { ...papel(v.papel), id };
+  const d = { ...papel(v.papel), id };
+  if (SUBTITULO_DO_DESENHO.has(v.papel) && v.nome) d.personagem = v.nome;   // Israelita: o ofício (Aguadeira, Oleiro, …)
+  return d;
 }
 /** Descrição da arte por omissão da carta (principal ou variante). */
 const descricaoBase = (id) => variante(id).descricao ?? '';

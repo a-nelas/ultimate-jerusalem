@@ -52,15 +52,15 @@ Prompt negativo comum (só tem efeito com CFG acima de 1):
 
 | ✓ | Ficheiro | Personagem | Subtítulo | Equipa |
 |---|---|---|---|---|
-| ☐ | `israelita.png` | Israelita · 1 (Aguadeiro) | Povo da Cidade Santa | Jerusalém |
-| ☐ | `israelita-2.png` | Israelita · 2 (Oleiro) | Povo da Cidade Santa | Jerusalém |
-| ☐ | `israelita-3.png` | Israelita · 3 (Lavrador) | Povo da Cidade Santa | Jerusalém |
-| ☐ | `israelita-4.png` | Israelita · 4 (Pastora) | Povo da Cidade Santa | Jerusalém |
-| ☐ | `israelita-5.png` | Israelita · 5 (Avó com pão) | Povo da Cidade Santa | Jerusalém |
-| ☐ | `israelita-6.png` | Israelita · 6 (Pescador) | Povo da Cidade Santa | Jerusalém |
-| ☐ | `israelita-7.png` | Israelita · 7 (Rapaz com cordeiro) | Povo da Cidade Santa | Jerusalém |
-| ☐ | `israelita-8.png` | Israelita · 8 (Tecedeira) | Povo da Cidade Santa | Jerusalém |
-| ☐ | `isaias.png` | Profeta Isaías | O Vidente de Jerusalém | Jerusalém |
+| ☐ | `israelita.png` | Israelita · 1 (Aguadeira) | Povo | Jerusalém |
+| ☐ | `israelita-2.png` | Israelita · 2 (Oleiro) | Povo | Jerusalém |
+| ☐ | `israelita-3.png` | Israelita · 3 (Lavrador) | Povo | Jerusalém |
+| ☐ | `israelita-4.png` | Israelita · 4 (Pastora) | Povo | Jerusalém |
+| ☐ | `israelita-5.png` | Israelita · 5 (Padeira) | Povo | Jerusalém |
+| ☐ | `israelita-6.png` | Israelita · 6 (Pescador) | Povo | Jerusalém |
+| ☐ | `israelita-7.png` | Israelita · 7 (Pastor) | Povo | Jerusalém |
+| ☐ | `israelita-8.png` | Israelita · 8 (Tecelã) | Povo | Jerusalém |
+| ☐ | `isaias.png` | Isaías | O Profeta | Jerusalém |
 | ☐ | `jeremias.png` | Profeta Jeremias | O Aprendiz do Profeta | Jerusalém |
 | ☐ | `elias.png` | Profeta Elias | Fogo do Céu e Vida Restaurada | Jerusalém |
 | ☐ | `eliseu.png` | Profeta Eliseu | Porção Dobrada do Espírito | Jerusalém |
@@ -115,14 +115,14 @@ O verso é desenhado pela Oficina e não precisa de imagem.
 As personagens que costumam ter várias cartas no mesmo jogo (10 a 20 jogadores) têm desenhos alternativos:
 Israelita (8), Filisteu (5), Construtor (4), Agente Caldeu (3).
 A n.º 1 é a imagem principal (`<id>.png` ou `<id>-1.png`); as outras chamam-se `<id>-2.png`, `<id>-3.png`, …
-Na Oficina aparecem na lista de personagens como *Israelita · 1 (Aguadeiro)*, *Israelita · 2 (Oleiro)*, etc.
+Na Oficina aparecem na lista de personagens como *Israelita · 1 (Aguadeira)*, *Israelita · 2 (Oleiro)*, etc.
 
 ## Prompts por personagem
 
-### Israelita · 1 (Aguadeiro) · `israelita`
+### Israelita · 1 (Aguadeira) · `israelita`
 
 ```text
-Minimalist flat cartoon illustration of a friendly Israelite villager with short dark hair under a simple head scarf, a simple striped tunic, smiling, carrying a clay water jar, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of a friendly Israelite water carrier woman with short dark hair under a simple striped head scarf, a simple striped tunic, smiling, carrying a clay water jar from the well, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 #### Israelita · 2 (Oleiro) · `israelita-2`
@@ -143,10 +143,10 @@ Minimalist flat cartoon illustration of an Israelite farmer with short brown hai
 Minimalist flat cartoon illustration of a young adult shepherd girl with a long dark braid and a light head scarf, kind smile, holding a shepherd staff, a fluffy lamb beside her, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
-#### Israelita · 5 (Avó com pão) · `israelita-5`
+#### Israelita · 5 (Padeira) · `israelita-5`
 
 ```text
-Minimalist flat cartoon illustration of an old Israelite woman with grey hair under a soft shawl, warm grandmotherly smile, holding a round loaf of bread, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of an older Israelite baker woman with grey hair under a soft shawl, warm smile, holding a round loaf of freshly baked bread, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
 #### Israelita · 6 (Pescador) · `israelita-6`
@@ -155,19 +155,19 @@ Minimalist flat cartoon illustration of an old Israelite woman with grey hair un
 Minimalist flat cartoon illustration of an Israelite fisherman with messy black hair and a short beard, happy grin, holding a small net with one fish, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
-#### Israelita · 7 (Rapaz com cordeiro) · `israelita-7`
+#### Israelita · 7 (Pastor) · `israelita-7`
 
 ```text
-Minimalist flat cartoon illustration of a small Israelite boy with short curly brown hair, big happy eyes, hugging a little lamb, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
+Minimalist flat cartoon illustration of a young Israelite shepherd boy with short curly brown hair, big happy eyes, hugging a little lamb from his flock, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
-#### Israelita · 8 (Tecedeira) · `israelita-8`
+#### Israelita · 8 (Tecelã) · `israelita-8`
 
 ```text
 Minimalist flat cartoon illustration of an Israelite weaver woman with dark hair in a bun, focused gentle face, holding a ball of yarn and a small spindle, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
-### Profeta Isaías · `isaias`
+### Isaías · `isaias`
 
 ```text
 Minimalist flat cartoon illustration of the prophet Isaiah, an old man with a long white beard and a blue mantle, looking up in awe at a glowing star, holding a scroll, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background

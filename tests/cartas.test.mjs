@@ -99,8 +99,10 @@ test('as variantes de arte pertencem a personagens com várias cópias e têm pr
   assert.equal(variante('israelita').n, 1);
   assert.equal(variante('israelita-1').descricao, variante('israelita').descricao);
   assert.equal(variante('israelita-2').nome, 'Oleiro');
-  assert.equal(variante('israelita').nome, 'Aguadeiro');
-  assert.equal(variante('israelita-1').nome, 'Aguadeiro');
+  assert.equal(variante('israelita').nome, 'Aguadeira');
+  assert.equal(variante('israelita-1').nome, 'Aguadeira');
+  assert.deepEqual(['israelita', ...IDS_VARIANTES.filter((i) => i.startsWith('israelita-'))].map((i) => variante(i).nome),
+    ['Aguadeira', 'Oleiro', 'Lavrador', 'Pastora', 'Padeira', 'Pescador', 'Pastor', 'Tecelã']);
   for (const id of IDS_VARIANTES) {
     const v = variante(id);
     assert.ok(v.descricao && v.n >= 2, id);
