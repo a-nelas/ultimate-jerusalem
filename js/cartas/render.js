@@ -248,7 +248,7 @@ export function desenharFrente(ctx, g, d, t, { arte = null, corte = {}, modo = '
   // Referência bíblica
   if (d.refBiblica) {
     linhaAjustada(ctx, d.refBiblica, g.ref.x + g.ref.w / 2, g.ref.y + g.ref.h / 2, g.ref.w,
-      { fonte: t.fontes.texto, tamanho: g.ref.h * 0.92, cor: t['ink-soft'], estilo: 'italic' });
+      { fonte: t.fontes.texto, tamanho: g.ref.h * 1.15, cor: t['ink-soft'], estilo: 'italic' });
   }
 
   // Medalha com o valor de equilíbrio

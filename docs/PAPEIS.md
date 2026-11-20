@@ -28,38 +28,38 @@ As mecânicas mantêm-se; mudam o nome, o subtítulo e o texto.
 | 4 | **Elias** | Fogo do Céu (1 Reis 17:22; 18:38) | Witch | Jerusalém | +4 | Todas as noites | Proteção, Eliminação | 1, a partir de 9 |
 | 5 | **Eliseu** | Porção Dobrada do Espírito (2 Reis 2:9; 4:35) | Sorcerer | Jerusalém | +4 | Todas as noites | Proteção, Eliminação | 0–1, a partir de 20 |
 | 6 | **Zadoque** | Sumo Sacerdote (Números 6:24) | Priest | Jerusalém | +3 | Todas as noites | Proteção | 1, a partir de 12 |
-| 7 | **Salomão** | O Rei Sábio (1 Reis 3:9) | Medium | Jerusalém | +3 ? | Todas as noites | Informação | 1, a partir de 12 |
-| 8 | **Calebe** | O Espia de Canaã (Números 13:30) | Psychic Detective | Jerusalém | +3 ? | Todas as noites | Informação | 1, a partir de 15 |
+| 7 | **Salomão** | O Rei Sábio (1 Reis 3:9) | Medium | Jerusalém | +3 | Todas as noites | Informação | 1, a partir de 12 |
+| 8 | **Calebe** | O Espia de Canaã (Números 13:30) | Psychic Detective | Jerusalém | +3 | Todas as noites | Informação | 1, a partir de 15 |
 | 9 | **Benaia** | Capitão da Guarda do Rei (2 Samuel 23:20-23) | Bodyguard | Jerusalém | +3 | Todas as noites | Proteção | 1, a partir de 8 |
 | 10 | **Sansão** | A Força do Nazireu (Juízes 16:30) | Hunter | Jerusalém | +3 | Nunca | Eliminação | 1, a partir de 8 |
 | 11 | **Ester** | A Rainha do Povo (Ester 4:16) | Martyr | Jerusalém | +3 | Nunca | Proteção | 1, a partir de 15 |
-| 12 | **Eleazar** | Valente de David (2 Samuel 23:9-10) | Stalwart | Jerusalém | +3 ? | Nunca | Passivo | 1, a partir de 15 |
+| 12 | **Eleazar** | Valente de David (2 Samuel 23:9-10) | Stalwart | Jerusalém | +3 | Nunca | Passivo | 1, a partir de 15 |
 | 13 | **Jónatas** | O Príncipe Amigo (1 Samuel 14:45) | Prince | Jerusalém | +3 | Nunca | Passivo | 1, a partir de 12 |
 | 14 | **Daniel** | Na Cova dos Leões (Daniel 6:22) | Diseased | Jerusalém | +3 | Nunca | Passivo | 1, a partir de 12 |
 | 15 | **Rei David** | O Pastor Ungido (1 Samuel 16:13) | Mayor | Jerusalém | +2 | Nunca | Manipulação | 1, a partir de 9 |
 | 16 | **Trombeteiro** | O Toque do Shofar (Josué 6:20) | Trouble Maker | Jerusalém | +2 | Todas as noites | Manipulação | 1, a partir de 15 |
 | 17 | **Baruque** | O Escriba e o seu Rolo (Jeremias 36:4) | Ghost | Jerusalém | +2 | Todas as noites | Informação | 1, a partir de 15 |
 | 18 | **Construtor** | Reconstrutor do Muro de Neemias (Neemias 4:17) | Mason | Jerusalém | +2 | Só na 1.ª noite | Informação | 2–3, a partir de 12 |
-| 19 | **Nabal** | O Insensato (1 Samuel 25:25) | Fool | Jerusalém | +2 ? | Nunca | Passivo | não recomendado (votação a apontar) |
+| 19 | **Nabal** | O Insensato (1 Samuel 25:25) | Fool | Jerusalém | +2 | Nunca | Passivo | não recomendado (votação a apontar) |
 | 20 | **Juíza Débora** | Sob a Palmeira (Juízes 4:5) | Old Hag | Jerusalém | +1 | Todas as noites | Manipulação | 1, a partir de 9 |
-| 21 | **Rei Ezequias** | "Não lhe respondais" (2 Reis 18:36) | Enchantress | Jerusalém | +1 ? | Todas as noites | Manipulação | 1, a partir de 15 |
+| 21 | **Rei Ezequias** | "Não lhe respondais" (2 Reis 18:36) | Enchantress | Jerusalém | +1 | Todas as noites | Manipulação | 1, a partir de 15 |
 | 22 | **Rute** | A Moabita Fiel (Rute 1:16) | Lycan | Jerusalém | −1 | Nunca | Passivo | 1, a partir de 10 |
 | 23 | **Noemi** | A Casamenteira (Rute 3:1) | Cupid | Jerusalém | −3 | Só na 1.ª noite | Manipulação | 1, a partir de 12 |
-| 24 | **Matusalém** | O Ancião (Génesis 5:27) | Elder | Jerusalém | 0 ? | Nunca | Passivo | 0–1, a partir de 18 |
+| 24 | **Matusalém** | O Ancião (Génesis 5:27) | Elder | Jerusalém | 0 | Nunca | Passivo | 0–1, a partir de 18 |
 | 25 | **Abigail** | A Pacificadora (1 Samuel 25:32-33) | Pacifist | Jerusalém | −2 | Nunca | Passivo | 0–1, a partir de 15 |
 | 26 | **Filisteu** | Guerreiro Infiltrado (1 Samuel 13:5) | Werewolf | Filisteus | −6 | Todas as noites | Eliminação | ~1 por 5 jogadores |
 | 27 | **Golias** | O Gigante de Gate (1 Samuel 17:4) | Wolf Cub | Filisteus | −8 | Todas as noites | Eliminação | 0–1, a partir de 15 |
 | 28 | **Dalila** | A Traidora de Soreque (Juízes 16:5) | Minion | Filisteus | −6 | Só na 1.ª noite | Informação | 0–1, a partir de 12 |
 | 29 | **Espia Filisteu** | Batedor do Templo de Dagom (Juízes 16:23) | Sorceress | Filisteus | −3 | Todas as noites | Informação | 1, a partir de 10 |
-| 30 | **Agente Caldeu** | Ao Serviço de Nabucodonosor (2 Reis 25:8-10) | Vampire | Babilónios | −7 ? | Todas as noites | Eliminação | 1–3, a partir de 20 |
+| 30 | **Agente Caldeu** | Ao Serviço de Nabucodonosor (2 Reis 25:8-10) | Vampire | Babilónios | −8 | Todas as noites | Eliminação | 1–3, a partir de 20 |
 | 31 | **Absalão** | O Filho Rebelde (2 Samuel 15:10) | Lone Wolf | Independentes | −5 | Todas as noites | Eliminação | 0–1, a partir de 11 |
 | 32 | **Hananias** | O Falso Profeta (Jeremias 28:15) | Cult Leader | Independentes | +1 | Todas as noites | Manipulação | 0–1, a partir de 15 |
 | 33 | **Jonas** | "Lançai-me ao mar" (Jonas 1:12) | Tanner | Independentes | +1 | Nunca | Passivo | 0–1, a partir de 12 |
-| 34 | **Barrabás** | O Salteador (João 18:40) | Bandit | Independentes | 0 ? | Só na 1.ª noite | Manipulação | 0–1, a partir de 20 |
+| 34 | **Barrabás** | O Salteador (João 18:40) | Bandit | Independentes | 0 | Só na 1.ª noite | Manipulação | 0–1, a partir de 20 |
 | 35 | **Jacó** | O que Tomou o Lugar (Génesis 27:19) | Doppelgänger | Flutuante | −2 | Quando ativado | Manipulação | 0–1, a partir de 15 |
 | 36 | **Acã** | O Cobiçoso (Josué 7:21) | Cursed | Flutuante | −3 | Quando ativado | Passivo | 0–1, a partir de 12 |
 | 37 | **Joás** | O Rei Escondido (2 Reis 11:2-3) | Drunk | Flutuante | −3 | Quando ativado | Passivo | 0–1, a partir de 18 |
-| 38 | **Manto** | A Roupa do Profeta (2 Reis 2:13) | Charm | Objeto | +1 ? | Todas as noites | Proteção | 0–1, a partir de 10 |
+| 38 | **Manto** | A Roupa do Profeta (2 Reis 2:13) | Charm | Objeto | +1 | Todas as noites | Proteção | 0–1, a partir de 10 |
 
 ## Inimigos recomendados por número de jogadores
 
@@ -174,7 +174,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 **Nota do Narrador:** A bênção protege contra qualquer morte (noite ou execução) uma única vez.
 
 ### Salomão
-*O Rei Sábio* · 1 Reis 3:9 · Jerusalém · +3 (por confirmar) · original: Medium
+*O Rei Sábio* · 1 Reis 3:9 · Jerusalém · +3 · original: Medium
 
 **Carta:** Todas as noites, aponta para um jogador. O Narrador revela-te se esse jogador tem uma personagem especial.
 
@@ -183,7 +183,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 **Nota do Narrador:** Equivalente ao Medium. Confirmar o texto exato na carta original.
 
 ### Calebe
-*O Espia de Canaã* · Números 13:30 · Jerusalém · +3 (por confirmar) · original: Psychic Detective
+*O Espia de Canaã* · Números 13:30 · Jerusalém · +3 · original: Psychic Detective
 
 **Carta:** Uma vez por jogo, aponta para um jogador. Descobres se há um Filisteu entre ele e os seus dois vizinhos.
 
@@ -215,7 +215,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 **Nota do Narrador:** Equivalente ao Mártir. Pergunta "Alguém se oferece em lugar do condenado?" antes de cada execução.
 
 ### Eleazar
-*Valente de David* · 2 Samuel 23:9-10 · Jerusalém · +3 (por confirmar) · original: Stalwart
+*Valente de David* · 2 Samuel 23:9-10 · Jerusalém · +3 · original: Stalwart
 
 **Carta:** Se fores atacado pelos Filisteus, resistes até ao fim e só morres na noite seguinte.
 
@@ -270,7 +270,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 **Nota do Narrador:** Equivalente ao Maçon. Inclui sempre 2 ou 3, nunca apenas um.
 
 ### Nabal
-*O Insensato* · 1 Samuel 25:25 · Jerusalém · +2 (por confirmar) · original: Fool
+*O Insensato* · 1 Samuel 25:25 · Jerusalém · +2 · original: Fool
 
 **Carta:** Nas votações, nunca te podes abster: apontas sempre para alguém.
 
@@ -286,7 +286,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 **Nota do Narrador:** Equivalente à Velha Bruxa (Old Hag). Não pode escolher o mesmo jogador duas noites seguidas.
 
 ### Rei Ezequias
-*"Não lhe respondais"* · 2 Reis 18:36 · Jerusalém · +1 (por confirmar) · original: Enchantress
+*"Não lhe respondais"* · 2 Reis 18:36 · Jerusalém · +1 · original: Enchantress
 
 **Carta:** Todas as noites, escolhe um jogador que fica mudo no dia seguinte (pode votar, mas não falar). Cada jogador só pode ser silenciado uma vez.
 
@@ -311,7 +311,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 **Nota do Narrador:** Equivalente ao Cupido. Se os Aliados forem de equipas inimigas, vencem só se forem os dois últimos sobreviventes.
 
 ### Matusalém
-*O Ancião* · Génesis 5:27 · Jerusalém · 0 (por confirmar) · original: Elder
+*O Ancião* · Génesis 5:27 · Jerusalém · 0 · original: Elder
 
 **Carta:** Vives longos dias, mas não para sempre: morres de velhice numa noite determinada pelo número de inimigos.
 
@@ -359,13 +359,13 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 **Nota do Narrador:** Equivalente à Feiticeira (Sorceress). Não acorda com os Filisteus e Isaías vê-o como Israelita.
 
 ### Agente Caldeu
-*Ao Serviço de Nabucodonosor* · 2 Reis 25:8-10 · Babilónios · −7 (por confirmar) · original: Vampire
+*Ao Serviço de Nabucodonosor* · 2 Reis 25:8-10 · Babilónios · −8 · original: Vampire
 
 **Carta:** Todas as noites, os Caldeus escolhem juntos uma vítima. Os Filisteus não te podem matar. Vencem quando forem os únicos inimigos e igualarem os restantes.
 
 **Guião:** _“Caldeus, acordem. Escolham juntos a vítima desta noite. Caldeus, adormeçam.”_
 
-**Nota do Narrador:** Equivalente ao Vampiro. Valor −8 no livro da Ultimate Edition, −7 em edições posteriores (confirmar).
+**Nota do Narrador:** Equivalente ao Vampiro.
 
 ### Absalão
 *O Filho Rebelde* · 2 Samuel 15:10 · Independentes · −5 · original: Lone Wolf
@@ -391,7 +391,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 **Nota do Narrador:** Equivalente ao Curtidor (Tanner). Se for executado, Jonas ganha (e o jogo pode continuar para os restantes, se o grupo quiser).
 
 ### Barrabás
-*O Salteador* · João 18:40 · Independentes · 0 (por confirmar) · original: Bandit
+*O Salteador* · João 18:40 · Independentes · 0 · original: Bandit
 
 **Carta:** Na primeira noite, escolhe dois jogadores. Ganhas se ambos morrerem e tu continuares vivo.
 
@@ -425,7 +425,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 **Nota do Narrador:** Equivalente ao Bêbado (Drunk). Separa uma carta aleatória do baralho para ele no início.
 
 ### Manto
-*A Roupa do Profeta* · 2 Reis 2:13 · Objeto · +1 (por confirmar) · original: Charm
+*A Roupa do Profeta* · 2 Reis 2:13 · Objeto · +1 · original: Charm
 
 **Carta:** Enquanto tiveres o Manto, nada te pode matar: nem os inimigos de noite, nem a execução de dia. No fim de cada noite, tens de o passar a outro jogador.
 

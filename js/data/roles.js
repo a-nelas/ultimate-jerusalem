@@ -112,7 +112,7 @@ export const ROLES = [
   },
   {
     id: 'salomao', nome: 'Salomão', personagem: 'O Rei Sábio', refBiblica: '1 Reis 3:9',
-    equipa: 'jerusalem', valor: 3, verificar: true, acorda: 'todas', ordemNoite: 80, tipo: ['info'],
+    equipa: 'jerusalem', valor: 3, acorda: 'todas', ordemNoite: 80, tipo: ['info'],
     recomendado: { min: 1, max: 1, aPartirDe: 12 }, profetaVe: 'nao',
     habilidade: 'Todas as noites, aponta para um jogador. O Narrador revela-te se esse jogador tem uma personagem especial.',
     guiaoNoite: 'Salomão, acorda. Aponta para um jogador. (Polegar para cima: tem personagem especial. Abanar a cabeça: não tem.) Salomão, adormece.',
@@ -121,7 +121,7 @@ export const ROLES = [
   },
   {
     id: 'calebe', nome: 'Calebe', personagem: 'O Espia de Canaã', refBiblica: 'Números 13:30',
-    equipa: 'jerusalem', valor: 3, verificar: true, acorda: 'todas', ordemNoite: 75, tipo: ['info'],
+    equipa: 'jerusalem', valor: 3, acorda: 'todas', ordemNoite: 75, tipo: ['info'],
     recomendado: { min: 1, max: 1, aPartirDe: 15 }, profetaVe: 'nao',
     habilidade: 'Uma vez por jogo, aponta para um jogador. Descobres se há um Filisteu entre ele e os seus dois vizinhos.',
     guiaoNoite: 'Calebe, acorda. Queres espiar esta noite? Aponta para um jogador. (Polegar para cima: há um Filisteu entre ele e os vizinhos.) Calebe, adormece.',
@@ -157,7 +157,7 @@ export const ROLES = [
   },
   {
     id: 'eleazar', nome: 'Eleazar', personagem: 'Valente de David', refBiblica: '2 Samuel 23:9-10',
-    equipa: 'jerusalem', valor: 3, verificar: true, acorda: 'nunca', ordemNoite: null, tipo: ['passivo'],
+    equipa: 'jerusalem', valor: 3, acorda: 'nunca', ordemNoite: null, tipo: ['passivo'],
     recomendado: { min: 1, max: 1, aPartirDe: 15 }, profetaVe: 'nao',
     habilidade: 'Se fores atacado pelos Filisteus, resistes até ao fim e só morres na noite seguinte.',
     guiaoNoite: null,
@@ -220,7 +220,7 @@ export const ROLES = [
   },
   {
     id: 'nabal', nome: 'Nabal', personagem: 'O Insensato', refBiblica: '1 Samuel 25:25',
-    equipa: 'jerusalem', valor: 2, verificar: true, acorda: 'nunca', ordemNoite: null, tipo: ['passivo'],
+    equipa: 'jerusalem', valor: 2, acorda: 'nunca', ordemNoite: null, tipo: ['passivo'],
     recomendado: { min: 0, max: 0, aPartirDe: 18 }, profetaVe: 'nao',
     habilidade: 'Nas votações, nunca te podes abster: apontas sempre para alguém.',
     guiaoNoite: null,
@@ -238,7 +238,7 @@ export const ROLES = [
   },
   {
     id: 'ezequias', nome: 'Rei Ezequias', personagem: '"Não lhe respondais"', refBiblica: '2 Reis 18:36',
-    equipa: 'jerusalem', valor: 1, verificar: true, acorda: 'todas', ordemNoite: 90, tipo: ['manipular'],
+    equipa: 'jerusalem', valor: 1, acorda: 'todas', ordemNoite: 90, tipo: ['manipular'],
     recomendado: { min: 1, max: 1, aPartirDe: 15 }, profetaVe: 'nao',
     habilidade: 'Todas as noites, escolhe um jogador que fica mudo no dia seguinte (pode votar, mas não falar). Cada jogador só pode ser silenciado uma vez.',
     guiaoNoite: 'Rei Ezequias, acorda. Aponta para o jogador a quem ordenas silêncio amanhã. Rei Ezequias, adormece.',
@@ -265,7 +265,7 @@ export const ROLES = [
   },
   {
     id: 'matusalem', nome: 'Matusalém', personagem: 'O Ancião', refBiblica: 'Génesis 5:27',
-    equipa: 'jerusalem', valor: 0, verificar: true, acorda: 'nunca', ordemNoite: null, tipo: ['passivo'],
+    equipa: 'jerusalem', valor: 0, acorda: 'nunca', ordemNoite: null, tipo: ['passivo'],
     recomendado: { min: 0, max: 1, aPartirDe: 18 }, profetaVe: 'nao',
     habilidade: 'Vives longos dias, mas não para sempre: morres de velhice numa noite determinada pelo número de inimigos.',
     guiaoNoite: null,
@@ -323,11 +323,11 @@ export const ROLES = [
   // ───────────────────────── BABILÓNIOS ─────────────────────────
   {
     id: 'caldeu', nome: 'Agente Caldeu', personagem: 'Ao Serviço de Nabucodonosor', refBiblica: '2 Reis 25:8-10',
-    equipa: 'babilonios', valor: -7, verificar: true, acorda: 'todas', ordemNoite: 50, tipo: ['matar'],
+    equipa: 'babilonios', valor: -8, acorda: 'todas', ordemNoite: 50, tipo: ['matar'],
     recomendado: { min: 1, max: 3, aPartirDe: 20 }, profetaVe: 'nao',
     habilidade: 'Todas as noites, os Caldeus escolhem juntos uma vítima. Os Filisteus não te podem matar. Vencem quando forem os únicos inimigos e igualarem os restantes.',
     guiaoNoite: 'Caldeus, acordem. Escolham juntos a vítima desta noite. Caldeus, adormeçam.',
-    notaModerador: 'Equivalente ao Vampiro. Valor −8 no livro da Ultimate Edition, −7 em edições posteriores (confirmar).',
+    notaModerador: 'Equivalente ao Vampiro.',
     original: 'Vampire',
   },
 
@@ -361,7 +361,7 @@ export const ROLES = [
   },
   {
     id: 'barrabas', nome: 'Barrabás', personagem: 'O Salteador', refBiblica: 'João 18:40',
-    equipa: 'independentes', valor: 0, verificar: true, acorda: '1noite', ordemNoite: 9, tipo: ['manipular'],
+    equipa: 'independentes', valor: 0, acorda: '1noite', ordemNoite: 9, tipo: ['manipular'],
     recomendado: { min: 0, max: 1, aPartirDe: 20 }, profetaVe: 'nao',
     habilidade: 'Na primeira noite, escolhe dois jogadores. Ganhas se ambos morrerem e tu continuares vivo.',
     guiaoNoite: 'Barrabás, acorda. Aponta para os dois jogadores que queres ver cair. Barrabás, adormece.',
@@ -401,7 +401,7 @@ export const ROLES = [
   // ───────────────────────── OBJETOS / MODERADOR ─────────────────────────
   {
     id: 'manto', nome: 'Manto', personagem: 'A Roupa do Profeta', refBiblica: '2 Reis 2:13',
-    equipa: 'objeto', valor: 1, verificar: true, acorda: 'todas', ordemNoite: 990, tipo: ['proteger'],
+    equipa: 'objeto', valor: 1, acorda: 'todas', ordemNoite: 990, tipo: ['proteger'],
     recomendado: { min: 0, max: 1, aPartirDe: 10 }, profetaVe: 'nao',
     habilidade: 'Enquanto tiveres o Manto, nada te pode matar: nem os inimigos de noite, nem a execução de dia. No fim de cada noite, tens de o passar a outro jogador.',
     guiaoNoite: 'Portador do Manto, acorda. Aponta para quem vai receber o Manto. Adormece. (Toca no ombro do novo portador.)',
