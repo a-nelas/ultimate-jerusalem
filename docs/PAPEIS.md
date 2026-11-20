@@ -99,14 +99,14 @@ Orientação do livro de regras: se os jogadores não se conhecem, junta +5 a fa
 
 ## Votação a apontar (regra por defeito)
 
-Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
+Todos apontam ao mesmo tempo; quem tiver mais votos é expulso.
 
 1. Terminada a discussão, o Narrador diz: "Um, dois, três… apontem!"
 2. Ao mesmo tempo, cada jogador vivo aponta para um jogador, ou para o céu, se não quiser acusar ninguém (abstenção).
 3. O Narrador conta os votos. O voto do Rei David conta a dobrar, sem o anunciar.
-4. Quem tiver mais votos é condenado. Antes da execução, Ester pode oferecer-se para morrer no seu lugar.
-5. Empate: nova votação só entre os empatados (os outros apontam para um deles ou para o céu). Se voltar a haver empate, ninguém é executado nesse dia.
-6. Se ninguém tiver votos (todos apontam para o céu), ninguém é executado.
+4. Quem tiver mais votos é expulso. Antes da expulsão, Ester pode oferecer-se para sair no seu lugar.
+5. Empate: nova votação só entre os empatados (os outros apontam para um deles ou para o céu). Se voltar a haver empate, ninguém é expulso nesse dia.
+6. Se ninguém tiver votos (todos apontam para o céu), ninguém é expulso.
 
 **Personagens que mexem no voto:**
 
@@ -116,8 +116,8 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 - Rei Ezequias: o jogador silenciado não fala, mas aponta.
 - Juíza Débora: o jogador expulso não vota nem recebe votos.
 - Jónatas: se for o mais votado, revela a carta e sobrevive.
-- Trombeteiro: no dia a seguir ao toque do shofar, faz-se uma segunda votação depois da primeira execução.
-- Manto: o portador condenado revela o Manto e sobrevive.
+- Trombeteiro: no dia a seguir ao toque do shofar, faz-se uma segunda votação depois da primeira expulsão.
+- Manto: o portador expulso revela o Manto e fica no jogo.
 
 ## Descrição de cada personagem
 
@@ -171,7 +171,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 
 **Guião:** _“Zadoque, acorda. Queres abençoar alguém? Aponta para essa pessoa. Zadoque, adormece.”_
 
-**Nota do Narrador:** A bênção protege contra qualquer morte (noite ou execução) uma única vez.
+**Nota do Narrador:** A bênção protege uma única vez, contra a morte de noite ou a expulsão de dia.
 
 ### Salomão
 *O Rei Sábio* · 1 Reis 3:9 · Jerusalém · +3 · original: Medium
@@ -210,9 +210,9 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 ### Ester
 *A Rainha do Povo* · Ester 4:16 · Jerusalém · +3 · original: Martyr
 
-**Carta:** Depois de um jogador ser condenado, podes revelar-te e morrer no seu lugar.
+**Carta:** Depois de um jogador ser expulso pela votação, podes revelar-te e sair do jogo no seu lugar.
 
-**Nota do Narrador:** Equivalente ao Mártir. Pergunta "Alguém se oferece em lugar do condenado?" antes de cada execução.
+**Nota do Narrador:** Equivalente ao Mártir. Pergunta "Alguém se oferece em lugar do expulso?" antes de cada expulsão.
 
 ### Eleazar
 *Valente de David* · 2 Samuel 23:9-10 · Jerusalém · +3 · original: Stalwart
@@ -224,9 +224,9 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 ### Jónatas
 *O Príncipe Amigo* · 1 Samuel 14:45 · Jerusalém · +3 · original: Prince
 
-**Carta:** Se fores condenado à execução, revelas a tua carta e sobrevives.
+**Carta:** Se fores expulso pela votação, revelas a tua carta e ficas no jogo.
 
-**Nota do Narrador:** Equivalente ao Príncipe. Só funciona contra a execução de dia, uma vez (fica revelado).
+**Nota do Narrador:** Equivalente ao Príncipe. Só funciona contra a expulsão de dia, uma vez (fica revelado).
 
 ### Daniel
 *Na Cova dos Leões* · Daniel 6:22 · Jerusalém · +3 · original: Diseased
@@ -245,9 +245,9 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 ### Trombeteiro
 *O Toque do Shofar* · Josué 6:20 · Jerusalém · +2 · original: Trouble Maker
 
-**Carta:** Uma vez por jogo, de noite, tocas o shofar: no dia seguinte haverá duas execuções.
+**Carta:** Uma vez por jogo, de noite, tocas o shofar: no dia seguinte haverá duas expulsões.
 
-**Guião:** _“Trombeteiro, acorda. Queres tocar o shofar para que amanhã haja duas execuções? Trombeteiro, adormece.”_
+**Guião:** _“Trombeteiro, acorda. Queres tocar o shofar para que amanhã haja duas expulsões? Trombeteiro, adormece.”_
 
 **Nota do Narrador:** Equivalente ao Trouble Maker.
 
@@ -274,7 +274,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 
 **Carta:** Nas votações, nunca te podes abster: apontas sempre para alguém.
 
-**Nota do Narrador:** Equivalente ao Tolo (Fool / Village Idiot). Não recomendado com a votação a apontar: quase todos apontam de qualquer forma, por isso a personagem não tem efeito. Na votação clássica, vota sempre a executar.
+**Nota do Narrador:** Equivalente ao Tolo (Fool / Village Idiot). Não recomendado com a votação a apontar: quase todos apontam de qualquer forma, por isso a personagem não tem efeito. Na votação clássica, vota sempre a expulsar.
 
 ### Juíza Débora
 *Sob a Palmeira* · Juízes 4:5 · Jerusalém · +1 · original: Old Hag
@@ -322,7 +322,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 
 **Carta:** Nas votações, apontas sempre para o céu: nunca acusas ninguém.
 
-**Nota do Narrador:** Equivalente ao Pacifista. Apontar para o céu conta como abstenção: o seu voto nunca ajuda a executar ninguém. Na votação clássica, vota sempre a poupar. O valor é negativo porque Jerusalém perde um voto útil e porque quem nunca acusa ninguém levanta suspeitas.
+**Nota do Narrador:** Equivalente ao Pacifista. Apontar para o céu conta como abstenção: o seu voto nunca ajuda a expulsar ninguém. Na votação clássica, vota sempre a poupar. O valor é negativo porque Jerusalém perde um voto útil e porque quem nunca acusa ninguém levanta suspeitas.
 
 ### Filisteu
 *Guerreiro Infiltrado* · 1 Samuel 13:5 · Filisteus · −6 · original: Werewolf
@@ -386,9 +386,9 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 ### Jonas
 *"Lançai-me ao mar"* · Jonas 1:12 · Independentes · +1 · original: Tanner
 
-**Carta:** Só ganhas se fores executado pela cidade.
+**Carta:** Só ganhas se fores expulso pela cidade.
 
-**Nota do Narrador:** Equivalente ao Curtidor (Tanner). Se for executado, Jonas ganha (e o jogo pode continuar para os restantes, se o grupo quiser).
+**Nota do Narrador:** Equivalente ao Curtidor (Tanner). Se for expulso, Jonas ganha (e o jogo pode continuar para os restantes, se o grupo quiser).
 
 ### Barrabás
 *O Salteador* · João 18:40 · Independentes · 0 · original: Bandit
@@ -427,8 +427,8 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 ### Manto
 *A Roupa do Profeta* · 2 Reis 2:13 · Objeto · +1 · original: Charm
 
-**Carta:** Enquanto tiveres o Manto, nada te pode matar: nem os inimigos de noite, nem a execução de dia. No fim de cada noite, tens de o passar a outro jogador.
+**Carta:** Enquanto tiveres o Manto, nada te tira do jogo: nem os inimigos de noite, nem a expulsão de dia. No fim de cada noite, tens de o passar a outro jogador.
 
 **Guião:** _“Portador do Manto, acorda. Aponta para quem vai receber o Manto. Adormece. (Toca no ombro do novo portador.)”_
 
-**Nota do Narrador:** Equivalente ao Amuleto (Charm). Não é uma personagem: na 1.ª noite, o Narrador toca no ombro de um jogador ao acaso, que fica com o Manto além da sua carta. Não conta para o número de cartas, mas o valor entra no equilíbrio. É sempre o último passo da noite, por isso o novo portador fica protegido até à noite seguinte (inclui a votação). Se o portador for condenado, revela o Manto e sobrevive, e a cidade fica a saber quem o tem até ele o passar. Protege qualquer equipa: nas mãos de um Filisteu ajuda os inimigos. Regra da casa sugerida: não se pode devolver o Manto a quem o deu na noite anterior (evita que dois aliados o troquem entre si para sempre).
+**Nota do Narrador:** Equivalente ao Amuleto (Charm). Não é uma personagem: na 1.ª noite, o Narrador toca no ombro de um jogador ao acaso, que fica com o Manto além da sua carta. Não conta para o número de cartas, mas o valor entra no equilíbrio. É sempre o último passo da noite, por isso o novo portador fica protegido até à noite seguinte (inclui a votação). Se o portador for expulso, revela o Manto e fica no jogo, e a cidade fica a saber quem o tem até ele o passar. Protege qualquer equipa: nas mãos de um Filisteu ajuda os inimigos. Regra da casa sugerida: não se pode devolver o Manto a quem o deu na noite anterior (evita que dois aliados o troquem entre si para sempre).
