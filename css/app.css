@@ -78,6 +78,8 @@ body.mf { min-height: 100vh; }
 .mf .mf-numbered.mf-cols { columns: 2 260px; column-gap: 32px; }
 .mf .mf-numbered.mf-cols > li { break-inside: avoid; }
 .mf .mf-block { width: var(--mf-flow-w); max-width: 100%; margin: 0 auto; }
+.mf .mf-numbered .modos { margin: 6px 0 2px; padding-left: 20px; }
+.mf .mf-numbered .modos > li { margin: 4px 0; }
 
 /* Rodapé: texto que não é ligação */
 .mf .mf-finale-foot li .mf-soon { font-size: var(--mf-foot-text); }

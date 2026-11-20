@@ -111,10 +111,10 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 **Personagens que mexem no voto:**
 
 - Rei David: o seu voto conta como dois.
-- Abigail: aponta sempre para o céu.
-- Nabal: não recomendado neste modo (todos apontam de qualquer forma).
+- Abigail: aponta para qualquer jogador exceto o mais votado ou para o céu (não recomendado neste modo de jogo).
+- Nabal: aponta sempre para o jogador mais votado (não recomendado neste modo de jogo).
 - Rei Ezequias: o jogador silenciado não fala, mas aponta.
-- Juíza Débora: o jogador expulso não aponta nem pode receber votos.
+- Juíza Débora: o jogador expulso não vota nem recebe votos.
 - Príncipe Jónatas: se for o mais votado, revela a carta e sobrevive.
 - Trombeteiro: no dia a seguir ao toque do shofar, faz-se uma segunda votação depois da primeira execução.
 - Manto do Profeta: o portador condenado revela o Manto e sobrevive.
