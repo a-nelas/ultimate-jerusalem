@@ -74,7 +74,7 @@ export function avisos(b) {
     if (n > maxCopias(id)) aviso(`${p.nome}: no máximo ${maxCopias(id)} ${maxCopias(id) === 1 ? 'cópia' : 'cópias'}.`);
     if (p.recomendado.aPartirDe > b.jogadores) aviso(`${p.nome} costuma entrar só a partir de ${p.recomendado.aPartirDe} jogadores.`);
   }
-  if (tem('jeremias') && !tem('isaias')) aviso('O Profeta Jeremias só acorda depois de Isaías morrer: sem Isaías, nunca joga.');
+  if (tem('jeremias') && !tem('isaias')) aviso('Jeremias só acorda depois de Isaías morrer: sem Isaías, nunca joga.');
   if ((tem('dalila') || tem('espia')) && !tem('filisteu') && !tem('golias')) aviso('Dalila e o Espia ajudam os Filisteus: sem eles não têm a quem ajudar.');
   if (copias(b, 'construtor') === 1) aviso('Um Construtor sozinho não tem com quem se reconhecer: usa 2 ou mais.');
   if (tem('nabal')) aviso('Nabal não é recomendado com a votação a apontar.');

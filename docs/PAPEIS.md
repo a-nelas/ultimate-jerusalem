@@ -24,17 +24,17 @@ As mecânicas mantêm-se; mudam o nome, o subtítulo e o texto.
 |---|---|---|---|---|---|---|---|---|
 | 1 | **Israelita** | Povo (Salmo 122:6) | Villager | Jerusalém | +1 | Nunca | Sem poder | o restante (mín. 2) |
 | 2 | **Isaías** | O Profeta (Isaías 6:8) | Seer | Jerusalém | +7 | Todas as noites | Informação | 1, a partir de 5 |
-| 3 | **Profeta Jeremias** | O Aprendiz do Profeta (Jeremias 1:5) | Apprentice Seer | Jerusalém | +4 | Quando ativado | Informação | 1, a partir de 10 |
-| 4 | **Profeta Elias** | Fogo do Céu e Vida Restaurada (1 Reis 17:22; 18:38) | Witch | Jerusalém | +4 | Todas as noites | Proteção, Eliminação | 1, a partir de 9 |
-| 5 | **Profeta Eliseu** | Porção Dobrada do Espírito (2 Reis 2:9; 4:35) | Sorcerer | Jerusalém | +4 | Todas as noites | Proteção, Eliminação | 0–1, a partir de 20 |
-| 6 | **Sumo Sacerdote Zadoque** | A Bênção do Templo (Números 6:24) | Priest | Jerusalém | +3 | Todas as noites | Proteção | 1, a partir de 12 |
-| 7 | **Rei Salomão** | O Coração Sábio (1 Reis 3:9) | Medium | Jerusalém | +3 ? | Todas as noites | Informação | 1, a partir de 12 |
+| 3 | **Jeremias** | O Aprendiz do Profeta (Jeremias 1:5) | Apprentice Seer | Jerusalém | +4 | Quando ativado | Informação | 1, a partir de 10 |
+| 4 | **Elias** | Fogo do Céu (1 Reis 17:22; 18:38) | Witch | Jerusalém | +4 | Todas as noites | Proteção, Eliminação | 1, a partir de 9 |
+| 5 | **Eliseu** | Porção Dobrada do Espírito (2 Reis 2:9; 4:35) | Sorcerer | Jerusalém | +4 | Todas as noites | Proteção, Eliminação | 0–1, a partir de 20 |
+| 6 | **Zadoque** | Sumo Sacerdote (Números 6:24) | Priest | Jerusalém | +3 | Todas as noites | Proteção | 1, a partir de 12 |
+| 7 | **Salomão** | O Rei Sábio (1 Reis 3:9) | Medium | Jerusalém | +3 ? | Todas as noites | Informação | 1, a partir de 12 |
 | 8 | **Calebe** | O Espia de Canaã (Números 13:30) | Psychic Detective | Jerusalém | +3 ? | Todas as noites | Informação | 1, a partir de 15 |
 | 9 | **Benaia** | Capitão da Guarda do Rei (2 Samuel 23:20-23) | Bodyguard | Jerusalém | +3 | Todas as noites | Proteção | 1, a partir de 8 |
 | 10 | **Sansão** | A Força do Nazireu (Juízes 16:30) | Hunter | Jerusalém | +3 | Nunca | Eliminação | 1, a partir de 8 |
-| 11 | **Rainha Ester** | "Se eu perecer, pereci" (Ester 4:16) | Martyr | Jerusalém | +3 | Nunca | Proteção | 1, a partir de 15 |
+| 11 | **Ester** | A Rainha do Povo (Ester 4:16) | Martyr | Jerusalém | +3 | Nunca | Proteção | 1, a partir de 15 |
 | 12 | **Eleazar** | Valente de David (2 Samuel 23:9-10) | Stalwart | Jerusalém | +3 ? | Nunca | Passivo | 1, a partir de 15 |
-| 13 | **Príncipe Jónatas** | Resgatado pelo Povo (1 Samuel 14:45) | Prince | Jerusalém | +3 | Nunca | Passivo | 1, a partir de 12 |
+| 13 | **Jónatas** | O Príncipe Amigo (1 Samuel 14:45) | Prince | Jerusalém | +3 | Nunca | Passivo | 1, a partir de 12 |
 | 14 | **Daniel** | Na Cova dos Leões (Daniel 6:22) | Diseased | Jerusalém | +3 | Nunca | Passivo | 1, a partir de 12 |
 | 15 | **Rei David** | O Pastor Ungido (1 Samuel 16:13) | Mayor | Jerusalém | +2 | Nunca | Manipulação | 1, a partir de 9 |
 | 16 | **Trombeteiro** | O Toque do Shofar (Josué 6:20) | Trouble Maker | Jerusalém | +2 | Todas as noites | Manipulação | 1, a partir de 15 |
@@ -59,7 +59,7 @@ As mecânicas mantêm-se; mudam o nome, o subtítulo e o texto.
 | 35 | **Jacó** | O que Tomou o Lugar (Génesis 27:19) | Doppelgänger | Flutuante | −2 | Quando ativado | Manipulação | 0–1, a partir de 15 |
 | 36 | **Acã** | O Cobiçoso (Josué 7:21) | Cursed | Flutuante | −3 | Quando ativado | Passivo | 0–1, a partir de 12 |
 | 37 | **Joás** | O Rei Escondido (2 Reis 11:2-3) | Drunk | Flutuante | −3 | Quando ativado | Passivo | 0–1, a partir de 18 |
-| 38 | **Manto do Profeta** | Passado de mão em mão (2 Reis 2:13) | Charm | Objeto | +1 ? | Todas as noites | Proteção | 0–1, a partir de 10 |
+| 38 | **Manto** | A Roupa do Profeta (2 Reis 2:13) | Charm | Objeto | +1 ? | Todas as noites | Proteção | 0–1, a partir de 10 |
 
 ## Inimigos recomendados por número de jogadores
 
@@ -77,17 +77,17 @@ Orientação do livro de regras: se os jogadores não se conhecem, junta +5 a fa
 2. **Noemi** · só na 1.ª noite
 3. **Construtor** · só na 1.ª noite
 4. **Barrabás** · só na 1.ª noite
-5. **Sumo Sacerdote Zadoque** · todas as noites
+5. **Zadoque** · todas as noites
 6. **Benaia** · todas as noites
 7. **Filisteu** (com Golias e Absalão) · todas as noites
 8. **Dalila** · só na 1.ª noite
 9. **Agente Caldeu** · todas as noites
-10. **Profeta Elias** · todas as noites
-11. **Profeta Eliseu** · todas as noites
+10. **Elias** · todas as noites
+11. **Eliseu** · todas as noites
 12. **Isaías** · todas as noites
-13. **Profeta Jeremias** · quando ativado
+13. **Jeremias** · quando ativado
 14. **Calebe** · todas as noites
-15. **Rei Salomão** · todas as noites
+15. **Salomão** · todas as noites
 16. **Espia Filisteu** · todas as noites
 17. **Rei Ezequias** · todas as noites
 18. **Juíza Débora** · todas as noites
@@ -95,7 +95,7 @@ Orientação do livro de regras: se os jogadores não se conhecem, junta +5 a fa
 20. **Trombeteiro** · todas as noites
 21. **Baruque** · todas as noites
 22. **Joás** · quando ativado
-23. **Manto do Profeta** · todas as noites
+23. **Manto** · todas as noites
 
 ## Votação a apontar (regra por defeito)
 
@@ -104,7 +104,7 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 1. Terminada a discussão, o Narrador diz: "Um, dois, três… apontem!"
 2. Ao mesmo tempo, cada jogador vivo aponta para um jogador, ou para o céu, se não quiser acusar ninguém (abstenção).
 3. O Narrador conta os votos. O voto do Rei David conta a dobrar, sem o anunciar.
-4. Quem tiver mais votos é condenado. Antes da execução, a Rainha Ester pode oferecer-se para morrer no seu lugar.
+4. Quem tiver mais votos é condenado. Antes da execução, Ester pode oferecer-se para morrer no seu lugar.
 5. Empate: nova votação só entre os empatados (os outros apontam para um deles ou para o céu). Se voltar a haver empate, ninguém é executado nesse dia.
 6. Se ninguém tiver votos (todos apontam para o céu), ninguém é executado.
 
@@ -115,9 +115,9 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 - Nabal: aponta sempre para o jogador mais votado / vota sempre com o polegar para baixo (não recomendado para jogar: apontar).
 - Rei Ezequias: o jogador silenciado não fala, mas aponta.
 - Juíza Débora: o jogador expulso não vota nem recebe votos.
-- Príncipe Jónatas: se for o mais votado, revela a carta e sobrevive.
+- Jónatas: se for o mais votado, revela a carta e sobrevive.
 - Trombeteiro: no dia a seguir ao toque do shofar, faz-se uma segunda votação depois da primeira execução.
-- Manto do Profeta: o portador condenado revela o Manto e sobrevive.
+- Manto: o portador condenado revela o Manto e sobrevive.
 
 ## Descrição de cada personagem
 
@@ -137,48 +137,48 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 
 **Nota do Narrador:** A personagem mais forte de Jerusalém: inclui-a em quase todas as partidas. Rute aparece como Filisteu; Dalila, o Espia e os Caldeus aparecem como Israelitas.
 
-### Profeta Jeremias
+### Jeremias
 *O Aprendiz do Profeta* · Jeremias 1:5 · Jerusalém · +4 · original: Apprentice Seer
 
 **Carta:** Quando Isaías morrer, herdas o seu dom e passas a receber visões todas as noites.
 
-**Guião:** _“Profeta Jeremias, acorda. Aponta para um jogador sobre quem queres receber uma visão. Profeta Jeremias, adormece.”_
+**Guião:** _“Jeremias, acorda. Aponta para um jogador sobre quem queres receber uma visão. Jeremias, adormece.”_
 
-**Nota do Narrador:** Só acorda depois da morte de Isaías. Na noite seguinte, toca-lhe no ombro para o avisar.
+**Nota do Narrador:** Só acorda depois da morte de Isaías.
 
-### Profeta Elias
-*Fogo do Céu e Vida Restaurada* · 1 Reis 17:22; 18:38 · Jerusalém · +4 · original: Witch
+### Elias
+*Fogo do Céu* · 1 Reis 17:22; 18:38 · Jerusalém · +4 · original: Witch
 
 **Carta:** Uma vez por jogo, podes salvar a vítima da noite. Uma vez por jogo, podes fazer descer fogo sobre um jogador. Podes usar ambos na mesma noite.
 
-**Guião:** _“Profeta Elias, acorda. Esta é a vítima desta noite (aponta). Queres salvá-la? Queres fazer descer fogo sobre alguém? Profeta Elias, adormece.”_
+**Guião:** _“Elias, acorda. Esta é a vítima desta noite (aponta). Queres salvá-la? Queres fazer descer fogo sobre alguém? Elias, adormece.”_
 
 **Nota do Narrador:** Equivalente à Bruxa. Regista quais dos dois poderes já foram usados.
 
-### Profeta Eliseu
+### Eliseu
 *Porção Dobrada do Espírito* · 2 Reis 2:9; 4:35 · Jerusalém · +4 · original: Sorcerer
 
 **Carta:** Tal como Elias: uma vez por jogo salvas a vítima da noite e uma vez por jogo eliminas um jogador.
 
-**Guião:** _“Profeta Eliseu, acorda. Esta é a vítima desta noite (aponta). Queres salvá-la? Queres eliminar alguém? Profeta Eliseu, adormece.”_
+**Guião:** _“Eliseu, acorda. Esta é a vítima desta noite (aponta). Queres salvá-la? Queres eliminar alguém? Eliseu, adormece.”_
 
 **Nota do Narrador:** Equivalente ao Feiticeiro (Sorcerer). Usa só em aldeias grandes, ao lado de Elias.
 
-### Sumo Sacerdote Zadoque
-*A Bênção do Templo* · Números 6:24 · Jerusalém · +3 · original: Priest
+### Zadoque
+*Sumo Sacerdote* · Números 6:24 · Jerusalém · +3 · original: Priest
 
 **Carta:** Uma vez por jogo, abençoa um jogador. Da próxima vez que ele devesse morrer, sobrevive e perde a bênção.
 
-**Guião:** _“Sumo Sacerdote Zadoque, acorda. Queres abençoar alguém? Aponta para essa pessoa. Sumo Sacerdote, adormece.”_
+**Guião:** _“Zadoque, acorda. Queres abençoar alguém? Aponta para essa pessoa. Zadoque, adormece.”_
 
 **Nota do Narrador:** A bênção protege contra qualquer morte (noite ou execução) uma única vez.
 
-### Rei Salomão
-*O Coração Sábio* · 1 Reis 3:9 · Jerusalém · +3 (por confirmar) · original: Medium
+### Salomão
+*O Rei Sábio* · 1 Reis 3:9 · Jerusalém · +3 (por confirmar) · original: Medium
 
 **Carta:** Todas as noites, aponta para um jogador. O Narrador revela-te se esse jogador tem uma personagem especial.
 
-**Guião:** _“Rei Salomão, acorda. Aponta para um jogador. (Polegar para cima: tem personagem especial. Abanar a cabeça: não tem.) Rei Salomão, adormece.”_
+**Guião:** _“Salomão, acorda. Aponta para um jogador. (Polegar para cima: tem personagem especial. Abanar a cabeça: não tem.) Salomão, adormece.”_
 
 **Nota do Narrador:** Equivalente ao Medium. Confirmar o texto exato na carta original.
 
@@ -207,8 +207,8 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 
 **Nota do Narrador:** Equivalente ao Caçador. Resolve a sua escolha logo que a morte é anunciada.
 
-### Rainha Ester
-*"Se eu perecer, pereci"* · Ester 4:16 · Jerusalém · +3 · original: Martyr
+### Ester
+*A Rainha do Povo* · Ester 4:16 · Jerusalém · +3 · original: Martyr
 
 **Carta:** Depois de um jogador ser condenado, podes revelar-te e morrer no seu lugar.
 
@@ -221,8 +221,8 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 
 **Nota do Narrador:** Equivalente ao Stalwart. Regista o ataque e anuncia a morte uma noite mais tarde.
 
-### Príncipe Jónatas
-*Resgatado pelo Povo* · 1 Samuel 14:45 · Jerusalém · +3 · original: Prince
+### Jónatas
+*O Príncipe Amigo* · 1 Samuel 14:45 · Jerusalém · +3 · original: Prince
 
 **Carta:** Se fores condenado à execução, revelas a tua carta e sobrevives.
 
@@ -424,8 +424,8 @@ Todos apontam ao mesmo tempo; quem tiver mais votos é condenado.
 
 **Nota do Narrador:** Equivalente ao Bêbado (Drunk). Separa uma carta aleatória do baralho para ele no início.
 
-### Manto do Profeta
-*Passado de mão em mão* · 2 Reis 2:13 · Objeto · +1 (por confirmar) · original: Charm
+### Manto
+*A Roupa do Profeta* · 2 Reis 2:13 · Objeto · +1 (por confirmar) · original: Charm
 
 **Carta:** Enquanto tiveres o Manto, nada te pode matar: nem os inimigos de noite, nem a execução de dia. No fim de cada noite, tens de o passar a outro jogador.
 

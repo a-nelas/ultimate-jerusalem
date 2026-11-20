@@ -61,17 +61,17 @@ Prompt negativo comum (só tem efeito com CFG acima de 1):
 | ☐ | `israelita-7.png` | Israelita · 7 (Pastor) | Povo | Jerusalém |
 | ☐ | `israelita-8.png` | Israelita · 8 (Tecelã) | Povo | Jerusalém |
 | ☐ | `isaias.png` | Isaías | O Profeta | Jerusalém |
-| ☐ | `jeremias.png` | Profeta Jeremias | O Aprendiz do Profeta | Jerusalém |
-| ☐ | `elias.png` | Profeta Elias | Fogo do Céu e Vida Restaurada | Jerusalém |
-| ☐ | `eliseu.png` | Profeta Eliseu | Porção Dobrada do Espírito | Jerusalém |
-| ☐ | `zadoque.png` | Sumo Sacerdote Zadoque | A Bênção do Templo | Jerusalém |
-| ☐ | `salomao.png` | Rei Salomão | O Coração Sábio | Jerusalém |
+| ☐ | `jeremias.png` | Jeremias | O Aprendiz do Profeta | Jerusalém |
+| ☐ | `elias.png` | Elias | Fogo do Céu | Jerusalém |
+| ☐ | `eliseu.png` | Eliseu | Porção Dobrada do Espírito | Jerusalém |
+| ☐ | `zadoque.png` | Zadoque | Sumo Sacerdote | Jerusalém |
+| ☐ | `salomao.png` | Salomão | O Rei Sábio | Jerusalém |
 | ☐ | `calebe.png` | Calebe | O Espia de Canaã | Jerusalém |
 | ☐ | `benaia.png` | Benaia | Capitão da Guarda do Rei | Jerusalém |
 | ☐ | `sansao.png` | Sansão | A Força do Nazireu | Jerusalém |
-| ☐ | `ester.png` | Rainha Ester | "Se eu perecer, pereci" | Jerusalém |
+| ☐ | `ester.png` | Ester | A Rainha do Povo | Jerusalém |
 | ☐ | `eleazar.png` | Eleazar | Valente de David | Jerusalém |
-| ☐ | `jonatas.png` | Príncipe Jónatas | Resgatado pelo Povo | Jerusalém |
+| ☐ | `jonatas.png` | Jónatas | O Príncipe Amigo | Jerusalém |
 | ☐ | `daniel.png` | Daniel | Na Cova dos Leões | Jerusalém |
 | ☐ | `david.png` | Rei David | O Pastor Ungido | Jerusalém |
 | ☐ | `trombeteiro.png` | Trombeteiro | O Toque do Shofar | Jerusalém |
@@ -105,7 +105,7 @@ Prompt negativo comum (só tem efeito com CFG acima de 1):
 | ☐ | `jaco.png` | Jacó | O que Tomou o Lugar | Flutuante |
 | ☐ | `aca.png` | Acã | O Cobiçoso | Flutuante |
 | ☐ | `joas.png` | Joás | O Rei Escondido | Flutuante |
-| ☐ | `manto.png` | Manto do Profeta | Passado de mão em mão | Objeto |
+| ☐ | `manto.png` | Manto | A Roupa do Profeta | Objeto |
 | ☐ | `narrador.png` | Narrador | Quem conta a história | Objeto |
 
 O verso é desenhado pela Oficina e não precisa de imagem.
@@ -173,31 +173,31 @@ Minimalist flat cartoon illustration of an Israelite weaver woman with dark hair
 Minimalist flat cartoon illustration of the prophet Isaiah, an old man with a long white beard and a blue mantle, looking up in awe at a glowing star, holding a scroll, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
-### Profeta Jeremias · `jeremias`
+### Jeremias · `jeremias`
 
 ```text
 Minimalist flat cartoon illustration of the young adult prophet Jeremiah, a slim young man with thick wavy dark brown hair and a short beard, sad and thoughtful, holding a scroll and a small blossoming almond branch, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
-### Profeta Elias · `elias`
+### Elias · `elias`
 
 ```text
 Minimalist flat cartoon illustration of the prophet Elijah, a wild-haired bearded man in a rough brown fur cloak, determined look, both arms raised, a small flame on a little stone altar beside him, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
-### Profeta Eliseu · `eliseu`
+### Eliseu · `eliseu`
 
 ```text
 Minimalist flat cartoon illustration of the prophet Elisha, a kind bald old man with a gentle smile, holding a walking staff, wearing a big cloak slightly too large for him, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
-### Sumo Sacerdote Zadoque · `zadoque`
+### Zadoque · `zadoque`
 
 ```text
 Minimalist flat cartoon illustration of Zadok the high priest, a calm man with a grey beard and grey hair under a white turban, white robes, a breastplate of colorful square gems, holding a small incense burner, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
-### Rei Salomão · `salomao`
+### Salomão · `salomao`
 
 ```text
 Minimalist flat cartoon illustration of King Solomon, a calm wise king with long dark hair, a neat black beard and a golden crown, sitting on a small throne, holding a scroll, thoughtful look, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
@@ -221,7 +221,7 @@ Minimalist flat cartoon illustration of Benaiah the royal bodyguard, a serious a
 Minimalist flat cartoon illustration of Samson, a very strong man with extremely long braided hair, straining face, pushing two short stone pillars apart, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
-### Rainha Ester · `ester`
+### Ester · `ester`
 
 ```text
 Minimalist flat cartoon illustration of Queen Esther, a brave young woman with long wavy black hair and a small crown, a royal robe, hopeful look, reaching toward a golden scepter, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
@@ -233,7 +233,7 @@ Minimalist flat cartoon illustration of Queen Esther, a brave young woman with l
 Minimalist flat cartoon illustration of Eleazar, a tired but determined warrior with messy brown hair and a short beard, gripping a sword with both hands, a few golden barley stalks at his feet, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
 ```
 
-### Príncipe Jónatas · `jonatas`
+### Jónatas · `jonatas`
 
 ```text
 Minimalist flat cartoon illustration of Prince Jonathan, a young adult archer with curly brown hair and a kind smile, holding a bow, a quiver of arrows on his back, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of slate blue, sage green and warm sand, soft pale blue background
@@ -437,7 +437,7 @@ Minimalist flat cartoon illustration of Achan, a man with short curly hair and a
 Minimalist flat cartoon illustration of the boy king Joash, a small child with short dark hair and big surprised eyes, wearing a crown that is too big for him, with a clearly visible cute face and visible hair or headwear: two black dot eyes, small eyebrows, tiny nose, small expressive mouth and soft rosy cheeks, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, cute chibi-like proportions, one character centered, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of moss green, grey and cream, soft moss green background
 ```
 
-### Manto do Profeta · `manto`
+### Manto · `manto`
 
 ```text
 Minimalist flat cartoon illustration of an empty prophet's mantle lying open on its own: a flat brown woven cloak spread out like a blanket, with no one inside, no hood, its loose edges lifted by a swirl of wind and golden light, an inanimate object only, no character, no creature, no head, no face, no eyes, thick dark navy outlines, simple clean rounded shapes, flat soft pastel colors with very little shading, one single object centered, still life, plain uncluttered background with only a soft ground shadow, children's storybook style, vector art, no text, no letters, no border, limited palette of umber brown and gold, soft tan background
